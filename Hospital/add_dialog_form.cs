@@ -29,6 +29,8 @@ namespace Hospital
                 datebox.Value = (DateTime)sel.Cells["date"].Value;
                 syndrombox.Text = sel.Cells["syndrom"].Value.ToString();
                 depbox.Text = sel.Cells["depart_name"].Value.ToString();
+                dateadd.Value = (DateTime)sel.Cells["date_add"].Value;
+                dateclose.Value = (DateTime)sel.Cells["date_close"].Value;
             }
         }
 
@@ -47,6 +49,14 @@ namespace Hospital
                 syndrombox.Focus();
                 return;
             }
+
+            if (dateadd.Value > dateclose.Value)
+            {
+                MessageBox.Show("Дата принятия не может быть позже даты выписки.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               dateadd.Focus();
+                return;
+            }
+
             if (!chanfl && MessageBox.Show("Пациент с фамилией " + namebox.Text + " добавлен. \n\nПовторить ввод?", "Вопросы ввода", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
                 again = true;

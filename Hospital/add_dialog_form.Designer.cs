@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -36,7 +35,6 @@
             this.namebox = new System.Windows.Forms.TextBox();
             this.syndrombox = new System.Windows.Forms.TextBox();
             this.depbox = new System.Windows.Forms.ComboBox();
-            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Accept_but = new System.Windows.Forms.Button();
             this.cansel_but = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -44,7 +42,6 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.dateclose = new System.Windows.Forms.DateTimePicker();
             this.datebox = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -102,9 +99,6 @@
             // depbox
             // 
             this.depbox.BackColor = System.Drawing.SystemColors.Window;
-            this.depbox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.departmentBindingSource, "name", true));
-            this.depbox.DataSource = this.departmentBindingSource;
-            this.depbox.DisplayMember = "name";
             this.depbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.depbox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.depbox.Location = new System.Drawing.Point(129, 37);
@@ -112,10 +106,6 @@
             this.depbox.Size = new System.Drawing.Size(260, 21);
             this.depbox.TabIndex = 2;
             this.depbox.ValueMember = "name";
-            // 
-            // departmentBindingSource
-            // 
-            this.departmentBindingSource.DataSource = typeof(Department);
             // 
             // Accept_but
             // 
@@ -152,6 +142,7 @@
             this.dateadd.Name = "dateadd";
             this.dateadd.Size = new System.Drawing.Size(260, 20);
             this.dateadd.TabIndex = 6;
+            this.dateadd.Value = new System.DateTime(2020, 5, 2, 0, 0, 0, 0);
             this.dateadd.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // textBox6
@@ -169,6 +160,7 @@
             this.dateclose.Name = "dateclose";
             this.dateclose.Size = new System.Drawing.Size(260, 20);
             this.dateclose.TabIndex = 7;
+            this.dateclose.Value = new System.DateTime(2020, 5, 2, 0, 0, 0, 0);
             // 
             // datebox
             // 
@@ -202,7 +194,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Редактировать";
             this.Load += new System.EventHandler(this.add_dialog_form_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,7 +205,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.BindingSource departmentBindingSource;
         public System.Windows.Forms.ComboBox depbox;
         private System.Windows.Forms.Button Accept_but;
         private System.Windows.Forms.Button cansel_but;

@@ -24,9 +24,9 @@ namespace Hospital
         public List<string> filter = new List<string>();
         public void Form1_Load(object sender, EventArgs e)
         {
-            if (File.Exists("Отделениbbbя.xml"))
+            if (File.Exists("Отделени.xml"))
             {
-                fsdep = new FileStream("Отделения.xml", FileMode.Open);
+                fsdep = new FileStream("Отделеyия.xml", FileMode.Open);
                 xsdep = new XmlSerializer(typeof(List<Department>));
                 departments = (List<Department>)xsdep.Deserialize(fsdep);
 
@@ -37,7 +37,6 @@ namespace Hospital
                         lst_people.Add(pac);
                     }                   
                 }
-                lst_onscreen = lst_people;
                 fsdep.Close();
             }
             else
@@ -50,17 +49,16 @@ namespace Hospital
                 departments.Add(dep2);
                 departments.Add(dep3);
                 lst_people.Add(new Pacient("Кириллкин", new DateTime(2000,2,3), "Модник", "Венерическое", new DateTime(2020,1,20),new DateTime(2020,2,20),departments));
-                lst_people.Add(new Pacient("Райбекас", new DateTime(2000, 2, 3), "Котики", "Венерическое", new DateTime(2020, 1, 14), new DateTime(2020, 3, 25), departments));
-                lst_people.Add(new Pacient("Никитин", new DateTime(2000, 2, 3), "Соболев", "Венерическое", new DateTime(2020, 1, 10), new DateTime(2020, 1, 20), departments));
-                lst_people.Add(new Pacient("Калашникова", new DateTime(2000, 2, 3), "Мразь", "Гастрологическое", new DateTime(2020, 2, 15), new DateTime(2020, 4, 8), departments));
-                lst_people.Add(new Pacient("Лебедь", new DateTime(2000, 2, 3), "Тряпка", "Гастрологическое", new DateTime(2020, 1, 20), new DateTime(2020, 1, 12), departments));
-                lst_people.Add(new Pacient("Федоренков", new DateTime(2000, 2, 3), "Робот", "Гастрологическое", new DateTime(2020, 2, 10), new DateTime(2020, 4, 10), departments));
-                lst_people.Add(new Pacient("Рогозникова", new DateTime(2000, 2, 3), "Словпок", "Гастрологическое", new DateTime(2020, 2, 10), new DateTime(2020, 5, 14), departments));
-                lst_people.Add(new Pacient("Акаев", new DateTime(2000, 2, 3), "Лентяево", "Психиатрическое", new DateTime(2020, 2, 15), new DateTime(2020, 3, 16), departments));
-                lst_people.Add(new Pacient("Комарницкий", new DateTime(2000, 2, 3), "ЦСВ", "Психиатрическое", new DateTime(2020, 1, 31), new DateTime(2020, 4, 1), departments));
-                
+                lst_people.Add(new Pacient("Райбекас", new DateTime(2000, 10, 12), "Котики", "Венерическое", new DateTime(2020, 5, 2), new DateTime(2020, 7, 25), departments));
+                lst_people.Add(new Pacient("Никитин", new DateTime(2000, 6, 8), "Соболев", "Венерическое", new DateTime(2020, 1, 10), new DateTime(2020, 1, 20), departments));
+                lst_people.Add(new Pacient("Калашникова", new DateTime(2001, 9, 25), "Мразь", "Гастрологическое", new DateTime(2020, 2, 15), new DateTime(2020, 6, 8), departments));
+                lst_people.Add(new Pacient("Лебедь", new DateTime(2000, 12, 14), "Тряпка", "Гастрологическое", new DateTime(2020, 4, 20), new DateTime(2020, 8, 26), departments));
+                lst_people.Add(new Pacient("Федоренков", new DateTime(2000, 6, 19), "Робот", "Гастрологическое", new DateTime(2020, 5, 10), new DateTime(2020, 6, 10), departments));
+                lst_people.Add(new Pacient("Рогозникова", new DateTime(2000, 11, 15), "Словпок", "Гастрологическое", new DateTime(2020, 2, 10), new DateTime(2020, 5, 14), departments));
+                lst_people.Add(new Pacient("Акаев", new DateTime(2000, 7, 21), "Лентяево", "Психиатрическое", new DateTime(2020, 3, 15), new DateTime(2020, 3, 16), departments));
+                lst_people.Add(new Pacient("Комарницкий", new DateTime(1999, 4, 28), "ЦСВ", "Психиатрическое", new DateTime(2020, 4, 30), new DateTime(2020, 6, 1), departments));
             }
-
+            lst_onscreen = lst_people;
             pacientBindingSource.DataSource = lst_onscreen;
             departmentBindingSource.DataSource = departments;
         }
@@ -102,7 +100,8 @@ namespace Hospital
             {
                 lst_people[pacientDataGridView.CurrentRow.Index].name = add_dialog.namebox.Text;
                 lst_people[pacientDataGridView.CurrentRow.Index].ChangeDepart((Department)add_dialog.depbox.SelectedItem, add_dialog.syndrombox.Text, departments);
-                lst_people[pacientDataGridView.CurrentRow.Index].ChangeDate(int.Parse(add_dialog.datebox.Text));
+                lst_people[pacientDataGridView.CurrentRow.Index].ChangeDate(add_dialog.datebox.Value);
+                lst_people[pacientDataGridView.CurrentRow.Index].ChangeCloseDate(add_dialog.dateadd.Value, add_dialog.dateclose.Value);
                 pacientBindingSource.ResetBindings(false);
                 departmentBindingSource.ResetBindings(false);
             }
@@ -271,6 +270,11 @@ namespace Hospital
         }
 
         private void pacientBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pacientDataGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
         }

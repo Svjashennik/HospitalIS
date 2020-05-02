@@ -1,7 +1,8 @@
 using Hospital;
 using System;
 using System.Collections.Generic;
-
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 public class Pacient
 {
@@ -12,6 +13,8 @@ public class Pacient
     public int age { get; set; } // Возраст
     public DateTime date_add { get; set; } // Дата приема
     public DateTime date_close { get; set; } // Дата выписки
+    public bool hear { get; set; } // Факт наличия
+    public int dayhear { get; set; } // Дней в больнице
     public Pacient()
     {
 
@@ -31,7 +34,9 @@ public class Pacient
         this.date = date;
         this.syndrom = syndrom;
         dep.Add(this);
+        this.hear = this.date_close > DateTime.Now;
         this.age = DateTime.Now.Year - this.date.Year;
+        this.dayhear = date_close.Subtract(date_add).Days;
     }
 
     public void ChangeDepart(Department dep, string syndrom, List<Department> departs) // Функция смены отделения и соответсвенно диагноза.
@@ -42,6 +47,13 @@ public class Pacient
         dep.Add(this);
     }
 
+    public void ChangeCloseDate(DateTime date_add, DateTime date_close)
+    {
+        this.date_add = date_add;
+        this.date_close = date_close;
+        this.hear = (this.date_close > DateTime.Now);
+        this.dayhear = date_close.Subtract(date_add).Days;
+    }
     public void ChangeDate(DateTime date) // Функция смены даты рождения.
     {
         this.date = date;

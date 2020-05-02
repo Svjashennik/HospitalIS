@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(departments_list));
-            this.departmentDataGridView = new System.Windows.Forms.DataGridView();
             this.add_button = new System.Windows.Forms.Button();
             this.chan_button = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -46,47 +45,22 @@
             this.exitbut = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maximum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.manager = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.countpac = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.departmentDataGridView)).BeginInit();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.departmentDataGridView = new System.Windows.Forms.DataGridView();
+            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // departmentDataGridView
-            // 
-            this.departmentDataGridView.AllowUserToAddRows = false;
-            this.departmentDataGridView.AllowUserToDeleteRows = false;
-            this.departmentDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.departmentDataGridView.AutoGenerateColumns = false;
-            this.departmentDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.departmentDataGridView.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.departmentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.departmentDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.name,
-            this.maximum,
-            this.manager,
-            this.countpac,
-            this.phone});
-            this.departmentDataGridView.DataSource = this.departmentBindingSource;
-            this.departmentDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.departmentDataGridView.Location = new System.Drawing.Point(12, 33);
-            this.departmentDataGridView.Name = "departmentDataGridView";
-            this.departmentDataGridView.RowHeadersWidth = 45;
-            this.departmentDataGridView.Size = new System.Drawing.Size(760, 342);
-            this.departmentDataGridView.TabIndex = 0;
-            this.departmentDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.departmentDataGridView_CellDoubleClick);
             // 
             // add_button
             // 
@@ -199,6 +173,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.Controls.Add(this.add_button);
             this.groupBox1.Controls.Add(this.chan_button);
             this.groupBox1.Controls.Add(this.deletebut);
@@ -211,6 +186,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.button1);
@@ -222,62 +198,14 @@
             this.groupBox2.Text = "Обработка данных";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // button1
+            // button3
             // 
-            this.button1.Location = new System.Drawing.Point(6, 17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 39);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Сбросить фильтры";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // name
-            // 
-            this.name.DataPropertyName = "name";
-            this.name.HeaderText = "Отделение";
-            this.name.MinimumWidth = 6;
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            // 
-            // maximum
-            // 
-            this.maximum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.maximum.DataPropertyName = "maximum";
-            this.maximum.HeaderText = "Лимит палат";
-            this.maximum.MinimumWidth = 6;
-            this.maximum.Name = "maximum";
-            this.maximum.ReadOnly = true;
-            this.maximum.Width = 110;
-            // 
-            // manager
-            // 
-            this.manager.DataPropertyName = "manager";
-            this.manager.HeaderText = "Заведующий";
-            this.manager.MinimumWidth = 6;
-            this.manager.Name = "manager";
-            this.manager.ReadOnly = true;
-            // 
-            // countpac
-            // 
-            this.countpac.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.countpac.DataPropertyName = "countpac";
-            this.countpac.HeaderText = "Кол-во пациентов";
-            this.countpac.MinimumWidth = 6;
-            this.countpac.Name = "countpac";
-            this.countpac.ReadOnly = true;
-            this.countpac.Width = 90;
-            // 
-            // phone
-            // 
-            this.phone.DataPropertyName = "phone";
-            this.phone.HeaderText = "Телефон";
-            this.phone.MinimumWidth = 6;
-            this.phone.Name = "phone";
-            this.phone.ReadOnly = true;
-            // 
-            // departmentBindingSource
-            // 
-            this.departmentBindingSource.DataSource = typeof(Department);
+            this.button3.Location = new System.Drawing.Point(198, 21);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(90, 30);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Сортировка";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -288,35 +216,110 @@
             this.button2.Text = "Фильтры";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // button1
             // 
-            this.button3.Location = new System.Drawing.Point(198, 21);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(90, 30);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Сортировка";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(6, 17);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 39);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Сбросить фильтры";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // departmentDataGridView
+            // 
+            this.departmentDataGridView.AllowUserToAddRows = false;
+            this.departmentDataGridView.AllowUserToDeleteRows = false;
+            this.departmentDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.departmentDataGridView.AutoGenerateColumns = false;
+            this.departmentDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.departmentDataGridView.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.departmentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.departmentDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.departmentDataGridView.DataSource = this.departmentBindingSource;
+            this.departmentDataGridView.Location = new System.Drawing.Point(12, 29);
+            this.departmentDataGridView.Name = "departmentDataGridView";
+            this.departmentDataGridView.RowHeadersWidth = 45;
+            this.departmentDataGridView.Size = new System.Drawing.Size(760, 346);
+            this.departmentDataGridView.TabIndex = 8;
+            // 
+            // departmentBindingSource
+            // 
+            this.departmentBindingSource.DataSource = typeof(Department);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "name";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Название";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "maximum";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Кол-во палат";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "manager";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Заведующий";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "countpac";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Кол-во пациентов";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "phone";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Телефон";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // departments_list
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 459);
+            this.Controls.Add(this.departmentDataGridView);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.exitbut);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.departmentDataGridView);
             this.MinimumSize = new System.Drawing.Size(800, 400);
             this.Name = "departments_list";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Отделения";
             this.Load += new System.EventHandler(this.departments_list_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.departmentDataGridView)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.departmentDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -324,8 +327,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.BindingSource departmentBindingSource;
-        private System.Windows.Forms.DataGridView departmentDataGridView;
         private System.Windows.Forms.Button add_button;
         private System.Windows.Forms.Button chan_button;
         private System.Windows.Forms.ToolStrip toolStrip1;
@@ -339,15 +340,17 @@
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
         private System.Windows.Forms.ToolStripMenuItem отделенияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem пациентыToolStripMenuItem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maximum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn manager;
-        private System.Windows.Forms.DataGridViewTextBoxColumn countpac;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.BindingSource departmentBindingSource;
+        public System.Windows.Forms.DataGridView departmentDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
     }
 }

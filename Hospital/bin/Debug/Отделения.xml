@@ -4,24 +4,30 @@
     <people>
       <Pacient>
         <name>Кириллкин</name>
-        <date>2000</date>
+        <date>2000-02-03T00:00:00</date>
         <syndrom>Модник</syndrom>
         <depart_name>Венерическое</depart_name>
         <age>20</age>
+        <date_add>2020-01-20T00:00:00</date_add>
+        <date_close>2020-02-20T00:00:00</date_close>
       </Pacient>
       <Pacient>
         <name>Райбекас</name>
-        <date>2000</date>
+        <date>2000-10-12T00:00:00</date>
         <syndrom>Котики</syndrom>
         <depart_name>Венерическое</depart_name>
         <age>20</age>
+        <date_add>2020-01-14T00:00:00</date_add>
+        <date_close>2020-03-25T00:00:00</date_close>
       </Pacient>
       <Pacient>
-        <name>Рогозникова</name>
-        <date>2000</date>
-        <syndrom>Словпок</syndrom>
+        <name>Никитин</name>
+        <date>2000-06-08T00:00:00</date>
+        <syndrom>Соболев</syndrom>
         <depart_name>Венерическое</depart_name>
         <age>20</age>
+        <date_add>2020-01-10T00:00:00</date_add>
+        <date_close>2020-01-20T00:00:00</date_close>
       </Pacient>
     </people>
     <name>Венерическое</name>
@@ -34,31 +40,39 @@
     <people>
       <Pacient>
         <name>Калашникова</name>
-        <date>2001</date>
+        <date>2001-09-25T00:00:00</date>
         <syndrom>Мразь</syndrom>
         <depart_name>Гастрологическое</depart_name>
         <age>19</age>
-      </Pacient>
-      <Pacient>
-        <name>Федоренков</name>
-        <date>2000</date>
-        <syndrom>Робот</syndrom>
-        <depart_name>Гастрологическое</depart_name>
-        <age>20</age>
-      </Pacient>
-      <Pacient>
-        <name>Никитин</name>
-        <date>2000</date>
-        <syndrom>Соболев</syndrom>
-        <depart_name>Гастрологическое</depart_name>
-        <age>20</age>
+        <date_add>2020-02-15T00:00:00</date_add>
+        <date_close>2020-04-08T00:00:00</date_close>
       </Pacient>
       <Pacient>
         <name>Лебедь</name>
-        <date>2000</date>
-        <syndrom>Вредина</syndrom>
+        <date>2000-12-14T00:00:00</date>
+        <syndrom>Тряпка</syndrom>
         <depart_name>Гастрологическое</depart_name>
         <age>20</age>
+        <date_add>2020-01-20T00:00:00</date_add>
+        <date_close>2020-01-12T00:00:00</date_close>
+      </Pacient>
+      <Pacient>
+        <name>Федоренков</name>
+        <date>2000-06-19T00:00:00</date>
+        <syndrom>Робот</syndrom>
+        <depart_name>Гастрологическое</depart_name>
+        <age>20</age>
+        <date_add>2020-02-10T00:00:00</date_add>
+        <date_close>2020-04-10T00:00:00</date_close>
+      </Pacient>
+      <Pacient>
+        <name>Рогозникова</name>
+        <date>2000-11-15T00:00:00</date>
+        <syndrom>Словпок</syndrom>
+        <depart_name>Гастрологическое</depart_name>
+        <age>20</age>
+        <date_add>2020-02-10T00:00:00</date_add>
+        <date_close>2020-05-14T00:00:00</date_close>
       </Pacient>
     </people>
     <name>Гастрологическое</name>
@@ -70,32 +84,28 @@
   <Department>
     <people>
       <Pacient>
-        <name>Комарницкий</name>
-        <date>1999</date>
-        <syndrom>ЦСВ</syndrom>
-        <depart_name>Психиатрическое</depart_name>
-        <age>21</age>
-      </Pacient>
-      <Pacient>
         <name>Акаев</name>
-        <date>2000</date>
+        <date>2000-07-21T00:00:00</date>
         <syndrom>Лентяево</syndrom>
         <depart_name>Психиатрическое</depart_name>
         <age>20</age>
+        <date_add>2020-02-15T00:00:00</date_add>
+        <date_close>2020-03-16T00:00:00</date_close>
+      </Pacient>
+      <Pacient>
+        <name>Комарницкий</name>
+        <date>1999-04-28T00:00:00</date>
+        <syndrom>ЦСВ</syndrom>
+        <depart_name>Психиатрическое</depart_name>
+        <age>21</age>
+        <date_add>2020-01-31T00:00:00</date_add>
+        <date_close>2020-04-01T00:00:00</date_close>
       </Pacient>
     </people>
     <name>Психиатрическое</name>
     <maximum>40</maximum>
     <manager>Колганова</manager>
     <countpac>2</countpac>
-    <phone>8-906-555-35-35</phone>
-  </Department>
-  <Department>
-    <people />
-    <name>Терапевтическое</name>
-    <maximum>60</maximum>
-    <manager>Васнецов</manager>
-    <countpac>0</countpac>
-    <phone>8-905-455-78-32</phone>
+    <phone>8-228-555-35-35</phone>
   </Department>
 </ArrayOfDepartment>
