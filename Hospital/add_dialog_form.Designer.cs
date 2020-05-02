@@ -34,12 +34,16 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.namebox = new System.Windows.Forms.TextBox();
-            this.datebox = new System.Windows.Forms.TextBox();
             this.syndrombox = new System.Windows.Forms.TextBox();
             this.depbox = new System.Windows.Forms.ComboBox();
             this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Accept_but = new System.Windows.Forms.Button();
             this.cansel_but = new System.Windows.Forms.Button();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.dateadd = new System.Windows.Forms.DateTimePicker();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.dateclose = new System.Windows.Forms.DateTimePicker();
+            this.datebox = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,13 +92,6 @@
             this.namebox.Size = new System.Drawing.Size(260, 20);
             this.namebox.TabIndex = 1;
             // 
-            // datebox
-            // 
-            this.datebox.Location = new System.Drawing.Point(129, 64);
-            this.datebox.Name = "datebox";
-            this.datebox.Size = new System.Drawing.Size(260, 20);
-            this.datebox.TabIndex = 1;
-            // 
             // syndrombox
             // 
             this.syndrombox.Location = new System.Drawing.Point(129, 90);
@@ -122,7 +119,7 @@
             // 
             // Accept_but
             // 
-            this.Accept_but.Location = new System.Drawing.Point(12, 116);
+            this.Accept_but.Location = new System.Drawing.Point(12, 168);
             this.Accept_but.Name = "Accept_but";
             this.Accept_but.Size = new System.Drawing.Size(75, 23);
             this.Accept_but.TabIndex = 3;
@@ -132,7 +129,7 @@
             // 
             // cansel_but
             // 
-            this.cansel_but.Location = new System.Drawing.Point(129, 116);
+            this.cansel_but.Location = new System.Drawing.Point(129, 168);
             this.cansel_but.Name = "cansel_but";
             this.cansel_but.Size = new System.Drawing.Size(75, 23);
             this.cansel_but.TabIndex = 4;
@@ -140,16 +137,61 @@
             this.cansel_but.UseVisualStyleBackColor = true;
             this.cansel_but.Click += new System.EventHandler(this.cansel_but_Click);
             // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(12, 116);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.TabIndex = 5;
+            this.textBox5.Text = "Дата приема";
+            // 
+            // dateadd
+            // 
+            this.dateadd.Location = new System.Drawing.Point(129, 116);
+            this.dateadd.Name = "dateadd";
+            this.dateadd.Size = new System.Drawing.Size(260, 20);
+            this.dateadd.TabIndex = 6;
+            this.dateadd.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(12, 142);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.TabIndex = 5;
+            this.textBox6.Text = "Дата приема";
+            // 
+            // dateclose
+            // 
+            this.dateclose.Location = new System.Drawing.Point(129, 142);
+            this.dateclose.Name = "dateclose";
+            this.dateclose.Size = new System.Drawing.Size(260, 20);
+            this.dateclose.TabIndex = 7;
+            // 
+            // datebox
+            // 
+            this.datebox.Location = new System.Drawing.Point(129, 64);
+            this.datebox.Name = "datebox";
+            this.datebox.Size = new System.Drawing.Size(260, 20);
+            this.datebox.TabIndex = 8;
+            this.datebox.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            // 
             // add_dialog_formpac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(401, 156);
+            this.ClientSize = new System.Drawing.Size(401, 205);
+            this.Controls.Add(this.datebox);
+            this.Controls.Add(this.dateclose);
+            this.Controls.Add(this.dateadd);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.cansel_but);
             this.Controls.Add(this.Accept_but);
             this.Controls.Add(this.depbox);
             this.Controls.Add(this.syndrombox);
-            this.Controls.Add(this.datebox);
             this.Controls.Add(this.namebox);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -177,7 +219,11 @@
         private System.Windows.Forms.Button Accept_but;
         private System.Windows.Forms.Button cansel_but;
         public System.Windows.Forms.TextBox namebox;
-        public System.Windows.Forms.TextBox datebox;
         public System.Windows.Forms.TextBox syndrombox;
+        private System.Windows.Forms.TextBox textBox5;
+        public System.Windows.Forms.DateTimePicker dateadd;
+        private System.Windows.Forms.TextBox textBox6;
+        public System.Windows.Forms.DateTimePicker dateclose;
+        private System.Windows.Forms.DateTimePicker datebox;
     }
 }

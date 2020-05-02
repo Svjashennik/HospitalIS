@@ -26,7 +26,7 @@ namespace Hospital
             if (chanfl)
             {
                 namebox.Text = sel.Cells["name"].Value.ToString();
-                datebox.Text = sel.Cells["date"].Value.ToString();
+                datebox.Value = (DateTime)sel.Cells["date"].Value;
                 syndrombox.Text = sel.Cells["syndrom"].Value.ToString();
                 depbox.Text = sel.Cells["depart_name"].Value.ToString();
             }
@@ -47,12 +47,6 @@ namespace Hospital
                 syndrombox.Focus();
                 return;
             }
-            if (!datebox.Text.All(char.IsDigit)||string.IsNullOrEmpty(datebox.Text))
-            {
-                MessageBox.Show("Необходим числовой формат года.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                datebox.Focus();
-                return;
-            }
             if (!chanfl && MessageBox.Show("Пациент с фамилией " + namebox.Text + " добавлен. \n\nПовторить ввод?", "Вопросы ввода", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
                 again = true;
@@ -66,6 +60,11 @@ namespace Hospital
         private void cansel_but_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

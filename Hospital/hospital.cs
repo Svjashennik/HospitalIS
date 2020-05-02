@@ -24,7 +24,7 @@ namespace Hospital
         public List<string> filter = new List<string>();
         public void Form1_Load(object sender, EventArgs e)
         {
-            if (File.Exists("Отделения.xml"))
+            if (File.Exists("Отделениbbbя.xml"))
             {
                 fsdep = new FileStream("Отделения.xml", FileMode.Open);
                 xsdep = new XmlSerializer(typeof(List<Department>));
@@ -49,15 +49,15 @@ namespace Hospital
                 departments.Add(dep1);
                 departments.Add(dep2);
                 departments.Add(dep3);
-                lst_people.Add(new Pacient("Кириллкин", 2000, "Модник", "Венерическое", departments));
-                lst_people.Add(new Pacient("Райбекас", 2000, "Котики", "Венерическое", departments));
-                lst_people.Add(new Pacient("Никитин", 2000, "Соболев", "Венерическое", departments));
-                lst_people.Add(new Pacient("Калашникова", 2001, "Мразь", "Гастрологическое", departments));
-                lst_people.Add(new Pacient("Лебедь", 2000, "Тряпка", "Гастрологическое", departments));
-                lst_people.Add(new Pacient("Федоренков", 2000, "Робот", "Гастрологическое", departments));
-                lst_people.Add(new Pacient("Рогозникова", 2000, "Словпок", "Гастрологическое", departments));
-                lst_people.Add(new Pacient("Акаев", 2000, "Лентяево", "Психиатрическое", departments));
-                lst_people.Add(new Pacient("Комарницкий", 1999, "ЦСВ", "Психиатрическое", departments));
+                lst_people.Add(new Pacient("Кириллкин", new DateTime(2000,2,3), "Модник", "Венерическое", new DateTime(2020,1,20),new DateTime(2020,2,20),departments));
+                lst_people.Add(new Pacient("Райбекас", new DateTime(2000, 2, 3), "Котики", "Венерическое", new DateTime(2020, 1, 14), new DateTime(2020, 3, 25), departments));
+                lst_people.Add(new Pacient("Никитин", new DateTime(2000, 2, 3), "Соболев", "Венерическое", new DateTime(2020, 1, 10), new DateTime(2020, 1, 20), departments));
+                lst_people.Add(new Pacient("Калашникова", new DateTime(2000, 2, 3), "Мразь", "Гастрологическое", new DateTime(2020, 2, 15), new DateTime(2020, 4, 8), departments));
+                lst_people.Add(new Pacient("Лебедь", new DateTime(2000, 2, 3), "Тряпка", "Гастрологическое", new DateTime(2020, 1, 20), new DateTime(2020, 1, 12), departments));
+                lst_people.Add(new Pacient("Федоренков", new DateTime(2000, 2, 3), "Робот", "Гастрологическое", new DateTime(2020, 2, 10), new DateTime(2020, 4, 10), departments));
+                lst_people.Add(new Pacient("Рогозникова", new DateTime(2000, 2, 3), "Словпок", "Гастрологическое", new DateTime(2020, 2, 10), new DateTime(2020, 5, 14), departments));
+                lst_people.Add(new Pacient("Акаев", new DateTime(2000, 2, 3), "Лентяево", "Психиатрическое", new DateTime(2020, 2, 15), new DateTime(2020, 3, 16), departments));
+                lst_people.Add(new Pacient("Комарницкий", new DateTime(2000, 2, 3), "ЦСВ", "Психиатрическое", new DateTime(2020, 1, 31), new DateTime(2020, 4, 1), departments));
                 
             }
 
@@ -268,6 +268,11 @@ namespace Hospital
                 pacientBindingSource.DataSource = lst_onscreen;
                 pacientBindingSource.ResetBindings(false);
             }
+        }
+
+        private void pacientBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 
