@@ -76,7 +76,7 @@ namespace Hospital
             add_dialog.ShowDialog();
             if (add_dialog.flag)
             {
-                Pacient newpac = new Pacient(add_dialog.namebox.Text, int.Parse(add_dialog.datebox.Text), add_dialog.syndrombox.Text, ((Department)add_dialog.depbox.SelectedItem).name, departments);
+                Pacient newpac = new Pacient(add_dialog.namebox.Text, add_dialog.datebox.Value, add_dialog.syndrombox.Text, ((Department)add_dialog.depbox.SelectedItem).name, add_dialog.dateadd.Value, add_dialog.dateclose.Value, departments);
                 lst_people.Add(newpac);
                 pacientBindingSource.ResetBindings(false);
                 departmentBindingSource.ResetBindings(false);

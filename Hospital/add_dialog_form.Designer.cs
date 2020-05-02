@@ -224,6 +224,6 @@
         public System.Windows.Forms.DateTimePicker dateadd;
         private System.Windows.Forms.TextBox textBox6;
         public System.Windows.Forms.DateTimePicker dateclose;
-        private System.Windows.Forms.DateTimePicker datebox;
+        public System.Windows.Forms.DateTimePicker datebox;
     }
 }
