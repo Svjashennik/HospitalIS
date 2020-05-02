@@ -44,14 +44,21 @@
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.deletebut = new System.Windows.Forms.Button();
             this.exitbut = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maximum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manager = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countpac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.departmentDataGridView)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +70,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.departmentDataGridView.AutoGenerateColumns = false;
-            this.departmentDataGridView.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.departmentDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.departmentDataGridView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.departmentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.departmentDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.name,
@@ -72,20 +80,20 @@
             this.countpac,
             this.phone});
             this.departmentDataGridView.DataSource = this.departmentBindingSource;
-            this.departmentDataGridView.GridColor = System.Drawing.SystemColors.Info;
-            this.departmentDataGridView.Location = new System.Drawing.Point(44, 33);
+            this.departmentDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.departmentDataGridView.Location = new System.Drawing.Point(12, 33);
             this.departmentDataGridView.Name = "departmentDataGridView";
             this.departmentDataGridView.RowHeadersWidth = 45;
-            this.departmentDataGridView.Size = new System.Drawing.Size(600, 288);
+            this.departmentDataGridView.Size = new System.Drawing.Size(760, 342);
             this.departmentDataGridView.TabIndex = 0;
             this.departmentDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.departmentDataGridView_CellDoubleClick);
             // 
             // add_button
             // 
             this.add_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.add_button.Location = new System.Drawing.Point(44, 327);
+            this.add_button.Location = new System.Drawing.Point(6, 21);
             this.add_button.Name = "add_button";
-            this.add_button.Size = new System.Drawing.Size(88, 33);
+            this.add_button.Size = new System.Drawing.Size(90, 30);
             this.add_button.TabIndex = 1;
             this.add_button.Text = "Добавить";
             this.add_button.UseVisualStyleBackColor = true;
@@ -94,9 +102,9 @@
             // chan_button
             // 
             this.chan_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.chan_button.Location = new System.Drawing.Point(138, 327);
+            this.chan_button.Location = new System.Drawing.Point(98, 21);
             this.chan_button.Name = "chan_button";
-            this.chan_button.Size = new System.Drawing.Size(88, 33);
+            this.chan_button.Size = new System.Drawing.Size(90, 30);
             this.chan_button.TabIndex = 2;
             this.chan_button.Text = "Изменить";
             this.chan_button.UseVisualStyleBackColor = true;
@@ -110,7 +118,7 @@
             this.toolStripDropDownButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(694, 26);
+            this.toolStrip1.Size = new System.Drawing.Size(784, 26);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -170,9 +178,9 @@
             // deletebut
             // 
             this.deletebut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.deletebut.Location = new System.Drawing.Point(232, 327);
+            this.deletebut.Location = new System.Drawing.Point(194, 21);
             this.deletebut.Name = "deletebut";
-            this.deletebut.Size = new System.Drawing.Size(88, 33);
+            this.deletebut.Size = new System.Drawing.Size(90, 30);
             this.deletebut.TabIndex = 4;
             this.deletebut.Text = "Удалить";
             this.deletebut.UseVisualStyleBackColor = true;
@@ -181,13 +189,47 @@
             // exitbut
             // 
             this.exitbut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.exitbut.Location = new System.Drawing.Point(528, 327);
+            this.exitbut.Location = new System.Drawing.Point(672, 402);
             this.exitbut.Name = "exitbut";
-            this.exitbut.Size = new System.Drawing.Size(116, 33);
+            this.exitbut.Size = new System.Drawing.Size(100, 30);
             this.exitbut.TabIndex = 5;
             this.exitbut.Text = "Закрыть";
             this.exitbut.UseVisualStyleBackColor = true;
             this.exitbut.Click += new System.EventHandler(this.exitbut_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.add_button);
+            this.groupBox1.Controls.Add(this.chan_button);
+            this.groupBox1.Controls.Add(this.deletebut);
+            this.groupBox1.Location = new System.Drawing.Point(12, 381);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(288, 66);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Действия с отделениями";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Location = new System.Drawing.Point(306, 382);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(296, 65);
+            this.groupBox2.TabIndex = 7;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Обработка данных";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(6, 17);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 39);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Сбросить фильтры";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // name
             // 
@@ -196,10 +238,10 @@
             this.name.MinimumWidth = 6;
             this.name.Name = "name";
             this.name.ReadOnly = true;
-            this.name.Width = 110;
             // 
             // maximum
             // 
+            this.maximum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.maximum.DataPropertyName = "maximum";
             this.maximum.HeaderText = "Лимит палат";
             this.maximum.MinimumWidth = 6;
@@ -214,16 +256,16 @@
             this.manager.MinimumWidth = 6;
             this.manager.Name = "manager";
             this.manager.ReadOnly = true;
-            this.manager.Width = 110;
             // 
             // countpac
             // 
+            this.countpac.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.countpac.DataPropertyName = "countpac";
             this.countpac.HeaderText = "Кол-во пациентов";
             this.countpac.MinimumWidth = 6;
             this.countpac.Name = "countpac";
             this.countpac.ReadOnly = true;
-            this.countpac.Width = 110;
+            this.countpac.Width = 90;
             // 
             // phone
             // 
@@ -232,23 +274,40 @@
             this.phone.MinimumWidth = 6;
             this.phone.Name = "phone";
             this.phone.ReadOnly = true;
-            this.phone.Width = 110;
             // 
             // departmentBindingSource
             // 
             this.departmentBindingSource.DataSource = typeof(Department);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(102, 21);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(90, 30);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Фильтры";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(198, 21);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(90, 30);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Сортировка";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // departments_list
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(694, 395);
+            this.ClientSize = new System.Drawing.Size(784, 459);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.exitbut);
-            this.Controls.Add(this.deletebut);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.chan_button);
-            this.Controls.Add(this.add_button);
             this.Controls.Add(this.departmentDataGridView);
+            this.MinimumSize = new System.Drawing.Size(800, 400);
             this.Name = "departments_list";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Отделения";
@@ -256,6 +315,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.departmentDataGridView)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -268,11 +329,6 @@
         private System.Windows.Forms.Button add_button;
         private System.Windows.Forms.Button chan_button;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maximum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn manager;
-        private System.Windows.Forms.DataGridViewTextBoxColumn countpac;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem настройкаЦветаToolStripMenuItem;
         private System.Windows.Forms.FontDialog fontDialog1;
@@ -283,5 +339,15 @@
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
         private System.Windows.Forms.ToolStripMenuItem отделенияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem пациентыToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maximum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn manager;
+        private System.Windows.Forms.DataGridViewTextBoxColumn countpac;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
     }
 }

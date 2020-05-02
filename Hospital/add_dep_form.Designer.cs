@@ -42,7 +42,7 @@
             // 
             // cansel_but
             // 
-            this.cansel_but.Location = new System.Drawing.Point(143, 139);
+            this.cansel_but.Location = new System.Drawing.Point(143, 116);
             this.cansel_but.Name = "cansel_but";
             this.cansel_but.Size = new System.Drawing.Size(75, 23);
             this.cansel_but.TabIndex = 14;
@@ -52,7 +52,7 @@
             // 
             // Accept_but
             // 
-            this.Accept_but.Location = new System.Drawing.Point(12, 139);
+            this.Accept_but.Location = new System.Drawing.Point(12, 116);
             this.Accept_but.Name = "Accept_but";
             this.Accept_but.Size = new System.Drawing.Size(75, 23);
             this.Accept_but.TabIndex = 13;
@@ -64,14 +64,14 @@
             // 
             this.maximumbox.Location = new System.Drawing.Point(143, 64);
             this.maximumbox.Name = "maximumbox";
-            this.maximumbox.Size = new System.Drawing.Size(131, 20);
+            this.maximumbox.Size = new System.Drawing.Size(244, 20);
             this.maximumbox.TabIndex = 10;
             // 
             // namebox
             // 
             this.namebox.Location = new System.Drawing.Point(143, 12);
             this.namebox.Name = "namebox";
-            this.namebox.Size = new System.Drawing.Size(131, 20);
+            this.namebox.Size = new System.Drawing.Size(244, 20);
             this.namebox.TabIndex = 11;
             this.namebox.TextChanged += new System.EventHandler(this.namebox_TextChanged);
             // 
@@ -117,7 +117,7 @@
             // 
             this.managerbox.Location = new System.Drawing.Point(143, 38);
             this.managerbox.Name = "managerbox";
-            this.managerbox.Size = new System.Drawing.Size(131, 20);
+            this.managerbox.Size = new System.Drawing.Size(244, 20);
             this.managerbox.TabIndex = 15;
             // 
             // phonebox
@@ -125,14 +125,14 @@
             this.phonebox.Location = new System.Drawing.Point(143, 90);
             this.phonebox.Mask = "8-000-000-00-00";
             this.phonebox.Name = "phonebox";
-            this.phonebox.Size = new System.Drawing.Size(131, 20);
+            this.phonebox.Size = new System.Drawing.Size(244, 20);
             this.phonebox.TabIndex = 16;
             // 
             // add_dep_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(286, 174);
+            this.ClientSize = new System.Drawing.Size(399, 152);
             this.Controls.Add(this.phonebox);
             this.Controls.Add(this.managerbox);
             this.Controls.Add(this.cansel_but);
@@ -143,6 +143,7 @@
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textbox2);
             this.Controls.Add(this.textbox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "add_dep_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Редактировать";

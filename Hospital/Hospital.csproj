@@ -59,6 +59,12 @@
     <Compile Include="add_dep_form.Designer.cs">
       <DependentUpon>add_dep_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sort_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sort_form.Designer.cs">
+      <DependentUpon>Sort_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="hospital.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="add_dep_form.resx">
       <DependentUpon>add_dep_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sort_form.resx">
+      <DependentUpon>Sort_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="hospital.ja-JP.resx">
       <DependentUpon>hospital.cs</DependentUpon>

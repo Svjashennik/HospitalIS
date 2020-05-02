@@ -85,21 +85,21 @@
             // 
             this.namebox.Location = new System.Drawing.Point(129, 12);
             this.namebox.Name = "namebox";
-            this.namebox.Size = new System.Drawing.Size(121, 20);
+            this.namebox.Size = new System.Drawing.Size(260, 20);
             this.namebox.TabIndex = 1;
             // 
             // datebox
             // 
             this.datebox.Location = new System.Drawing.Point(129, 64);
             this.datebox.Name = "datebox";
-            this.datebox.Size = new System.Drawing.Size(121, 20);
+            this.datebox.Size = new System.Drawing.Size(260, 20);
             this.datebox.TabIndex = 1;
             // 
             // syndrombox
             // 
             this.syndrombox.Location = new System.Drawing.Point(129, 90);
             this.syndrombox.Name = "syndrombox";
-            this.syndrombox.Size = new System.Drawing.Size(121, 20);
+            this.syndrombox.Size = new System.Drawing.Size(260, 20);
             this.syndrombox.TabIndex = 1;
             // 
             // depbox
@@ -112,7 +112,7 @@
             this.depbox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.depbox.Location = new System.Drawing.Point(129, 37);
             this.depbox.Name = "depbox";
-            this.depbox.Size = new System.Drawing.Size(121, 21);
+            this.depbox.Size = new System.Drawing.Size(260, 21);
             this.depbox.TabIndex = 2;
             this.depbox.ValueMember = "name";
             // 
@@ -144,7 +144,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(265, 154);
+            this.ClientSize = new System.Drawing.Size(401, 156);
             this.Controls.Add(this.cansel_but);
             this.Controls.Add(this.Accept_but);
             this.Controls.Add(this.depbox);
@@ -155,6 +155,7 @@
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "add_dialog_formpac";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Редактировать";

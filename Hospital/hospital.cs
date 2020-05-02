@@ -19,7 +19,8 @@ namespace Hospital
         FileStream fsdep;
         XmlSerializer xsdep;
         public List<Department> departments;
-        public List<Pacient> lst_people = new List<Pacient>();
+        public List<Pacient> lst_people = new List<Pacient>(); 
+        public List<Pacient> lst_onscreen = new List<Pacient>();
         public List<string> filter = new List<string>();
         public void Form1_Load(object sender, EventArgs e)
         {
@@ -28,6 +29,7 @@ namespace Hospital
                 fsdep = new FileStream("Отделения.xml", FileMode.Open);
                 xsdep = new XmlSerializer(typeof(List<Department>));
                 departments = (List<Department>)xsdep.Deserialize(fsdep);
+
                 foreach(Department dep in departments)
                 {
                     foreach (Pacient pac in dep.people)
@@ -35,6 +37,7 @@ namespace Hospital
                         lst_people.Add(pac);
                     }                   
                 }
+                lst_onscreen = lst_people;
                 fsdep.Close();
             }
             else
@@ -57,9 +60,11 @@ namespace Hospital
                 lst_people.Add(new Pacient("Комарницкий", 1999, "ЦСВ", "Психиатрическое", departments));
                 
             }
-            pacientBindingSource.DataSource = lst_people;
+
+            pacientBindingSource.DataSource = lst_onscreen;
             departmentBindingSource.DataSource = departments;
         }
+
 
 
         private void Add_pole_Click(object sender, EventArgs e)
@@ -149,13 +154,16 @@ namespace Hospital
             {
                 return;
             }
-            pacientBindingSource.DataSource = lst_people.FindAll(pac => pac.depart_name == filter[0]);
+            lst_onscreen = lst_people.FindAll(pac => pac.depart_name == filter[0]);
+            pacientBindingSource.DataSource = lst_onscreen;
             pacientBindingSource.ResetBindings(false);
             departmentBindingSource.ResetBindings(false);
         }
 
         private void пациентыToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            lst_onscreen = lst_people;
+            pacientBindingSource.DataSource = lst_onscreen;
             pacientBindingSource.ResetBindings(false);
             departmentBindingSource.ResetBindings(false);
         
@@ -173,13 +181,15 @@ namespace Hospital
         private void pacientDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int i = pacientDataGridView.CurrentCell.RowIndex;
-            pacientBindingSource.DataSource = lst_people.FindAll(pac => pac.depart_name == pacientDataGridView.Rows[i].Cells["depart_name"].Value.ToString());
+            lst_onscreen = lst_people.FindAll(pac => pac.depart_name == pacientDataGridView.Rows[i].Cells["depart_name"].Value.ToString());
+            pacientBindingSource.DataSource = lst_onscreen;
             pacientBindingSource.ResetBindings(false);
         }
 
         private void resetfilterbut_Click(object sender, EventArgs e)
         {
-            pacientBindingSource.DataSource = lst_people;
+            lst_onscreen = lst_people;
+            pacientBindingSource.DataSource = lst_onscreen;
             pacientBindingSource.ResetBindings(false);
             filter.Clear();
         }
@@ -205,14 +215,59 @@ namespace Hospital
 
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void pacientDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            сохранитьToolStripMenuItem_Click(sender, e);
+
         }
 
-        private void toolStripDropDownButton2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
+            SortPac_form sort_form = new SortPac_form();
+            sort_form.Owner = this;
+            sort_form.ShowDialog();
+            if (sort_form.flag)
+            {
+                if (!sort_form.typesort)
+                {
+                    switch (sort_form.sort)
+                    {
+                        case "По фамилии":
+                            lst_onscreen = lst_onscreen.OrderBy(pac => pac.name).ToList();
+                            break;
+                        case "По отделению":
+                            lst_onscreen = lst_onscreen.OrderBy(pac => pac.depart_name).ToList();
+                            break;
+                        case "По возрасту":
+                            lst_onscreen = lst_onscreen.OrderBy(pac => pac.age).ToList();
+                            break;
+                        case "По диагнозу":
+                            lst_onscreen = lst_onscreen.OrderBy(pac => pac.syndrom).ToList();
+                            break;
+                    }
+                }
+                else
+                {
+                    switch (sort_form.sort)
+                    {
+                        case "По фамилии":
+                            lst_onscreen = lst_onscreen.OrderByDescending(pac => pac.name).ToList();
+                            break;
+                        case "По отделению":
+                            lst_onscreen = lst_onscreen.OrderByDescending(pac => pac.depart_name).ToList();
+                            break;
+                        case "По возрасту":
+                            lst_onscreen = lst_onscreen.OrderByDescending(pac => pac.age).ToList();
+                            break;
+                        case "По диагнозу":
+                            lst_onscreen = lst_onscreen.OrderByDescending(pac => pac.syndrom).ToList();
+                            break;
+                    }
 
+                }
+                sort_form.Close();
+                pacientBindingSource.DataSource = lst_onscreen;
+                pacientBindingSource.ResetBindings(false);
+            }
         }
     }
 

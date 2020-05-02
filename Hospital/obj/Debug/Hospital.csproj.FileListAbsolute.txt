@@ -27,3 +27,4 @@ N:\Kursach\Hospital\Hospital\obj\Debug\ru\Hospital.resources.dll
 N:\Kursach\Hospital\Hospital\obj\Debug\Hospital.departments_list.resources
 N:\Kursach\Hospital\Hospital\obj\Debug\Hospital.add_dialog_formpac.resources
 N:\Kursach\Hospital\Hospital\obj\Debug\Hospital.add_dep_form.resources
+N:\Kursach\Hospital\Hospital\obj\Debug\Hospital.SortPac_form.resources

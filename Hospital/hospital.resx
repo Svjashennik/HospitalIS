@@ -128,8 +128,17 @@
   <data name="name.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="name.Width" type="System.Int32, mscorlib">
-    <value>110</value>
+  <metadata name="depart_name.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="depart_name.HeaderText" xml:space="preserve">
+    <value>Отделение</value>
+  </data>
+  <data name="depart_name.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="depart_name.Width" type="System.Int32, mscorlib">
+    <value>120</value>
   </data>
   <metadata name="age.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -141,22 +150,7 @@
     <value>6</value>
   </data>
   <data name="age.Width" type="System.Int32, mscorlib">
-    <value>110</value>
-  </data>
-  <metadata name="depart_name.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="departmentBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>478, 17</value>
-  </metadata>
-  <data name="depart_name.HeaderText" xml:space="preserve">
-    <value>Отделение</value>
-  </data>
-  <data name="depart_name.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="depart_name.Width" type="System.Int32, mscorlib">
-    <value>120</value>
+    <value>70</value>
   </data>
   <data name="date.HeaderText" xml:space="preserve">
     <value>Год рождения</value>
@@ -165,7 +159,7 @@
     <value>6</value>
   </data>
   <data name="date.Width" type="System.Int32, mscorlib">
-    <value>110</value>
+    <value>80</value>
   </data>
   <data name="syndrom.HeaderText" xml:space="preserve">
     <value>Диагноз</value>
@@ -173,21 +167,18 @@
   <data name="syndrom.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="syndrom.Width" type="System.Int32, mscorlib">
-    <value>110</value>
-  </data>
   <metadata name="pacientBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>295, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pacientDataGridView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>34, 28</value>
+    <value>12, 28</value>
   </data>
   <data name="pacientDataGridView.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>45</value>
   </data>
   <data name="pacientDataGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>621, 336</value>
+    <value>727, 352</value>
   </data>
   <data name="pacientDataGridView.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -202,7 +193,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pacientDataGridView.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>5</value>
   </data>
   <data name="Add_pole.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -211,10 +202,10 @@
     <value>NoControl</value>
   </data>
   <data name="Add_pole.Location" type="System.Drawing.Point, System.Drawing">
-    <value>34, 373</value>
+    <value>6, 19</value>
   </data>
   <data name="Add_pole.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 39</value>
+    <value>90, 30</value>
   </data>
   <data name="Add_pole.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -229,10 +220,10 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Add_pole.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;Add_pole.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>1</value>
   </data>
   <data name="change_but.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -241,10 +232,10 @@
     <value>NoControl</value>
   </data>
   <data name="change_but.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 373</value>
+    <value>102, 19</value>
   </data>
   <data name="change_but.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 39</value>
+    <value>90, 30</value>
   </data>
   <data name="change_but.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -259,10 +250,10 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;change_but.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;change_but.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>0</value>
   </data>
   <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -531,7 +522,7 @@
     <value>0, 0</value>
   </data>
   <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>702, 26</value>
+    <value>784, 26</value>
   </data>
   <data name="toolStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -564,10 +555,10 @@
     <value>NoControl</value>
   </data>
   <data name="quite_save.Location" type="System.Drawing.Point, System.Drawing">
-    <value>523, 371</value>
+    <value>624, 405</value>
   </data>
   <data name="quite_save.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 41</value>
+    <value>130, 30</value>
   </data>
   <data name="quite_save.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -594,10 +585,10 @@
     <value>NoControl</value>
   </data>
   <data name="resetfilterbut.Location" type="System.Drawing.Point, System.Drawing">
-    <value>246, 373</value>
+    <value>6, 15</value>
   </data>
   <data name="resetfilterbut.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 39</value>
+    <value>90, 40</value>
   </data>
   <data name="resetfilterbut.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -612,7 +603,7 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;resetfilterbut.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;resetfilterbut.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -624,10 +615,10 @@
     <value>NoControl</value>
   </data>
   <data name="deletebut.Location" type="System.Drawing.Point, System.Drawing">
-    <value>356, 373</value>
+    <value>198, 19</value>
   </data>
   <data name="deletebut.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 39</value>
+    <value>90, 30</value>
   </data>
   <data name="deletebut.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -642,19 +633,136 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;deletebut.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;deletebut.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 386</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>299, 61</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Действия с пациентами</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="button2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>198, 19</value>
+  </data>
+  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 30</value>
+  </data>
+  <data name="button2.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="button2.Text" xml:space="preserve">
+    <value>Сортировка</value>
+  </data>
+  <data name="&gt;&gt;button2.Name" xml:space="preserve">
+    <value>button2</value>
+  </data>
+  <data name="&gt;&gt;button2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button2.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 19</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 30</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Фильтры</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>317, 386</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>298, 61</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Обработка данных</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="departmentBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>478, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>702, 460</value>
+    <value>784, 459</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 400</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
@@ -662,10 +770,10 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Пациенты</value>
   </data>
-  <data name="&gt;&gt;name.Name" xml:space="preserve">
-    <value>name</value>
+  <data name="&gt;&gt;depart_name.Name" xml:space="preserve">
+    <value>depart_name</value>
   </data>
-  <data name="&gt;&gt;name.Type" xml:space="preserve">
+  <data name="&gt;&gt;depart_name.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;age.Name" xml:space="preserve">
@@ -673,36 +781,6 @@
   </data>
   <data name="&gt;&gt;age.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;depart_name.Name" xml:space="preserve">
-    <value>depart_name</value>
-  </data>
-  <data name="&gt;&gt;depart_name.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewComboBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;departmentBindingSource.Name" xml:space="preserve">
-    <value>departmentBindingSource</value>
-  </data>
-  <data name="&gt;&gt;departmentBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;date.Name" xml:space="preserve">
-    <value>date</value>
-  </data>
-  <data name="&gt;&gt;date.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;syndrom.Name" xml:space="preserve">
-    <value>syndrom</value>
-  </data>
-  <data name="&gt;&gt;syndrom.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pacientBindingSource.Name" xml:space="preserve">
-    <value>pacientBindingSource</value>
-  </data>
-  <data name="&gt;&gt;pacientBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripDropDownButton3.Name" xml:space="preserve">
     <value>toolStripDropDownButton3</value>
@@ -769,6 +847,36 @@
   </data>
   <data name="&gt;&gt;colorDialog1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColorDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;name.Name" xml:space="preserve">
+    <value>name</value>
+  </data>
+  <data name="&gt;&gt;name.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;date.Name" xml:space="preserve">
+    <value>date</value>
+  </data>
+  <data name="&gt;&gt;date.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;syndrom.Name" xml:space="preserve">
+    <value>syndrom</value>
+  </data>
+  <data name="&gt;&gt;syndrom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pacientBindingSource.Name" xml:space="preserve">
+    <value>pacientBindingSource</value>
+  </data>
+  <data name="&gt;&gt;pacientBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;departmentBindingSource.Name" xml:space="preserve">
+    <value>departmentBindingSource</value>
+  </data>
+  <data name="&gt;&gt;departmentBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>hospital</value>
