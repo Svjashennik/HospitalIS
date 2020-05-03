@@ -27,7 +27,7 @@ namespace Hospital
 
         private void Accept_but_Click(object sender, EventArgs e)
         {
-            foreach (RadioButton rad in groupBox1.Controls)
+            foreach (RadioButton rad in groupBox3.Controls)
             {
                 if (rad.Checked)
                 {
@@ -48,9 +48,6 @@ namespace Hospital
             StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void DescradioButton_CheckedChanged(object sender, EventArgs e)
-        {
 
-        }
     }
 }

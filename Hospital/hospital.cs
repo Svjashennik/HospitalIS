@@ -18,15 +18,15 @@ namespace Hospital
 
         FileStream fsdep;
         XmlSerializer xsdep;
-        public List<Department> departments;
+        public List<Department> departments { get; set; }
         public List<Pacient> lst_people = new List<Pacient>(); 
         public List<Pacient> lst_onscreen = new List<Pacient>();
         public List<string> filter = new List<string>();
         public void Form1_Load(object sender, EventArgs e)
         {
-            if (File.Exists("Отделени.xml"))
+            if (File.Exists("Отделения.xml"))
             {
-                fsdep = new FileStream("Отделеyия.xml", FileMode.Open);
+                fsdep = new FileStream("Отделения.xml", FileMode.Open);
                 xsdep = new XmlSerializer(typeof(List<Department>));
                 departments = (List<Department>)xsdep.Deserialize(fsdep);
 
@@ -242,6 +242,18 @@ namespace Hospital
                         case "По диагнозу":
                             lst_onscreen = lst_onscreen.OrderBy(pac => pac.syndrom).ToList();
                             break;
+                        case "По дате приема":
+                            lst_onscreen = lst_onscreen.OrderBy(pac => pac.date_add).ToList();
+                            break;
+                        case "По дате выписки":
+                            lst_onscreen = lst_onscreen.OrderBy(pac => pac.date_close).ToList();
+                            break;
+                        case "По факту пребывания":
+                            lst_onscreen = lst_onscreen.OrderBy(pac => pac.hear).ToList();
+                            break;
+                        case "По кол-ву дней":
+                            lst_onscreen = lst_onscreen.OrderBy(pac => pac.dayhear).ToList();
+                            break;
                     }
                 }
                 else
@@ -260,10 +272,21 @@ namespace Hospital
                         case "По диагнозу":
                             lst_onscreen = lst_onscreen.OrderByDescending(pac => pac.syndrom).ToList();
                             break;
+                        case "По дате приема":
+                            lst_onscreen = lst_onscreen.OrderByDescending(pac => pac.date_add).ToList();
+                            break;
+                        case "По дате выписки":
+                            lst_onscreen = lst_onscreen.OrderByDescending(pac => pac.date_close).ToList();
+                            break;
+                        case "По факту пребывания":
+                            lst_onscreen = lst_onscreen.OrderByDescending(pac => pac.hear).ToList();
+                            break;
+                        case "По кол-ву дней":
+                            lst_onscreen = lst_onscreen.OrderByDescending(pac => pac.dayhear).ToList();
+                            break;
                     }
 
                 }
-                sort_form.Close();
                 pacientBindingSource.DataSource = lst_onscreen;
                 pacientBindingSource.ResetBindings(false);
             }
@@ -276,6 +299,28 @@ namespace Hospital
 
         private void pacientDataGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            filter_form filt_form = new filter_form();
+            filt_form.Owner = this;
+            lst_onscreen = lst_people;
+            filt_form.departmentBindingSource.DataSource = departments;
+            filt_form.ShowDialog();
+            if (filt_form.checkBox1.Checked)
+            {
+                if (filt_form.nameCheck.Checked)
+                {
+
+                }
+            }
 
         }
     }

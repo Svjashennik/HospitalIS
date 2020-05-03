@@ -49,12 +49,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.departmentDataGridView = new System.Windows.Forms.DataGridView();
-            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -92,7 +92,7 @@
             this.toolStripDropDownButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(784, 26);
+            this.toolStrip1.Size = new System.Drawing.Size(784, 25);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -105,20 +105,20 @@
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(66, 23);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(57, 22);
             this.toolStripDropDownButton1.Text = "Опции";
             // 
             // настройкаЦветаToolStripMenuItem
             // 
             this.настройкаЦветаToolStripMenuItem.Name = "настройкаЦветаToolStripMenuItem";
-            this.настройкаЦветаToolStripMenuItem.Size = new System.Drawing.Size(205, 24);
+            this.настройкаЦветаToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.настройкаЦветаToolStripMenuItem.Text = "Настройка цвета";
             this.настройкаЦветаToolStripMenuItem.Click += new System.EventHandler(this.настройкаЦветаToolStripMenuItem_Click);
             // 
             // настройкаШрифтаToolStripMenuItem
             // 
             this.настройкаШрифтаToolStripMenuItem.Name = "настройкаШрифтаToolStripMenuItem";
-            this.настройкаШрифтаToolStripMenuItem.Size = new System.Drawing.Size(205, 24);
+            this.настройкаШрифтаToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.настройкаШрифтаToolStripMenuItem.Text = "Настройка шрифта";
             this.настройкаШрифтаToolStripMenuItem.Click += new System.EventHandler(this.настройкаШрифтаToolStripMenuItem_Click);
             // 
@@ -131,21 +131,21 @@
             this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
             this.toolStripDropDownButton2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(73, 23);
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(63, 22);
             this.toolStripDropDownButton2.Text = "Данные";
             this.toolStripDropDownButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             // 
             // отделенияToolStripMenuItem
             // 
             this.отделенияToolStripMenuItem.Name = "отделенияToolStripMenuItem";
-            this.отделенияToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
+            this.отделенияToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.отделенияToolStripMenuItem.Text = "Отделения";
             this.отделенияToolStripMenuItem.Click += new System.EventHandler(this.отделенияToolStripMenuItem_Click);
             // 
             // пациентыToolStripMenuItem
             // 
             this.пациентыToolStripMenuItem.Name = "пациентыToolStripMenuItem";
-            this.пациентыToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
+            this.пациентыToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.пациентыToolStripMenuItem.Text = "Пациенты";
             this.пациентыToolStripMenuItem.Click += new System.EventHandler(this.пациентыToolStripMenuItem_Click);
             // 
@@ -206,6 +206,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Сортировка";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -248,10 +249,6 @@
             this.departmentDataGridView.RowHeadersWidth = 45;
             this.departmentDataGridView.Size = new System.Drawing.Size(760, 346);
             this.departmentDataGridView.TabIndex = 8;
-            // 
-            // departmentBindingSource
-            // 
-            this.departmentBindingSource.DataSource = typeof(Department);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -299,6 +296,10 @@
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // departmentBindingSource
+            // 
+            this.departmentBindingSource.DataSource = typeof(Department);
             // 
             // departments_list
             // 

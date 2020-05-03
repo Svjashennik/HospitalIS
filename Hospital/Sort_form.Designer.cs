@@ -28,76 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.nameradioBut = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.syndromBut = new System.Windows.Forms.RadioButton();
-            this.ageradioBut = new System.Windows.Forms.RadioButton();
-            this.departradioBut = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.DescradioButton = new System.Windows.Forms.RadioButton();
             this.AscradioButton = new System.Windows.Forms.RadioButton();
             this.Accept_but = new System.Windows.Forms.Button();
             this.Cansel_but = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.hearrad = new System.Windows.Forms.RadioButton();
+            this.datecloseradioBut = new System.Windows.Forms.RadioButton();
+            this.dateaddRad = new System.Windows.Forms.RadioButton();
+            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.radioButton9 = new System.Windows.Forms.RadioButton();
+            this.radioButton10 = new System.Windows.Forms.RadioButton();
+            this.dayrad = new System.Windows.Forms.RadioButton();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // nameradioBut
-            // 
-            this.nameradioBut.AutoSize = true;
-            this.nameradioBut.Location = new System.Drawing.Point(6, 29);
-            this.nameradioBut.Name = "nameradioBut";
-            this.nameradioBut.Size = new System.Drawing.Size(99, 19);
-            this.nameradioBut.TabIndex = 1;
-            this.nameradioBut.TabStop = true;
-            this.nameradioBut.Text = "По фамилии";
-            this.nameradioBut.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.syndromBut);
-            this.groupBox1.Controls.Add(this.ageradioBut);
-            this.groupBox1.Controls.Add(this.departradioBut);
-            this.groupBox1.Controls.Add(this.nameradioBut);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(153, 157);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Варианты сортировки";
-            // 
-            // syndromBut
-            // 
-            this.syndromBut.AutoSize = true;
-            this.syndromBut.Location = new System.Drawing.Point(6, 105);
-            this.syndromBut.Name = "syndromBut";
-            this.syndromBut.Size = new System.Drawing.Size(95, 19);
-            this.syndromBut.TabIndex = 4;
-            this.syndromBut.TabStop = true;
-            this.syndromBut.Text = "По диагнозу";
-            this.syndromBut.UseVisualStyleBackColor = true;
-            // 
-            // ageradioBut
-            // 
-            this.ageradioBut.AutoSize = true;
-            this.ageradioBut.Location = new System.Drawing.Point(6, 80);
-            this.ageradioBut.Name = "ageradioBut";
-            this.ageradioBut.Size = new System.Drawing.Size(96, 19);
-            this.ageradioBut.TabIndex = 3;
-            this.ageradioBut.TabStop = true;
-            this.ageradioBut.Text = "По возрасту";
-            this.ageradioBut.UseVisualStyleBackColor = true;
-            // 
-            // departradioBut
-            // 
-            this.departradioBut.AutoSize = true;
-            this.departradioBut.Location = new System.Drawing.Point(6, 54);
-            this.departradioBut.Name = "departradioBut";
-            this.departradioBut.Size = new System.Drawing.Size(109, 19);
-            this.departradioBut.TabIndex = 2;
-            this.departradioBut.TabStop = true;
-            this.departradioBut.Text = "По отделению";
-            this.departradioBut.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -115,19 +62,18 @@
             this.DescradioButton.AutoSize = true;
             this.DescradioButton.Location = new System.Drawing.Point(6, 55);
             this.DescradioButton.Name = "DescradioButton";
-            this.DescradioButton.Size = new System.Drawing.Size(128, 19);
+            this.DescradioButton.Size = new System.Drawing.Size(115, 17);
             this.DescradioButton.TabIndex = 1;
             this.DescradioButton.TabStop = true;
             this.DescradioButton.Text = "По возрастванию";
             this.DescradioButton.UseVisualStyleBackColor = true;
-            this.DescradioButton.CheckedChanged += new System.EventHandler(this.DescradioButton_CheckedChanged);
             // 
             // AscradioButton
             // 
             this.AscradioButton.AutoSize = true;
             this.AscradioButton.Location = new System.Drawing.Point(6, 29);
             this.AscradioButton.Name = "AscradioButton";
-            this.AscradioButton.Size = new System.Drawing.Size(102, 19);
+            this.AscradioButton.Size = new System.Drawing.Size(93, 17);
             this.AscradioButton.TabIndex = 0;
             this.AscradioButton.TabStop = true;
             this.AscradioButton.Text = "По убыванию";
@@ -153,38 +99,146 @@
             this.Cansel_but.UseVisualStyleBackColor = true;
             this.Cansel_but.Click += new System.EventHandler(this.Cansel_but_Click);
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.dayrad);
+            this.groupBox3.Controls.Add(this.hearrad);
+            this.groupBox3.Controls.Add(this.datecloseradioBut);
+            this.groupBox3.Controls.Add(this.dateaddRad);
+            this.groupBox3.Controls.Add(this.radioButton7);
+            this.groupBox3.Controls.Add(this.radioButton8);
+            this.groupBox3.Controls.Add(this.radioButton9);
+            this.groupBox3.Controls.Add(this.radioButton10);
+            this.groupBox3.Location = new System.Drawing.Point(12, 12);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(147, 224);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Варианты сортировки";
+            // 
+            // hearrad
+            // 
+            this.hearrad.AutoSize = true;
+            this.hearrad.Location = new System.Drawing.Point(6, 175);
+            this.hearrad.Name = "hearrad";
+            this.hearrad.Size = new System.Drawing.Size(137, 17);
+            this.hearrad.TabIndex = 5;
+            this.hearrad.TabStop = true;
+            this.hearrad.Text = "По факту пребывания";
+            this.hearrad.UseVisualStyleBackColor = true;
+            // 
+            // datecloseradioBut
+            // 
+            this.datecloseradioBut.AutoSize = true;
+            this.datecloseradioBut.Location = new System.Drawing.Point(6, 152);
+            this.datecloseradioBut.Name = "datecloseradioBut";
+            this.datecloseradioBut.Size = new System.Drawing.Size(112, 17);
+            this.datecloseradioBut.TabIndex = 5;
+            this.datecloseradioBut.TabStop = true;
+            this.datecloseradioBut.Text = "По дате выписки";
+            this.datecloseradioBut.UseVisualStyleBackColor = true;
+            // 
+            // dateaddRad
+            // 
+            this.dateaddRad.AutoSize = true;
+            this.dateaddRad.Location = new System.Drawing.Point(7, 129);
+            this.dateaddRad.Name = "dateaddRad";
+            this.dateaddRad.Size = new System.Drawing.Size(106, 17);
+            this.dateaddRad.TabIndex = 5;
+            this.dateaddRad.TabStop = true;
+            this.dateaddRad.Text = "По дате приема";
+            this.dateaddRad.UseVisualStyleBackColor = true;
+            // 
+            // radioButton7
+            // 
+            this.radioButton7.AutoSize = true;
+            this.radioButton7.Location = new System.Drawing.Point(6, 105);
+            this.radioButton7.Name = "radioButton7";
+            this.radioButton7.Size = new System.Drawing.Size(88, 17);
+            this.radioButton7.TabIndex = 4;
+            this.radioButton7.TabStop = true;
+            this.radioButton7.Text = "По диагнозу";
+            this.radioButton7.UseVisualStyleBackColor = true;
+            // 
+            // radioButton8
+            // 
+            this.radioButton8.AutoSize = true;
+            this.radioButton8.Location = new System.Drawing.Point(6, 80);
+            this.radioButton8.Name = "radioButton8";
+            this.radioButton8.Size = new System.Drawing.Size(88, 17);
+            this.radioButton8.TabIndex = 3;
+            this.radioButton8.TabStop = true;
+            this.radioButton8.Text = "По возрасту";
+            this.radioButton8.UseVisualStyleBackColor = true;
+            // 
+            // radioButton9
+            // 
+            this.radioButton9.AutoSize = true;
+            this.radioButton9.Location = new System.Drawing.Point(6, 54);
+            this.radioButton9.Name = "radioButton9";
+            this.radioButton9.Size = new System.Drawing.Size(97, 17);
+            this.radioButton9.TabIndex = 2;
+            this.radioButton9.TabStop = true;
+            this.radioButton9.Text = "По отделению";
+            this.radioButton9.UseVisualStyleBackColor = true;
+            // 
+            // radioButton10
+            // 
+            this.radioButton10.AutoSize = true;
+            this.radioButton10.Location = new System.Drawing.Point(6, 29);
+            this.radioButton10.Name = "radioButton10";
+            this.radioButton10.Size = new System.Drawing.Size(88, 17);
+            this.radioButton10.TabIndex = 1;
+            this.radioButton10.TabStop = true;
+            this.radioButton10.Text = "По фамилии";
+            this.radioButton10.UseVisualStyleBackColor = true;
+            // 
+            // dayrad
+            // 
+            this.dayrad.AutoSize = true;
+            this.dayrad.Location = new System.Drawing.Point(6, 198);
+            this.dayrad.Name = "dayrad";
+            this.dayrad.Size = new System.Drawing.Size(101, 17);
+            this.dayrad.TabIndex = 5;
+            this.dayrad.TabStop = true;
+            this.dayrad.Text = "По кол-ву дней";
+            this.dayrad.UseVisualStyleBackColor = true;
+            // 
             // SortPac_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(335, 179);
+            this.ClientSize = new System.Drawing.Size(335, 247);
             this.Controls.Add(this.Cansel_but);
             this.Controls.Add(this.Accept_but);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "SortPac_form";
             this.Text = "Сортировка";
             this.Load += new System.EventHandler(this.SortPac_form_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.RadioButton nameradioBut;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton syndromBut;
-        private System.Windows.Forms.RadioButton ageradioBut;
-        private System.Windows.Forms.RadioButton departradioBut;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton DescradioButton;
         private System.Windows.Forms.RadioButton AscradioButton;
         private System.Windows.Forms.Button Accept_but;
         private System.Windows.Forms.Button Cansel_but;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.RadioButton hearrad;
+        private System.Windows.Forms.RadioButton datecloseradioBut;
+        private System.Windows.Forms.RadioButton dateaddRad;
+        private System.Windows.Forms.RadioButton radioButton7;
+        private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.RadioButton radioButton9;
+        private System.Windows.Forms.RadioButton radioButton10;
+        private System.Windows.Forms.RadioButton dayrad;
     }
 }
