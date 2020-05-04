@@ -53,17 +53,17 @@
             this.button2 = new System.Windows.Forms.Button();
             this.filtbut = new System.Windows.Forms.Button();
             this.pacientDataGridView = new System.Windows.Forms.DataGridView();
-            this.date_add = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date_close = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dayhear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hear = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.pacientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.depart_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.age = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date_add = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date_close = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.syndrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pacientBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dayhear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hear = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -240,38 +240,13 @@
             this.pacientDataGridView.DataSource = this.pacientBindingSource;
             this.pacientDataGridView.Name = "pacientDataGridView";
             // 
-            // date_add
+            // pacientBindingSource
             // 
-            this.date_add.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.date_add.DataPropertyName = "date_add";
-            resources.ApplyResources(this.date_add, "date_add");
-            this.date_add.Name = "date_add";
-            this.date_add.ReadOnly = true;
+            this.pacientBindingSource.DataSource = typeof(Pacient);
             // 
-            // date_close
+            // departmentBindingSource
             // 
-            this.date_close.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.date_close.DataPropertyName = "date_close";
-            resources.ApplyResources(this.date_close, "date_close");
-            this.date_close.Name = "date_close";
-            this.date_close.ReadOnly = true;
-            // 
-            // dayhear
-            // 
-            this.dayhear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dayhear.DataPropertyName = "dayhear";
-            resources.ApplyResources(this.dayhear, "dayhear");
-            this.dayhear.Name = "dayhear";
-            this.dayhear.ReadOnly = true;
-            // 
-            // hear
-            // 
-            this.hear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.hear.DataPropertyName = "hear";
-            this.hear.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            resources.ApplyResources(this.hear, "hear");
-            this.hear.Name = "hear";
-            this.hear.ReadOnly = true;
+            this.departmentBindingSource.DataSource = typeof(Department);
             // 
             // name
             // 
@@ -308,6 +283,22 @@
             this.age.Name = "age";
             this.age.ReadOnly = true;
             // 
+            // date_add
+            // 
+            this.date_add.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.date_add.DataPropertyName = "date_add";
+            resources.ApplyResources(this.date_add, "date_add");
+            this.date_add.Name = "date_add";
+            this.date_add.ReadOnly = true;
+            // 
+            // date_close
+            // 
+            this.date_close.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.date_close.DataPropertyName = "date_close";
+            resources.ApplyResources(this.date_close, "date_close");
+            this.date_close.Name = "date_close";
+            this.date_close.ReadOnly = true;
+            // 
             // syndrom
             // 
             this.syndrom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -317,13 +308,22 @@
             this.syndrom.Name = "syndrom";
             this.syndrom.ReadOnly = true;
             // 
-            // pacientBindingSource
+            // dayhear
             // 
-            this.pacientBindingSource.DataSource = typeof(Pacient);
+            this.dayhear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dayhear.DataPropertyName = "dayhear";
+            resources.ApplyResources(this.dayhear, "dayhear");
+            this.dayhear.Name = "dayhear";
+            this.dayhear.ReadOnly = true;
             // 
-            // departmentBindingSource
+            // hear
             // 
-            this.departmentBindingSource.DataSource = typeof(Department);
+            this.hear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.hear.DataPropertyName = "hear";
+            this.hear.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            resources.ApplyResources(this.hear, "hear");
+            this.hear.Name = "hear";
+            this.hear.ReadOnly = true;
             // 
             // hospital
             // 

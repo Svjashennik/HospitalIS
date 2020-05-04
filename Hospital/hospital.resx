@@ -678,13 +678,13 @@
     <value>Фамилия</value>
   </data>
   <data name="name.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>120</value>
   </data>
   <data name="depart_name.HeaderText" xml:space="preserve">
     <value>Отделение</value>
   </data>
   <data name="depart_name.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>120</value>
   </data>
   <data name="date.HeaderText" xml:space="preserve">
     <value>Дата рождения</value>
@@ -732,7 +732,7 @@
     <value>Диагноз</value>
   </data>
   <data name="syndrom.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>120</value>
   </data>
   <metadata name="dayhear.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -799,9 +799,6 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1184, 562</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>800, 400</value>
@@ -878,29 +875,17 @@
   <data name="&gt;&gt;colorDialog1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColorDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;date_add.Name" xml:space="preserve">
-    <value>date_add</value>
+  <data name="&gt;&gt;pacientBindingSource.Name" xml:space="preserve">
+    <value>pacientBindingSource</value>
   </data>
-  <data name="&gt;&gt;date_add.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;pacientBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;date_close.Name" xml:space="preserve">
-    <value>date_close</value>
+  <data name="&gt;&gt;departmentBindingSource.Name" xml:space="preserve">
+    <value>departmentBindingSource</value>
   </data>
-  <data name="&gt;&gt;date_close.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dayhear.Name" xml:space="preserve">
-    <value>dayhear</value>
-  </data>
-  <data name="&gt;&gt;dayhear.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;hear.Name" xml:space="preserve">
-    <value>hear</value>
-  </data>
-  <data name="&gt;&gt;hear.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;departmentBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;name.Name" xml:space="preserve">
     <value>name</value>
@@ -926,23 +911,35 @@
   <data name="&gt;&gt;age.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;date_add.Name" xml:space="preserve">
+    <value>date_add</value>
+  </data>
+  <data name="&gt;&gt;date_add.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;date_close.Name" xml:space="preserve">
+    <value>date_close</value>
+  </data>
+  <data name="&gt;&gt;date_close.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;syndrom.Name" xml:space="preserve">
     <value>syndrom</value>
   </data>
   <data name="&gt;&gt;syndrom.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pacientBindingSource.Name" xml:space="preserve">
-    <value>pacientBindingSource</value>
+  <data name="&gt;&gt;dayhear.Name" xml:space="preserve">
+    <value>dayhear</value>
   </data>
-  <data name="&gt;&gt;pacientBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;dayhear.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;departmentBindingSource.Name" xml:space="preserve">
-    <value>departmentBindingSource</value>
+  <data name="&gt;&gt;hear.Name" xml:space="preserve">
+    <value>hear</value>
   </data>
-  <data name="&gt;&gt;departmentBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;hear.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>hospital</value>
