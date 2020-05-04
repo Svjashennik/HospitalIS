@@ -102,7 +102,6 @@
             this.toolStripButton1});
             resources.ApplyResources(this.toolStrip1, "toolStrip1");
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // toolStripDropDownButton3
             // 
@@ -111,7 +110,6 @@
             this.сохранитьToolStripMenuItem});
             resources.ApplyResources(this.toolStripDropDownButton3, "toolStripDropDownButton3");
             this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
-            this.toolStripDropDownButton3.Click += new System.EventHandler(this.toolStripDropDownButton3_Click);
             // 
             // сохранитьToolStripMenuItem
             // 
@@ -218,7 +216,7 @@
             resources.ApplyResources(this.filtbut, "filtbut");
             this.filtbut.Name = "filtbut";
             this.filtbut.UseVisualStyleBackColor = true;
-            this.filtbut.Click += new System.EventHandler(this.button1_Click);
+            this.filtbut.Click += new System.EventHandler(this.filt_Click);
             // 
             // pacientDataGridView
             // 
@@ -241,7 +239,6 @@
             this.hear});
             this.pacientDataGridView.DataSource = this.pacientBindingSource;
             this.pacientDataGridView.Name = "pacientDataGridView";
-            this.pacientDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.pacientDataGridView_CellContentClick_1);
             // 
             // date_add
             // 

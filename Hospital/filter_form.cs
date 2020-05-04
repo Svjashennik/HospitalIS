@@ -12,14 +12,15 @@ namespace Hospital
 {
     public partial class filter_form : Form
     {
-        bool flag;
+        public bool flag;
         public filter_form()
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
             groupBox1.Enabled = false;
-            groupBox1.Enabled = false;
-            groupBox1.Enabled = false;
+            groupBox2.Enabled = false;
+            groupBox4.Enabled = false;
+            comboBox2.SelectedItem = comboBox2.Items[0];
         }
 
         private void dateadd1_ValueChanged(object sender, EventArgs e)
@@ -81,6 +82,12 @@ namespace Hospital
                 groupBox2.Enabled = true;
             else
                 groupBox2.Enabled = false;
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox2.Text == "Числится") factcheck.Checked = true;
+            else factcheck.Checked = false;
         }
     }
 }

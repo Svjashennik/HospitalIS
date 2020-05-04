@@ -22,6 +22,7 @@ namespace Hospital
         public List<Pacient> lst_people = new List<Pacient>(); 
         public List<Pacient> lst_onscreen = new List<Pacient>();
         public List<string> filter = new List<string>();
+        public filter_form filt_form = new filter_form();
         public void Form1_Load(object sender, EventArgs e)
         {
             if (File.Exists("Отделения.xml"))
@@ -29,8 +30,7 @@ namespace Hospital
                 fsdep = new FileStream("Отделения.xml", FileMode.Open);
                 xsdep = new XmlSerializer(typeof(List<Department>));
                 departments = (List<Department>)xsdep.Deserialize(fsdep);
-
-                foreach(Department dep in departments)
+                foreach (Department dep in departments)
                 {
                     foreach (Pacient pac in dep.people)
                     {
@@ -209,16 +209,6 @@ namespace Hospital
             fsdep.Close();
         }
 
-        private void toolStripDropDownButton3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pacientDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             SortPac_form sort_form = new SortPac_form();
@@ -292,40 +282,79 @@ namespace Hospital
             }
         }
 
-        private void pacientBindingSource_CurrentChanged(object sender, EventArgs e)
+        private void filt_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void pacientDataGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            filter_form filt_form = new filter_form();
             filt_form.Owner = this;
             lst_onscreen = lst_people;
+            filt_form.flag = false;
             filt_form.departmentBindingSource.DataSource = departments;
             filt_form.ShowDialog();
+            if (!filt_form.flag) return;
+
             if (filt_form.checkBox1.Checked)
             {
                 if (filt_form.nameCheck.Checked)
                 {
-
+                    lst_onscreen = lst_onscreen.FindAll(pac => pac.name.Contains(filt_form.namesub.Text));
+                }
+                if (filt_form.departsub.Checked)
+                {
+                    lst_onscreen = lst_onscreen.FindAll(pac => pac.depart_name.Contains(filt_form.departsubtext.Text));
+                }
+                if (filt_form.syndromsub.Checked)
+                { 
+                    lst_onscreen = lst_onscreen.FindAll(pac => pac.syndrom.Contains(filt_form.syndromsubtext.Text));
                 }
             }
 
+            if (filt_form.checkBox2.Checked)
+            {
+                if (filt_form.datecheck.Checked)
+                {
+                    lst_onscreen = lst_onscreen.FindAll(pac => (filt_form.date1.Value <= pac.date && pac.date <= filt_form.date2.Value));
+                }
+
+                if (filt_form.dateaddcheck.Checked)
+                {
+                    lst_onscreen = lst_onscreen.FindAll(pac => (filt_form.dateadd1.Value <= pac.date_add && pac.date_add <= filt_form.dateadd2.Value));
+                }
+
+                if (filt_form.datecloseCheck.Checked)
+                {
+                    lst_onscreen = lst_onscreen.FindAll(pac => (filt_form.dateclose1.Value <= pac.date_close && pac.date_close <= filt_form.dateclose2.Value));
+                }
+            }
+            if (filt_form.checkBox3.Checked)
+            {
+                if (filt_form.departcheck.Checked)
+                {
+                        lst_onscreen = lst_onscreen.FindAll(pac => pac.depart_name == filt_form.departbox.Text);
+                }
+                        
+                if (filt_form.dayhearcheck.Checked)
+                {
+                        lst_onscreen = lst_onscreen.FindAll(pac => (int.Parse(filt_form.day1.Text) <= pac.dayhear && int.Parse(filt_form.day2.Text) >= pac.dayhear));
+                }
+
+                if (filt_form.agecheck.Checked)
+                {
+                        lst_onscreen = lst_onscreen.FindAll(pac => (int.Parse(filt_form.age1.Text) <= pac.age && int.Parse(filt_form.age2.Text) >= pac.age));
+                }
+                if (filt_form.hearcheck.Checked)
+                {
+                    if (filt_form.factcheck.Checked) lst_onscreen = lst_onscreen.FindAll(pac => pac.hear);
+                    else lst_onscreen = lst_onscreen.FindAll(pac => !pac.hear);
+                }
+            }
+                pacientBindingSource.DataSource = lst_onscreen;
+                pacientBindingSource.ResetBindings(false);
         }
-    }
+
+
+
 
     }
+}
 
 
    
