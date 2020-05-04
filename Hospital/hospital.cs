@@ -365,9 +365,10 @@ namespace Hospital
             pacientBindingSource.ResetBindings(false);
         }
 
-
-
-
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _=MessageBox.Show("Данная программа разработана студентом \n Финансового Университета второго года обучения группы ПИ18-2 Асташкина Никиты. \n Научный руководитель - Чистов Д.В.", "О программе", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
 
