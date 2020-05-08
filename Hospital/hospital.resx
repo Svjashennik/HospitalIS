@@ -196,7 +196,7 @@
     <value>539, 17</value>
   </metadata>
   <data name="сохранитьToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 22</value>
+    <value>151, 24</value>
   </data>
   <data name="сохранитьToolStripMenuItem.Text" xml:space="preserve">
     <value>Сохранить</value>
@@ -204,7 +204,7 @@
   <data name="toolStripDropDownButton3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
+        YQUAAAAJcEhZcwAAEE0AABBNAWeMAeAAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
         YKxG6WBogkMZKgPNCEVJFBGdGETEvgwyO9DJE5syZw3PIlPEE9pgBCLZ5XvdMB8Ew8gXbl54nuf63dd9
         0OGSnwCahxbPRNPAPMw9Xpg6ZmF46kZZ0xSKzJPIrhpDWsVnpBhGkKx3nAX8Pv7z1zg8OoY/cITdn4fw
         bf/C0kYAN3Ma/w3gWfZL5kzTKBxjWyK2DftwI9tyMYCZKXbNHaD91bLYJrDXsYbrWfUKwJrPE9M2M1Oc
@@ -220,19 +220,19 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripDropDownButton3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 22</value>
+    <value>55, 23</value>
   </data>
   <data name="toolStripDropDownButton3.Text" xml:space="preserve">
     <value>Файл</value>
   </data>
   <data name="shrift_button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 22</value>
+    <value>206, 24</value>
   </data>
   <data name="shrift_button.Text" xml:space="preserve">
     <value>Настройки шрифта</value>
   </data>
   <data name="color_but.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 22</value>
+    <value>206, 24</value>
   </data>
   <data name="color_but.Text" xml:space="preserve">
     <value>Настройки цвета</value>
@@ -240,7 +240,7 @@
   <data name="toolStripDropDownButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
+        YQUAAAAJcEhZcwAAEE0AABBNAWeMAeAAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
         YKxG6WBogkMZKgPNCEVJFBGdGETEvgwyO9DJE5syZw3PIlPEE9pgBCLZ5XvdMB8Ew8gXbl54nuf63dd9
         0OGSnwCahxbPRNPAPMw9Xpg6ZmF46kZZ0xSKzJPIrhpDWsVnpBhGkKx3nAX8Pv7z1zg8OoY/cITdn4fw
         bf/C0kYAN3Ma/w3gWfZL5kzTKBxjWyK2DftwI9tyMYCZKXbNHaD91bLYJrDXsYbrWfUKwJrPE9M2M1Oc
@@ -256,19 +256,19 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripDropDownButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 22</value>
+    <value>66, 23</value>
   </data>
   <data name="toolStripDropDownButton1.Text" xml:space="preserve">
     <value>Опции</value>
   </data>
   <data name="департаментыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 22</value>
+    <value>153, 24</value>
   </data>
   <data name="департаментыToolStripMenuItem.Text" xml:space="preserve">
     <value>Отделения</value>
   </data>
   <data name="пациентыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 22</value>
+    <value>153, 24</value>
   </data>
   <data name="пациентыToolStripMenuItem.Text" xml:space="preserve">
     <value>Пациенты</value>
@@ -276,7 +276,7 @@
   <data name="toolStripDropDownButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
+        YQUAAAAJcEhZcwAAEE0AABBNAWeMAeAAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
         YKxG6WBogkMZKgPNCEVJFBGdGETEvgwyO9DJE5syZw3PIlPEE9pgBCLZ5XvdMB8Ew8gXbl54nuf63dd9
         0OGSnwCahxbPRNPAPMw9Xpg6ZmF46kZZ0xSKzJPIrhpDWsVnpBhGkKx3nAX8Pv7z1zg8OoY/cITdn4fw
         bf/C0kYAN3Ma/w3gWfZL5kzTKBxjWyK2DftwI9tyMYCZKXbNHaD91bLYJrDXsYbrWfUKwJrPE9M2M1Oc
@@ -292,13 +292,13 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripDropDownButton2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 22</value>
+    <value>73, 23</value>
   </data>
   <data name="toolStripDropDownButton2.Text" xml:space="preserve">
     <value>Данные</value>
   </data>
   <data name="оПрограммеToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>170, 24</value>
   </data>
   <data name="оПрограммеToolStripMenuItem.Text" xml:space="preserve">
     <value>О программе</value>
@@ -306,7 +306,7 @@
   <data name="toolStripDropDownButton4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
+        YQUAAAAJcEhZcwAAEE0AABBNAWeMAeAAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
         YKxG6WBogkMZKgPNCEVJFBGdGETEvgwyO9DJE5syZw3PIlPEE9pgBCLZ5XvdMB8Ew8gXbl54nuf63dd9
         0OGSnwCahxbPRNPAPMw9Xpg6ZmF46kZZ0xSKzJPIrhpDWsVnpBhGkKx3nAX8Pv7z1zg8OoY/cITdn4fw
         bf/C0kYAN3Ma/w3gWfZL5kzTKBxjWyK2DftwI9tyMYCZKXbNHaD91bLYJrDXsYbrWfUKwJrPE9M2M1Oc
@@ -322,7 +322,7 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripDropDownButton4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 22</value>
+    <value>107, 23</value>
   </data>
   <data name="toolStripDropDownButton4.Text" xml:space="preserve">
     <value>Информация</value>
@@ -330,7 +330,7 @@
   <data name="toolStripButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAB69SURBVHhe7d19zLZ3Xd9xSlugPBR5FLaWIYGO2SlPhhSU
+        YQUAAAAJcEhZcwAAEE0AABBNAWeMAeAAAB69SURBVHhe7d19zLZ3Xd9xSlugPBR5FLaWIYGO2SlPhhSU
         FJCazZkJA6UrzmCMdbTZOnGBZRBWBk5UzJDRRCECNiIbYCA4JKwqkDoQxwRXG9gkXWfRtpvQWukDLe32
         OdYwYOfvuO/rvo/r+J7H7zhe7+T1/3X2/N2/fu77Oh/uIUmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmS
         JEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmS
@@ -468,7 +468,7 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
+    <value>25, 23</value>
   </data>
   <data name="toolStripButton1.Text" xml:space="preserve">
     <value>Сохранить</value>
@@ -477,7 +477,7 @@
     <value>0, 0</value>
   </data>
   <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1184, 25</value>
+    <value>1184, 26</value>
   </data>
   <data name="toolStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -495,7 +495,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;toolStrip1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <metadata name="fontDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>651, 17</value>
@@ -531,7 +531,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;quite_save.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="resetfilterbut.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -618,7 +618,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="groupBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -699,7 +699,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="pacientDataGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -716,65 +716,20 @@
   <data name="depart_name.MinimumWidth" type="System.Int32, mscorlib">
     <value>120</value>
   </data>
-  <data name="date.HeaderText" xml:space="preserve">
-    <value>Дата рождения</value>
-  </data>
-  <data name="date.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="date.Width" type="System.Int32, mscorlib">
-    <value>110</value>
-  </data>
-  <data name="age.HeaderText" xml:space="preserve">
-    <value>Возраст</value>
-  </data>
-  <data name="age.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="age.Width" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <metadata name="date_add.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="date_add.HeaderText" xml:space="preserve">
-    <value>Дата принятия</value>
-  </data>
-  <data name="date_add.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="date_add.Width" type="System.Int32, mscorlib">
-    <value>110</value>
-  </data>
-  <metadata name="date_close.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="date_close.HeaderText" xml:space="preserve">
-    <value>Дата выписки</value>
-  </data>
-  <data name="date_close.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="date_close.Width" type="System.Int32, mscorlib">
-    <value>110</value>
-  </data>
   <data name="syndrom.HeaderText" xml:space="preserve">
     <value>Диагноз</value>
   </data>
   <data name="syndrom.MinimumWidth" type="System.Int32, mscorlib">
     <value>120</value>
   </data>
-  <metadata name="dayhear.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="date.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="dayhear.HeaderText" xml:space="preserve">
-    <value>Дней в больнице</value>
+  <data name="date.HeaderText" xml:space="preserve">
+    <value>Дата рождения</value>
   </data>
-  <data name="dayhear.MinimumWidth" type="System.Int32, mscorlib">
+  <data name="date.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
-  </data>
-  <data name="dayhear.Width" type="System.Int32, mscorlib">
-    <value>80</value>
   </data>
   <metadata name="hear.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -792,13 +747,13 @@
     <value>904, 17</value>
   </metadata>
   <data name="pacientDataGridView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 29</value>
+    <value>12, 29</value>
   </data>
   <data name="pacientDataGridView.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>45</value>
   </data>
   <data name="pacientDataGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1131, 454</value>
+    <value>839, 454</value>
   </data>
   <data name="pacientDataGridView.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -813,6 +768,69 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pacientDataGridView.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupBox3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Right</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.8679247pt</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 31</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 20</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>ФИО</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupBox3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.2641506pt</value>
+  </data>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>873, 29</value>
+  </data>
+  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>299, 454</value>
+  </data>
+  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>Подробности</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <metadata name="departmentBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -829,9 +847,6 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1184, 562</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>800, 400</value>
@@ -890,6 +905,18 @@
   <data name="&gt;&gt;пациентыToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;toolStripDropDownButton4.Name" xml:space="preserve">
+    <value>toolStripDropDownButton4</value>
+  </data>
+  <data name="&gt;&gt;toolStripDropDownButton4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripDropDownButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;оПрограммеToolStripMenuItem.Name" xml:space="preserve">
+    <value>оПрограммеToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;оПрограммеToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;toolStripButton1.Name" xml:space="preserve">
     <value>toolStripButton1</value>
   </data>
@@ -908,22 +935,10 @@
   <data name="&gt;&gt;colorDialog1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColorDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;date_add.Name" xml:space="preserve">
-    <value>date_add</value>
+  <data name="&gt;&gt;date.Name" xml:space="preserve">
+    <value>date</value>
   </data>
-  <data name="&gt;&gt;date_add.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;date_close.Name" xml:space="preserve">
-    <value>date_close</value>
-  </data>
-  <data name="&gt;&gt;date_close.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dayhear.Name" xml:space="preserve">
-    <value>dayhear</value>
-  </data>
-  <data name="&gt;&gt;dayhear.Type" xml:space="preserve">
+  <data name="&gt;&gt;date.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;hear.Name" xml:space="preserve">
@@ -944,18 +959,6 @@
   <data name="&gt;&gt;depart_name.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;date.Name" xml:space="preserve">
-    <value>date</value>
-  </data>
-  <data name="&gt;&gt;date.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;age.Name" xml:space="preserve">
-    <value>age</value>
-  </data>
-  <data name="&gt;&gt;age.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;syndrom.Name" xml:space="preserve">
     <value>syndrom</value>
   </data>
@@ -973,18 +976,6 @@
   </data>
   <data name="&gt;&gt;departmentBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripDropDownButton4.Name" xml:space="preserve">
-    <value>toolStripDropDownButton4</value>
-  </data>
-  <data name="&gt;&gt;toolStripDropDownButton4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripDropDownButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;оПрограммеToolStripMenuItem.Name" xml:space="preserve">
-    <value>оПрограммеToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;оПрограммеToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>hospital</value>

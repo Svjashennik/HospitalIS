@@ -15,7 +15,7 @@ namespace Hospital
         public bool flag = false;
         public bool chanfl = false;
         public bool again;
-        public DataGridViewRow sel;
+        public Pacient sel;
         public add_dialog_formpac()
         {
             InitializeComponent();
@@ -25,12 +25,12 @@ namespace Hospital
         {
             if (chanfl)
             {
-                namebox.Text = sel.Cells["name"].Value.ToString();
-                datebox.Value = (DateTime)sel.Cells["date"].Value;
-                syndrombox.Text = sel.Cells["syndrom"].Value.ToString();
-                depbox.Text = sel.Cells["depart_name"].Value.ToString();
-                dateadd.Value = (DateTime)sel.Cells["date_add"].Value;
-                dateclose.Value = (DateTime)sel.Cells["date_close"].Value;
+                namebox.Text = sel.name;
+                datebox.Value = sel.date;
+                syndrombox.Text = sel.syndrom;
+                depbox.Text = sel.depart_name;
+                dateadd.Value = sel.date_add;
+                dateclose.Value = sel.date_close;
             }
         }
 

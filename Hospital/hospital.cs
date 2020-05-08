@@ -93,7 +93,7 @@ namespace Hospital
             add_dialog_formpac add_dialog = new add_dialog_formpac();
             add_dialog.Owner = this;
             add_dialog.chanfl = true;
-            add_dialog.sel = pacientDataGridView.CurrentRow;
+            add_dialog.sel = lst_onscreen[pacientDataGridView.CurrentCell.RowIndex];
             add_dialog.depbox.DataSource = departmentBindingSource;
             add_dialog.ShowDialog();
             if (add_dialog.flag)

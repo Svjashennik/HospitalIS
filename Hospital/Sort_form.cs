@@ -18,6 +18,7 @@ namespace Hospital
         public SortPac_form()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void Cansel_but_Click(object sender, EventArgs e)
@@ -45,7 +46,6 @@ namespace Hospital
         private void SortPac_form_Load(object sender, EventArgs e)
         {
             DescradioButton.Checked = true;
-            StartPosition = FormStartPosition.CenterScreen;
         }
 
 

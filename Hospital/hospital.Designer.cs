@@ -42,6 +42,8 @@
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.департаментыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.пациентыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripDropDownButton4 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
@@ -53,23 +55,20 @@
             this.button2 = new System.Windows.Forms.Button();
             this.filtbut = new System.Windows.Forms.Button();
             this.pacientDataGridView = new System.Windows.Forms.DataGridView();
-            this.date_add = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date_close = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dayhear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hear = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.depart_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.age = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.syndrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pacientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.toolStripDropDownButton4 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pacientDataGridView)).BeginInit();
+            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pacientBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -162,6 +161,20 @@
             resources.ApplyResources(this.пациентыToolStripMenuItem, "пациентыToolStripMenuItem");
             this.пациентыToolStripMenuItem.Click += new System.EventHandler(this.пациентыToolStripMenuItem_Click);
             // 
+            // toolStripDropDownButton4
+            // 
+            this.toolStripDropDownButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.оПрограммеToolStripMenuItem});
+            resources.ApplyResources(this.toolStripDropDownButton4, "toolStripDropDownButton4");
+            this.toolStripDropDownButton4.Name = "toolStripDropDownButton4";
+            // 
+            // оПрограммеToolStripMenuItem
+            // 
+            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
+            resources.ApplyResources(this.оПрограммеToolStripMenuItem, "оПрограммеToolStripMenuItem");
+            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
+            // 
             // toolStripButton1
             // 
             this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -233,39 +246,17 @@
             this.pacientDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.name,
             this.depart_name,
-            this.date,
-            this.age,
-            this.date_add,
-            this.date_close,
             this.syndrom,
-            this.dayhear,
+            this.date,
             this.hear});
             this.pacientDataGridView.DataSource = this.pacientBindingSource;
             this.pacientDataGridView.Name = "pacientDataGridView";
             // 
-            // date_add
+            // date
             // 
-            this.date_add.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.date_add.DataPropertyName = "date_add";
-            resources.ApplyResources(this.date_add, "date_add");
-            this.date_add.Name = "date_add";
-            this.date_add.ReadOnly = true;
-            // 
-            // date_close
-            // 
-            this.date_close.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.date_close.DataPropertyName = "date_close";
-            resources.ApplyResources(this.date_close, "date_close");
-            this.date_close.Name = "date_close";
-            this.date_close.ReadOnly = true;
-            // 
-            // dayhear
-            // 
-            this.dayhear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dayhear.DataPropertyName = "dayhear";
-            resources.ApplyResources(this.dayhear, "dayhear");
-            this.dayhear.Name = "dayhear";
-            this.dayhear.ReadOnly = true;
+            this.date.DataPropertyName = "date";
+            resources.ApplyResources(this.date, "date");
+            this.date.Name = "date";
             // 
             // hear
             // 
@@ -276,11 +267,23 @@
             this.hear.Name = "hear";
             this.hear.ReadOnly = true;
             // 
+            // groupBox3
+            // 
+            resources.ApplyResources(this.groupBox3, "groupBox3");
+            this.groupBox3.Controls.Add(this.label1);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.TabStop = false;
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
             // name
             // 
             this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.name.DataPropertyName = "name";
-            this.name.FillWeight = 114.2857F;
+            this.name.FillWeight = 141.5145F;
             resources.ApplyResources(this.name, "name");
             this.name.Name = "name";
             this.name.ReadOnly = true;
@@ -289,33 +292,16 @@
             // 
             this.depart_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.depart_name.DataPropertyName = "depart_name";
-            this.depart_name.FillWeight = 71.42857F;
+            this.depart_name.FillWeight = 88.44657F;
             resources.ApplyResources(this.depart_name, "depart_name");
             this.depart_name.Name = "depart_name";
             this.depart_name.ReadOnly = true;
-            // 
-            // date
-            // 
-            this.date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.date.DataPropertyName = "date";
-            this.date.FillWeight = 110F;
-            resources.ApplyResources(this.date, "date");
-            this.date.Name = "date";
-            this.date.ReadOnly = true;
-            // 
-            // age
-            // 
-            this.age.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.age.DataPropertyName = "age";
-            resources.ApplyResources(this.age, "age");
-            this.age.Name = "age";
-            this.age.ReadOnly = true;
             // 
             // syndrom
             // 
             this.syndrom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.syndrom.DataPropertyName = "syndrom";
-            this.syndrom.FillWeight = 114.2857F;
+            this.syndrom.FillWeight = 70.0389F;
             resources.ApplyResources(this.syndrom, "syndrom");
             this.syndrom.Name = "syndrom";
             this.syndrom.ReadOnly = true;
@@ -328,24 +314,11 @@
             // 
             this.departmentBindingSource.DataSource = typeof(Department);
             // 
-            // toolStripDropDownButton4
-            // 
-            this.toolStripDropDownButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.оПрограммеToolStripMenuItem});
-            resources.ApplyResources(this.toolStripDropDownButton4, "toolStripDropDownButton4");
-            this.toolStripDropDownButton4.Name = "toolStripDropDownButton4";
-            // 
-            // оПрограммеToolStripMenuItem
-            // 
-            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            resources.ApplyResources(this.оПрограммеToolStripMenuItem, "оПрограммеToolStripMenuItem");
-            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
-            // 
             // hospital
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.pacientDataGridView);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -358,6 +331,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pacientDataGridView)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pacientBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -391,17 +366,15 @@
         private System.Windows.Forms.BindingSource pacientBindingSource;
         private System.Windows.Forms.DataGridView pacientDataGridView;
         private System.Windows.Forms.BindingSource departmentBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn depart_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn age;
-        private System.Windows.Forms.DataGridViewTextBoxColumn date_add;
-        private System.Windows.Forms.DataGridViewTextBoxColumn date_close;
-        private System.Windows.Forms.DataGridViewTextBoxColumn syndrom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dayhear;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn hear;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton4;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn depart_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn syndrom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn date;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn hear;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label1;
     }
 }
 
