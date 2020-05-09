@@ -25,7 +25,7 @@ namespace Hospital
         public filter_form filt_form = new filter_form();
         public void Form1_Load(object sender, EventArgs e)
         {
-            if (File.Exists("Отделения.xml"))
+            if (File.Exists("Отделениия.xml"))
             {
                 fsdep = new FileStream("Отделения.xml", FileMode.Open);
                 xsdep = new XmlSerializer(typeof(List<Department>));
@@ -48,15 +48,15 @@ namespace Hospital
                 departments.Add(dep1);
                 departments.Add(dep2);
                 departments.Add(dep3);
-                lst_people.Add(new Pacient("Кириллкин В.Л.", new DateTime(2000,2,3), "Ветрянка", "Кожевно-венерологическое", new DateTime(2020,1,20),new DateTime(2020,2,20),departments));
-                lst_people.Add(new Pacient("Райбекас А.Я.", new DateTime(2000, 10, 12), "Сыпь", "Кожевно-венерологическое", new DateTime(2020, 5, 2), new DateTime(2020, 7, 25), departments));
-                lst_people.Add(new Pacient("Никитин Р.Б.", new DateTime(2000, 6, 8), "Герпис", "Кожевно-венерологическое", new DateTime(2020, 1, 10), new DateTime(2020, 1, 20), departments));
-                lst_people.Add(new Pacient("Калашникова С.Д.", new DateTime(2001, 9, 25), "Гастрит", "Гастрологическое", new DateTime(2020, 2, 15), new DateTime(2020, 6, 8), departments));
-                lst_people.Add(new Pacient("Лебедь Д.О.", new DateTime(2000, 12, 14), "Гастрит", "Гастрологическое", new DateTime(2020, 4, 20), new DateTime(2020, 8, 26), departments));
-                lst_people.Add(new Pacient("Федоренков В.В.", new DateTime(2000, 6, 19), "Ожирение", "Гастрологическое", new DateTime(2020, 5, 10), new DateTime(2020, 6, 10), departments));
-                lst_people.Add(new Pacient("Рогозникова С.Л.", new DateTime(2000, 11, 15), "Обследование", "Гастрологическое", new DateTime(2020, 2, 10), new DateTime(2020, 5, 14), departments));
-                lst_people.Add(new Pacient("Акаев И.С.", new DateTime(2000, 7, 21), "Неврит", "Психиатрическое", new DateTime(2020, 3, 15), new DateTime(2020, 3, 16), departments));
-                lst_people.Add(new Pacient("Комарницкий В.Г.", new DateTime(1999, 4, 28), "Биполярное расстройство", "Психиатрическое", new DateTime(2020, 4, 30), new DateTime(2020, 6, 1), departments));
+                lst_people.Add(new Pacient("Кириллкин В.Л.", new DateTime(2000,2,3), "Ветрянка", "Кожевно-венерологическое", new DateTime(2020,1,20),new DateTime(2020,2,20),"783-212",departments));
+                lst_people.Add(new Pacient("Райбекас А.Я.", new DateTime(2000, 10, 12), "Сыпь", "Кожевно-венерологическое", new DateTime(2020, 5, 2), new DateTime(2020, 7, 25), "784-818", departments));
+                lst_people.Add(new Pacient("Никитин Р.Б.", new DateTime(2000, 6, 8), "Герпис", "Кожевно-венерологическое", new DateTime(2020, 1, 10), new DateTime(2020, 1, 20), "233-252", departments));
+                lst_people.Add(new Pacient("Калашникова С.Д.", new DateTime(2001, 9, 25), "Гастрит", "Гастрологическое", new DateTime(2020, 2, 15), new DateTime(2020, 6, 8), "983-000", departments));
+                lst_people.Add(new Pacient("Лебедь Д.О.", new DateTime(2000, 12, 14), "Гастрит", "Гастрологическое", new DateTime(2020, 4, 20), new DateTime(2020, 8, 26), "753-900", departments));
+                lst_people.Add(new Pacient("Федоренков В.В.", new DateTime(2000, 6, 19), "Ожирение", "Гастрологическое", new DateTime(2020, 5, 10), new DateTime(2020, 6, 10), "408-123", departments));
+                lst_people.Add(new Pacient("Рогозникова С.Л.", new DateTime(2000, 11, 15), "Обследование", "Гастрологическое", new DateTime(2020, 2, 10), new DateTime(2020, 5, 14), "645-802", departments));
+                lst_people.Add(new Pacient("Акаев И.С.", new DateTime(2000, 7, 21), "Неврит", "Психиатрическое", new DateTime(2020, 3, 15), new DateTime(2020, 3, 16), "123-987", departments));
+                lst_people.Add(new Pacient("Комарницкий В.Г.", new DateTime(1999, 4, 28), "Биполярное расстройство", "Психиатрическое", new DateTime(2020, 4, 30), new DateTime(2020, 6, 1), "626-228", departments));
             }
             lst_onscreen = lst_people;
             pacientBindingSource.DataSource = lst_onscreen;
@@ -74,7 +74,7 @@ namespace Hospital
             add_dialog.ShowDialog();
             if (add_dialog.flag)
             {
-                Pacient newpac = new Pacient(add_dialog.namebox.Text, add_dialog.datebox.Value, add_dialog.syndrombox.Text, ((Department)add_dialog.depbox.SelectedItem).name, add_dialog.dateadd.Value, add_dialog.dateclose.Value, departments);
+                Pacient newpac = new Pacient(add_dialog.namebox.Text, add_dialog.datebox.Value, add_dialog.syndrombox.Text, ((Department)add_dialog.depbox.SelectedItem).name, add_dialog.dateadd.Value, add_dialog.dateclose.Value,add_dialog.medbox.Text ,departments);
                 lst_people.Add(newpac);
                 pacientBindingSource.ResetBindings(false);
                 departmentBindingSource.ResetBindings(false);
@@ -96,12 +96,14 @@ namespace Hospital
             add_dialog.sel = lst_onscreen[pacientDataGridView.CurrentCell.RowIndex];
             add_dialog.depbox.DataSource = departmentBindingSource;
             add_dialog.ShowDialog();
+            int i = pacientDataGridView.CurrentRow.Index;
             if (add_dialog.flag)
             {
-                lst_onscreen[pacientDataGridView.CurrentRow.Index].name = add_dialog.namebox.Text;
-                lst_onscreen[pacientDataGridView.CurrentRow.Index].ChangeDepart((Department)add_dialog.depbox.SelectedItem, add_dialog.syndrombox.Text, departments);
-                lst_onscreen[pacientDataGridView.CurrentRow.Index].ChangeDate(add_dialog.datebox.Value);
-                lst_onscreen[pacientDataGridView.CurrentRow.Index].ChangeCloseDate(add_dialog.dateadd.Value, add_dialog.dateclose.Value);
+                lst_onscreen[i].name = add_dialog.namebox.Text;
+                lst_onscreen[i].ChangeDepart((Department)add_dialog.depbox.SelectedItem, add_dialog.syndrombox.Text, departments);
+                lst_onscreen[i].ChangeDate(add_dialog.datebox.Value);
+                lst_onscreen[i].ChangeCloseDate(add_dialog.dateadd.Value, add_dialog.dateclose.Value);
+                lst_onscreen[i].medicinecard = add_dialog.medbox.Text;
                 pacientBindingSource.ResetBindings(false);
                 departmentBindingSource.ResetBindings(false);
             }
@@ -257,6 +259,9 @@ namespace Hospital
                         case "По кол-ву дней":
                             lst_onscreen = lst_onscreen.OrderBy(pac => pac.dayhear).ToList();
                             break;
+                        case "По мед.карте":
+                            lst_onscreen = lst_onscreen.OrderBy(pac => pac.medicinecard).ToList();
+                            break;
                     }
                 }
                 else
@@ -286,6 +291,9 @@ namespace Hospital
                             break;
                         case "По кол-ву дней":
                             lst_onscreen = lst_onscreen.OrderByDescending(pac => pac.dayhear).ToList();
+                            break;
+                        case "По мед.карте":
+                            lst_onscreen = lst_onscreen.OrderByDescending(pac => pac.medicinecard).ToList();
                             break;
                     }
 
@@ -317,6 +325,10 @@ namespace Hospital
                 if (filt_form.syndromsub.Checked)
                 { 
                     lst_onscreen = lst_onscreen.FindAll(pac => pac.syndrom.Contains(filt_form.syndromsubtext.Text));
+                }
+                if (filt_form.medicinesub.Checked)
+                {
+                    lst_onscreen = lst_onscreen.FindAll(pac => pac.medicinecard.Contains(filt_form.medicinesubtext.Text));
                 }
             }
 
@@ -368,6 +380,22 @@ namespace Hospital
         private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
         {
             _=MessageBox.Show("Данная программа разработана студентом \n Финансового Университета второго года обучения группы ПИ18-2 Асташкина Никиты. \n Научный руководитель - Чистов Д.В.", "О программе", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void pacientDataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            Pacient pac = lst_onscreen[pacientDataGridView.CurrentRow.Index];
+            namelab.Text = pac.name;
+            medicinelab.Text = pac.medicinecard;
+            depart_lab.Text = pac.depart_name;
+            syndromlab.Text = pac.syndrom;
+            agelab.Text = pac.age.ToString();
+            datelab.Text = pac.date.ToString("d");
+            dateaddlab.Text = pac.date_add.ToString("d");
+            datecloselab.Text = pac.date_close.ToString("d");
+            daylab.Text = pac.dayhear.ToString();
+            if (pac.hear) hearlab.Text = "Числится";
+            else hearlab.Text = "Не числится";
         }
     }
 }

@@ -55,9 +55,29 @@
             this.button2 = new System.Windows.Forms.Button();
             this.filtbut = new System.Windows.Forms.Button();
             this.pacientDataGridView = new System.Windows.Forms.DataGridView();
+            this.medicinecard = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hear = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.hearlab = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.daylab = new System.Windows.Forms.Label();
+            this.medicinelab = new System.Windows.Forms.Label();
+            this.datecloselab = new System.Windows.Forms.Label();
+            this.dateaddlab = new System.Windows.Forms.Label();
+            this.syndromlab = new System.Windows.Forms.Label();
+            this.agelab = new System.Windows.Forms.Label();
+            this.datelab = new System.Windows.Forms.Label();
+            this.depart_lab = new System.Windows.Forms.Label();
+            this.namelab = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.depart_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -244,6 +264,7 @@
             this.pacientDataGridView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.pacientDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.pacientDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.medicinecard,
             this.name,
             this.depart_name,
             this.syndrom,
@@ -251,10 +272,19 @@
             this.hear});
             this.pacientDataGridView.DataSource = this.pacientBindingSource;
             this.pacientDataGridView.Name = "pacientDataGridView";
+            this.pacientDataGridView.SelectionChanged += new System.EventHandler(this.pacientDataGridView_SelectionChanged);
+            // 
+            // medicinecard
+            // 
+            this.medicinecard.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.medicinecard.DataPropertyName = "medicinecard";
+            resources.ApplyResources(this.medicinecard, "medicinecard");
+            this.medicinecard.Name = "medicinecard";
             // 
             // date
             // 
             this.date.DataPropertyName = "date";
+            this.date.FillWeight = 96.44419F;
             resources.ApplyResources(this.date, "date");
             this.date.Name = "date";
             // 
@@ -270,9 +300,123 @@
             // groupBox3
             // 
             resources.ApplyResources(this.groupBox3, "groupBox3");
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.label16);
+            this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.hearlab);
+            this.groupBox3.Controls.Add(this.label2);
+            this.groupBox3.Controls.Add(this.daylab);
+            this.groupBox3.Controls.Add(this.medicinelab);
+            this.groupBox3.Controls.Add(this.datecloselab);
+            this.groupBox3.Controls.Add(this.dateaddlab);
+            this.groupBox3.Controls.Add(this.syndromlab);
+            this.groupBox3.Controls.Add(this.agelab);
+            this.groupBox3.Controls.Add(this.datelab);
+            this.groupBox3.Controls.Add(this.depart_lab);
+            this.groupBox3.Controls.Add(this.namelab);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // label16
+            // 
+            resources.ApplyResources(this.label16, "label16");
+            this.label16.Name = "label16";
+            // 
+            // label14
+            // 
+            resources.ApplyResources(this.label14, "label14");
+            this.label14.Name = "label14";
+            // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
+            // label12
+            // 
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.Name = "label12";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // label10
+            // 
+            resources.ApplyResources(this.label10, "label10");
+            this.label10.Name = "label10";
+            // 
+            // hearlab
+            // 
+            resources.ApplyResources(this.hearlab, "hearlab");
+            this.hearlab.Name = "hearlab";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // daylab
+            // 
+            resources.ApplyResources(this.daylab, "daylab");
+            this.daylab.Name = "daylab";
+            // 
+            // medicinelab
+            // 
+            resources.ApplyResources(this.medicinelab, "medicinelab");
+            this.medicinelab.Name = "medicinelab";
+            // 
+            // datecloselab
+            // 
+            resources.ApplyResources(this.datecloselab, "datecloselab");
+            this.datecloselab.Name = "datecloselab";
+            // 
+            // dateaddlab
+            // 
+            resources.ApplyResources(this.dateaddlab, "dateaddlab");
+            this.dateaddlab.Name = "dateaddlab";
+            // 
+            // syndromlab
+            // 
+            resources.ApplyResources(this.syndromlab, "syndromlab");
+            this.syndromlab.Name = "syndromlab";
+            // 
+            // agelab
+            // 
+            resources.ApplyResources(this.agelab, "agelab");
+            this.agelab.Name = "agelab";
+            // 
+            // datelab
+            // 
+            resources.ApplyResources(this.datelab, "datelab");
+            this.datelab.Name = "datelab";
+            // 
+            // depart_lab
+            // 
+            resources.ApplyResources(this.depart_lab, "depart_lab");
+            this.depart_lab.Name = "depart_lab";
+            // 
+            // namelab
+            // 
+            resources.ApplyResources(this.namelab, "namelab");
+            this.namelab.Name = "namelab";
             // 
             // label1
             // 
@@ -283,7 +427,7 @@
             // 
             this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.name.DataPropertyName = "name";
-            this.name.FillWeight = 141.5145F;
+            this.name.FillWeight = 136.4825F;
             resources.ApplyResources(this.name, "name");
             this.name.Name = "name";
             this.name.ReadOnly = true;
@@ -292,7 +436,7 @@
             // 
             this.depart_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.depart_name.DataPropertyName = "depart_name";
-            this.depart_name.FillWeight = 88.44657F;
+            this.depart_name.FillWeight = 85.30157F;
             resources.ApplyResources(this.depart_name, "depart_name");
             this.depart_name.Name = "depart_name";
             this.depart_name.ReadOnly = true;
@@ -301,7 +445,7 @@
             // 
             this.syndrom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.syndrom.DataPropertyName = "syndrom";
-            this.syndrom.FillWeight = 70.0389F;
+            this.syndrom.FillWeight = 81.77171F;
             resources.ApplyResources(this.syndrom, "syndrom");
             this.syndrom.Name = "syndrom";
             this.syndrom.ReadOnly = true;
@@ -368,13 +512,33 @@
         private System.Windows.Forms.BindingSource departmentBindingSource;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton4;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label namelab;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label depart_lab;
+        private System.Windows.Forms.DataGridViewTextBoxColumn medicinecard;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn depart_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn syndrom;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
         private System.Windows.Forms.DataGridViewCheckBoxColumn hear;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label medicinelab;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label datecloselab;
+        private System.Windows.Forms.Label dateaddlab;
+        private System.Windows.Forms.Label syndromlab;
+        private System.Windows.Forms.Label datelab;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label agelab;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label hearlab;
+        private System.Windows.Forms.Label daylab;
     }
 }
 

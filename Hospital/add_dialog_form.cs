@@ -31,6 +31,7 @@ namespace Hospital
                 depbox.Text = sel.depart_name;
                 dateadd.Value = sel.date_add;
                 dateclose.Value = sel.date_close;
+                medbox.Text = sel.medicinecard;
             }
         }
 
@@ -73,6 +74,11 @@ namespace Hospital
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
         {
 
         }

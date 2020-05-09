@@ -64,6 +64,8 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.factcheck = new System.Windows.Forms.CheckBox();
+            this.medicinesub = new System.Windows.Forms.CheckBox();
+            this.medicinesubtext = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -73,10 +75,9 @@
             // nameCheck
             // 
             this.nameCheck.AutoSize = true;
-            this.nameCheck.Location = new System.Drawing.Point(8, 23);
-            this.nameCheck.Margin = new System.Windows.Forms.Padding(4);
+            this.nameCheck.Location = new System.Drawing.Point(6, 19);
             this.nameCheck.Name = "nameCheck";
-            this.nameCheck.Size = new System.Drawing.Size(159, 21);
+            this.nameCheck.Size = new System.Drawing.Size(141, 19);
             this.nameCheck.TabIndex = 0;
             this.nameCheck.Text = "Фамилия содержит";
             this.nameCheck.UseVisualStyleBackColor = true;
@@ -84,10 +85,9 @@
             // departsub
             // 
             this.departsub.AutoSize = true;
-            this.departsub.Location = new System.Drawing.Point(8, 52);
-            this.departsub.Margin = new System.Windows.Forms.Padding(4);
+            this.departsub.Location = new System.Drawing.Point(6, 42);
             this.departsub.Name = "departsub";
-            this.departsub.Size = new System.Drawing.Size(171, 21);
+            this.departsub.Size = new System.Drawing.Size(151, 19);
             this.departsub.TabIndex = 1;
             this.departsub.Text = "Отделение содержит";
             this.departsub.UseVisualStyleBackColor = true;
@@ -95,10 +95,9 @@
             // datecheck
             // 
             this.datecheck.AutoSize = true;
-            this.datecheck.Location = new System.Drawing.Point(8, 80);
-            this.datecheck.Margin = new System.Windows.Forms.Padding(4);
+            this.datecheck.Location = new System.Drawing.Point(6, 65);
             this.datecheck.Name = "datecheck";
-            this.datecheck.Size = new System.Drawing.Size(133, 21);
+            this.datecheck.Size = new System.Drawing.Size(117, 19);
             this.datecheck.TabIndex = 1;
             this.datecheck.Text = "Дата рождения";
             this.datecheck.UseVisualStyleBackColor = true;
@@ -106,10 +105,9 @@
             // syndromsub
             // 
             this.syndromsub.AutoSize = true;
-            this.syndromsub.Location = new System.Drawing.Point(8, 80);
-            this.syndromsub.Margin = new System.Windows.Forms.Padding(4);
+            this.syndromsub.Location = new System.Drawing.Point(6, 65);
             this.syndromsub.Name = "syndromsub";
-            this.syndromsub.Size = new System.Drawing.Size(152, 21);
+            this.syndromsub.Size = new System.Drawing.Size(134, 19);
             this.syndromsub.TabIndex = 1;
             this.syndromsub.Text = "Диагноз содержит";
             this.syndromsub.UseVisualStyleBackColor = true;
@@ -117,10 +115,9 @@
             // dateaddcheck
             // 
             this.dateaddcheck.AutoSize = true;
-            this.dateaddcheck.Location = new System.Drawing.Point(8, 23);
-            this.dateaddcheck.Margin = new System.Windows.Forms.Padding(4);
+            this.dateaddcheck.Location = new System.Drawing.Point(6, 19);
             this.dateaddcheck.Name = "dateaddcheck";
-            this.dateaddcheck.Size = new System.Drawing.Size(117, 21);
+            this.dateaddcheck.Size = new System.Drawing.Size(103, 19);
             this.dateaddcheck.TabIndex = 1;
             this.dateaddcheck.Text = "Дата приема";
             this.dateaddcheck.UseVisualStyleBackColor = true;
@@ -128,53 +125,49 @@
             // datecloseCheck
             // 
             this.datecloseCheck.AutoSize = true;
-            this.datecloseCheck.Location = new System.Drawing.Point(8, 52);
-            this.datecloseCheck.Margin = new System.Windows.Forms.Padding(4);
+            this.datecloseCheck.Location = new System.Drawing.Point(6, 42);
             this.datecloseCheck.Name = "datecloseCheck";
-            this.datecloseCheck.Size = new System.Drawing.Size(123, 21);
+            this.datecloseCheck.Size = new System.Drawing.Size(108, 19);
             this.datecloseCheck.TabIndex = 1;
             this.datecloseCheck.Text = "Дата выписки";
             this.datecloseCheck.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.medicinesubtext);
             this.groupBox1.Controls.Add(this.syndromsubtext);
             this.groupBox1.Controls.Add(this.departsubtext);
             this.groupBox1.Controls.Add(this.namesub);
+            this.groupBox1.Controls.Add(this.medicinesub);
             this.groupBox1.Controls.Add(this.syndromsub);
             this.groupBox1.Controls.Add(this.departsub);
             this.groupBox1.Controls.Add(this.nameCheck);
-            this.groupBox1.Location = new System.Drawing.Point(16, 42);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(18, 37);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(451, 112);
+            this.groupBox1.Size = new System.Drawing.Size(338, 117);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Строковые фильтры";
             // 
             // syndromsubtext
             // 
-            this.syndromsubtext.Location = new System.Drawing.Point(217, 76);
-            this.syndromsubtext.Margin = new System.Windows.Forms.Padding(4);
+            this.syndromsubtext.Location = new System.Drawing.Point(163, 64);
             this.syndromsubtext.Name = "syndromsubtext";
-            this.syndromsubtext.Size = new System.Drawing.Size(224, 22);
+            this.syndromsubtext.Size = new System.Drawing.Size(169, 20);
             this.syndromsubtext.TabIndex = 4;
             // 
             // departsubtext
             // 
-            this.departsubtext.Location = new System.Drawing.Point(217, 48);
-            this.departsubtext.Margin = new System.Windows.Forms.Padding(4);
+            this.departsubtext.Location = new System.Drawing.Point(163, 39);
             this.departsubtext.Name = "departsubtext";
-            this.departsubtext.Size = new System.Drawing.Size(224, 22);
+            this.departsubtext.Size = new System.Drawing.Size(169, 20);
             this.departsubtext.TabIndex = 3;
             // 
             // namesub
             // 
-            this.namesub.Location = new System.Drawing.Point(217, 20);
-            this.namesub.Margin = new System.Windows.Forms.Padding(4);
+            this.namesub.Location = new System.Drawing.Point(163, 16);
             this.namesub.Name = "namesub";
-            this.namesub.Size = new System.Drawing.Size(224, 22);
+            this.namesub.Size = new System.Drawing.Size(169, 20);
             this.namesub.TabIndex = 2;
             // 
             // groupBox2
@@ -188,11 +181,9 @@
             this.groupBox2.Controls.Add(this.dateaddcheck);
             this.groupBox2.Controls.Add(this.datecloseCheck);
             this.groupBox2.Controls.Add(this.datecheck);
-            this.groupBox2.Location = new System.Drawing.Point(16, 190);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Location = new System.Drawing.Point(12, 195);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(451, 111);
+            this.groupBox2.Size = new System.Drawing.Size(338, 90);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Фильтры по датам";
@@ -200,49 +191,44 @@
             // dateadd1
             // 
             this.dateadd1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateadd1.Location = new System.Drawing.Point(184, 23);
-            this.dateadd1.Margin = new System.Windows.Forms.Padding(4);
+            this.dateadd1.Location = new System.Drawing.Point(138, 19);
             this.dateadd1.Name = "dateadd1";
-            this.dateadd1.Size = new System.Drawing.Size(124, 22);
+            this.dateadd1.Size = new System.Drawing.Size(94, 20);
             this.dateadd1.TabIndex = 2;
             this.dateadd1.ValueChanged += new System.EventHandler(this.dateadd1_ValueChanged);
             // 
             // date2
             // 
             this.date2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.date2.Location = new System.Drawing.Point(317, 80);
-            this.date2.Margin = new System.Windows.Forms.Padding(4);
+            this.date2.Location = new System.Drawing.Point(238, 65);
             this.date2.Name = "date2";
-            this.date2.Size = new System.Drawing.Size(124, 22);
+            this.date2.Size = new System.Drawing.Size(94, 20);
             this.date2.TabIndex = 2;
             this.date2.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
             // dateclose2
             // 
             this.dateclose2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateclose2.Location = new System.Drawing.Point(317, 52);
-            this.dateclose2.Margin = new System.Windows.Forms.Padding(4);
+            this.dateclose2.Location = new System.Drawing.Point(238, 42);
             this.dateclose2.Name = "dateclose2";
-            this.dateclose2.Size = new System.Drawing.Size(124, 22);
+            this.dateclose2.Size = new System.Drawing.Size(94, 20);
             this.dateclose2.TabIndex = 2;
             // 
             // dateclose1
             // 
             this.dateclose1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateclose1.Location = new System.Drawing.Point(184, 52);
-            this.dateclose1.Margin = new System.Windows.Forms.Padding(4);
+            this.dateclose1.Location = new System.Drawing.Point(138, 42);
             this.dateclose1.Name = "dateclose1";
-            this.dateclose1.Size = new System.Drawing.Size(124, 22);
+            this.dateclose1.Size = new System.Drawing.Size(94, 20);
             this.dateclose1.TabIndex = 2;
             this.dateclose1.ValueChanged += new System.EventHandler(this.dateclose1_ValueChanged);
             // 
             // date1
             // 
             this.date1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.date1.Location = new System.Drawing.Point(184, 80);
-            this.date1.Margin = new System.Windows.Forms.Padding(4);
+            this.date1.Location = new System.Drawing.Point(138, 65);
             this.date1.Name = "date1";
-            this.date1.Size = new System.Drawing.Size(124, 22);
+            this.date1.Size = new System.Drawing.Size(94, 20);
             this.date1.TabIndex = 2;
             this.date1.Value = new System.DateTime(1999, 1, 1, 0, 0, 0, 0);
             this.date1.ValueChanged += new System.EventHandler(this.date1_ValueChanged);
@@ -250,10 +236,9 @@
             // dateadd2
             // 
             this.dateadd2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateadd2.Location = new System.Drawing.Point(317, 23);
-            this.dateadd2.Margin = new System.Windows.Forms.Padding(4);
+            this.dateadd2.Location = new System.Drawing.Point(238, 19);
             this.dateadd2.Name = "dateadd2";
-            this.dateadd2.Size = new System.Drawing.Size(124, 22);
+            this.dateadd2.Size = new System.Drawing.Size(94, 20);
             this.dateadd2.TabIndex = 2;
             // 
             // groupBox4
@@ -268,46 +253,40 @@
             this.groupBox4.Controls.Add(this.dayhearcheck);
             this.groupBox4.Controls.Add(this.agecheck);
             this.groupBox4.Controls.Add(this.departcheck);
-            this.groupBox4.Location = new System.Drawing.Point(16, 336);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Location = new System.Drawing.Point(12, 314);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(451, 140);
+            this.groupBox4.Size = new System.Drawing.Size(338, 114);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Фактические фильтры";
             // 
             // day2
             // 
-            this.day2.Location = new System.Drawing.Point(328, 76);
-            this.day2.Margin = new System.Windows.Forms.Padding(4);
+            this.day2.Location = new System.Drawing.Point(246, 62);
             this.day2.Name = "day2";
-            this.day2.Size = new System.Drawing.Size(103, 22);
+            this.day2.Size = new System.Drawing.Size(78, 20);
             this.day2.TabIndex = 2;
             // 
             // day1
             // 
-            this.day1.Location = new System.Drawing.Point(216, 76);
-            this.day1.Margin = new System.Windows.Forms.Padding(4);
+            this.day1.Location = new System.Drawing.Point(162, 62);
             this.day1.Name = "day1";
-            this.day1.Size = new System.Drawing.Size(103, 22);
+            this.day1.Size = new System.Drawing.Size(78, 20);
             this.day1.TabIndex = 2;
             this.day1.TextChanged += new System.EventHandler(this.day1_TextChanged);
             // 
             // age2
             // 
-            this.age2.Location = new System.Drawing.Point(328, 48);
-            this.age2.Margin = new System.Windows.Forms.Padding(4);
+            this.age2.Location = new System.Drawing.Point(246, 39);
             this.age2.Name = "age2";
-            this.age2.Size = new System.Drawing.Size(104, 22);
+            this.age2.Size = new System.Drawing.Size(79, 20);
             this.age2.TabIndex = 2;
             // 
             // age1
             // 
-            this.age1.Location = new System.Drawing.Point(216, 48);
-            this.age1.Margin = new System.Windows.Forms.Padding(4);
+            this.age1.Location = new System.Drawing.Point(162, 39);
             this.age1.Name = "age1";
-            this.age1.Size = new System.Drawing.Size(103, 22);
+            this.age1.Size = new System.Drawing.Size(78, 20);
             this.age1.TabIndex = 2;
             this.age1.TextChanged += new System.EventHandler(this.age1_TextChanged);
             // 
@@ -319,10 +298,9 @@
             this.comboBox2.Items.AddRange(new object[] {
             "Числится",
             "Не числится"});
-            this.comboBox2.Location = new System.Drawing.Point(216, 105);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox2.Location = new System.Drawing.Point(162, 85);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(216, 24);
+            this.comboBox2.Size = new System.Drawing.Size(163, 21);
             this.comboBox2.TabIndex = 1;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
@@ -333,10 +311,9 @@
             this.departbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.departbox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.departbox.FormattingEnabled = true;
-            this.departbox.Location = new System.Drawing.Point(216, 18);
-            this.departbox.Margin = new System.Windows.Forms.Padding(4);
+            this.departbox.Location = new System.Drawing.Point(162, 15);
             this.departbox.Name = "departbox";
-            this.departbox.Size = new System.Drawing.Size(216, 24);
+            this.departbox.Size = new System.Drawing.Size(163, 21);
             this.departbox.TabIndex = 1;
             // 
             // departmentBindingSource
@@ -346,10 +323,9 @@
             // hearcheck
             // 
             this.hearcheck.AutoSize = true;
-            this.hearcheck.Location = new System.Drawing.Point(8, 107);
-            this.hearcheck.Margin = new System.Windows.Forms.Padding(4);
+            this.hearcheck.Location = new System.Drawing.Point(6, 87);
             this.hearcheck.Name = "hearcheck";
-            this.hearcheck.Size = new System.Drawing.Size(150, 21);
+            this.hearcheck.Size = new System.Drawing.Size(132, 19);
             this.hearcheck.TabIndex = 0;
             this.hearcheck.Text = "Факт пребывания";
             this.hearcheck.UseVisualStyleBackColor = true;
@@ -357,10 +333,9 @@
             // dayhearcheck
             // 
             this.dayhearcheck.AutoSize = true;
-            this.dayhearcheck.Location = new System.Drawing.Point(8, 79);
-            this.dayhearcheck.Margin = new System.Windows.Forms.Padding(4);
+            this.dayhearcheck.Location = new System.Drawing.Point(6, 64);
             this.dayhearcheck.Name = "dayhearcheck";
-            this.dayhearcheck.Size = new System.Drawing.Size(111, 21);
+            this.dayhearcheck.Size = new System.Drawing.Size(97, 19);
             this.dayhearcheck.TabIndex = 0;
             this.dayhearcheck.Text = "Кол-во дней";
             this.dayhearcheck.UseVisualStyleBackColor = true;
@@ -368,10 +343,9 @@
             // agecheck
             // 
             this.agecheck.AutoSize = true;
-            this.agecheck.Location = new System.Drawing.Point(8, 50);
-            this.agecheck.Margin = new System.Windows.Forms.Padding(4);
+            this.agecheck.Location = new System.Drawing.Point(6, 41);
             this.agecheck.Name = "agecheck";
-            this.agecheck.Size = new System.Drawing.Size(84, 21);
+            this.agecheck.Size = new System.Drawing.Size(74, 19);
             this.agecheck.TabIndex = 0;
             this.agecheck.Text = "Возраст";
             this.agecheck.UseVisualStyleBackColor = true;
@@ -379,20 +353,18 @@
             // departcheck
             // 
             this.departcheck.AutoSize = true;
-            this.departcheck.Location = new System.Drawing.Point(8, 23);
-            this.departcheck.Margin = new System.Windows.Forms.Padding(4);
+            this.departcheck.Location = new System.Drawing.Point(6, 19);
             this.departcheck.Name = "departcheck";
-            this.departcheck.Size = new System.Drawing.Size(104, 21);
+            this.departcheck.Size = new System.Drawing.Size(91, 19);
             this.departcheck.TabIndex = 0;
             this.departcheck.Text = "Отделение";
             this.departcheck.UseVisualStyleBackColor = true;
             // 
             // AcceptBut
             // 
-            this.AcceptBut.Location = new System.Drawing.Point(16, 484);
-            this.AcceptBut.Margin = new System.Windows.Forms.Padding(4);
+            this.AcceptBut.Location = new System.Drawing.Point(12, 434);
             this.AcceptBut.Name = "AcceptBut";
-            this.AcceptBut.Size = new System.Drawing.Size(100, 28);
+            this.AcceptBut.Size = new System.Drawing.Size(75, 23);
             this.AcceptBut.TabIndex = 4;
             this.AcceptBut.Text = "Принять";
             this.AcceptBut.UseVisualStyleBackColor = true;
@@ -400,10 +372,9 @@
             // 
             // CanselBut
             // 
-            this.CanselBut.Location = new System.Drawing.Point(149, 484);
-            this.CanselBut.Margin = new System.Windows.Forms.Padding(4);
+            this.CanselBut.Location = new System.Drawing.Point(112, 434);
             this.CanselBut.Name = "CanselBut";
-            this.CanselBut.Size = new System.Drawing.Size(100, 28);
+            this.CanselBut.Size = new System.Drawing.Size(75, 23);
             this.CanselBut.TabIndex = 5;
             this.CanselBut.Text = "Отмена";
             this.CanselBut.UseVisualStyleBackColor = true;
@@ -412,10 +383,9 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(24, 308);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.checkBox3.Location = new System.Drawing.Point(18, 291);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(248, 21);
+            this.checkBox3.Size = new System.Drawing.Size(221, 19);
             this.checkBox3.TabIndex = 6;
             this.checkBox3.Text = "Включить фактические фильтры";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -424,10 +394,9 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(24, 161);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.checkBox2.Location = new System.Drawing.Point(18, 172);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(225, 21);
+            this.checkBox2.Size = new System.Drawing.Size(201, 19);
             this.checkBox2.TabIndex = 6;
             this.checkBox2.Text = "Включить фильтры по датам ";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -436,10 +405,9 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(24, 15);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.checkBox1.Location = new System.Drawing.Point(18, 12);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(235, 21);
+            this.checkBox1.Size = new System.Drawing.Size(210, 19);
             this.checkBox1.TabIndex = 6;
             this.checkBox1.Text = "Включить фильтры по строкам";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -449,19 +417,37 @@
             // 
             this.factcheck.AutoSize = true;
             this.factcheck.Cursor = System.Windows.Forms.Cursors.Default;
-            this.factcheck.Location = new System.Drawing.Point(359, 483);
+            this.factcheck.Location = new System.Drawing.Point(269, 433);
+            this.factcheck.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.factcheck.Name = "factcheck";
-            this.factcheck.Size = new System.Drawing.Size(98, 21);
+            this.factcheck.Size = new System.Drawing.Size(86, 19);
             this.factcheck.TabIndex = 7;
             this.factcheck.Text = "checkBox4";
             this.factcheck.UseVisualStyleBackColor = true;
             this.factcheck.Visible = false;
             // 
+            // medicinesub
+            // 
+            this.medicinesub.AutoSize = true;
+            this.medicinesub.Location = new System.Drawing.Point(6, 90);
+            this.medicinesub.Name = "medicinesub";
+            this.medicinesub.Size = new System.Drawing.Size(148, 19);
+            this.medicinesub.TabIndex = 1;
+            this.medicinesub.Text = "Мед.карта содержит";
+            this.medicinesub.UseVisualStyleBackColor = true;
+            // 
+            // medicinesubtext
+            // 
+            this.medicinesubtext.Location = new System.Drawing.Point(163, 88);
+            this.medicinesubtext.Name = "medicinesubtext";
+            this.medicinesubtext.Size = new System.Drawing.Size(169, 20);
+            this.medicinesubtext.TabIndex = 4;
+            // 
             // filter_form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(487, 527);
+            this.ClientSize = new System.Drawing.Size(365, 467);
             this.Controls.Add(this.factcheck);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.checkBox2);
@@ -472,9 +458,9 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "filter_form";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.filter_form_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -523,5 +509,7 @@
         public System.Windows.Forms.TextBox day2;
         public System.Windows.Forms.TextBox age2;
         public System.Windows.Forms.CheckBox factcheck;
+        public System.Windows.Forms.TextBox medicinesubtext;
+        public System.Windows.Forms.CheckBox medicinesub;
     }
 }

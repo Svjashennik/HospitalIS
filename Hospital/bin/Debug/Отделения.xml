@@ -12,6 +12,7 @@
         <date_close>2020-02-20T00:00:00</date_close>
         <hear>false</hear>
         <dayhear>31</dayhear>
+        <medicinecard>783-212</medicinecard>
       </Pacient>
       <Pacient>
         <name>Райбекас А.Я.</name>
@@ -23,6 +24,7 @@
         <date_close>2020-07-25T00:00:00</date_close>
         <hear>true</hear>
         <dayhear>84</dayhear>
+        <medicinecard>784-818</medicinecard>
       </Pacient>
       <Pacient>
         <name>Никитин Р.Б.</name>
@@ -34,6 +36,7 @@
         <date_close>2020-01-20T00:00:00</date_close>
         <hear>false</hear>
         <dayhear>10</dayhear>
+        <medicinecard>233-252</medicinecard>
       </Pacient>
     </people>
     <name>Кожевно-венерологическое</name>
@@ -54,6 +57,7 @@
         <date_close>2020-06-08T00:00:00</date_close>
         <hear>true</hear>
         <dayhear>114</dayhear>
+        <medicinecard>983-000</medicinecard>
       </Pacient>
       <Pacient>
         <name>Лебедь Д.О.</name>
@@ -65,6 +69,7 @@
         <date_close>2020-08-26T00:00:00</date_close>
         <hear>true</hear>
         <dayhear>128</dayhear>
+        <medicinecard>753-900</medicinecard>
       </Pacient>
       <Pacient>
         <name>Федоренков В.В.</name>
@@ -76,6 +81,7 @@
         <date_close>2020-06-10T00:00:00</date_close>
         <hear>true</hear>
         <dayhear>31</dayhear>
+        <medicinecard>408-123</medicinecard>
       </Pacient>
       <Pacient>
         <name>Рогозникова С.Л.</name>
@@ -87,6 +93,7 @@
         <date_close>2020-05-14T00:00:00</date_close>
         <hear>true</hear>
         <dayhear>94</dayhear>
+        <medicinecard>645-802</medicinecard>
       </Pacient>
     </people>
     <name>Гастрологическое</name>
@@ -107,6 +114,7 @@
         <date_close>2020-03-16T00:00:00</date_close>
         <hear>false</hear>
         <dayhear>1</dayhear>
+        <medicinecard>123-987</medicinecard>
       </Pacient>
       <Pacient>
         <name>Комарницкий В.Г.</name>
@@ -118,6 +126,7 @@
         <date_close>2020-06-01T00:00:00</date_close>
         <hear>true</hear>
         <dayhear>32</dayhear>
+        <medicinecard>626-228</medicinecard>
       </Pacient>
     </people>
     <name>Психиатрическое</name>
@@ -125,13 +134,5 @@
     <manager>Колганова</manager>
     <countpac>2</countpac>
     <phone>8-228-555-35-35</phone>
-  </Department>
-  <Department>
-    <people />
-    <name>Терапевтическое</name>
-    <maximum>70</maximum>
-    <manager>Балуцкая</manager>
-    <countpac>0</countpac>
-    <phone>8-906-709-43-22</phone>
   </Department>
 </ArrayOfDepartment>

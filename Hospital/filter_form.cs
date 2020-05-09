@@ -89,5 +89,10 @@ namespace Hospital
             if (comboBox2.Text == "Числится") factcheck.Checked = true;
             else factcheck.Checked = false;
         }
+
+        private void filter_form_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -34,6 +34,7 @@
             this.Accept_but = new System.Windows.Forms.Button();
             this.Cansel_but = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dayrad = new System.Windows.Forms.RadioButton();
             this.hearrad = new System.Windows.Forms.RadioButton();
             this.datecloseradioBut = new System.Windows.Forms.RadioButton();
             this.dateaddRad = new System.Windows.Forms.RadioButton();
@@ -41,7 +42,7 @@
             this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.dayrad = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -62,7 +63,7 @@
             this.DescradioButton.AutoSize = true;
             this.DescradioButton.Location = new System.Drawing.Point(6, 55);
             this.DescradioButton.Name = "DescradioButton";
-            this.DescradioButton.Size = new System.Drawing.Size(115, 17);
+            this.DescradioButton.Size = new System.Drawing.Size(128, 19);
             this.DescradioButton.TabIndex = 1;
             this.DescradioButton.TabStop = true;
             this.DescradioButton.Text = "По возрастванию";
@@ -73,7 +74,7 @@
             this.AscradioButton.AutoSize = true;
             this.AscradioButton.Location = new System.Drawing.Point(6, 29);
             this.AscradioButton.Name = "AscradioButton";
-            this.AscradioButton.Size = new System.Drawing.Size(93, 17);
+            this.AscradioButton.Size = new System.Drawing.Size(102, 19);
             this.AscradioButton.TabIndex = 0;
             this.AscradioButton.TabStop = true;
             this.AscradioButton.Text = "По убыванию";
@@ -107,21 +108,33 @@
             this.groupBox3.Controls.Add(this.dateaddRad);
             this.groupBox3.Controls.Add(this.radioButton7);
             this.groupBox3.Controls.Add(this.radioButton8);
+            this.groupBox3.Controls.Add(this.radioButton1);
             this.groupBox3.Controls.Add(this.radioButton9);
             this.groupBox3.Controls.Add(this.radioButton10);
             this.groupBox3.Location = new System.Drawing.Point(12, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(147, 224);
+            this.groupBox3.Size = new System.Drawing.Size(165, 250);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Варианты сортировки";
             // 
+            // dayrad
+            // 
+            this.dayrad.AutoSize = true;
+            this.dayrad.Location = new System.Drawing.Point(6, 226);
+            this.dayrad.Name = "dayrad";
+            this.dayrad.Size = new System.Drawing.Size(111, 19);
+            this.dayrad.TabIndex = 5;
+            this.dayrad.TabStop = true;
+            this.dayrad.Text = "По кол-ву дней";
+            this.dayrad.UseVisualStyleBackColor = true;
+            // 
             // hearrad
             // 
             this.hearrad.AutoSize = true;
-            this.hearrad.Location = new System.Drawing.Point(6, 175);
+            this.hearrad.Location = new System.Drawing.Point(6, 201);
             this.hearrad.Name = "hearrad";
-            this.hearrad.Size = new System.Drawing.Size(137, 17);
+            this.hearrad.Size = new System.Drawing.Size(155, 19);
             this.hearrad.TabIndex = 5;
             this.hearrad.TabStop = true;
             this.hearrad.Text = "По факту пребывания";
@@ -130,9 +143,9 @@
             // datecloseradioBut
             // 
             this.datecloseradioBut.AutoSize = true;
-            this.datecloseradioBut.Location = new System.Drawing.Point(6, 152);
+            this.datecloseradioBut.Location = new System.Drawing.Point(6, 176);
             this.datecloseradioBut.Name = "datecloseradioBut";
-            this.datecloseradioBut.Size = new System.Drawing.Size(112, 17);
+            this.datecloseradioBut.Size = new System.Drawing.Size(124, 19);
             this.datecloseradioBut.TabIndex = 5;
             this.datecloseradioBut.TabStop = true;
             this.datecloseradioBut.Text = "По дате выписки";
@@ -141,9 +154,9 @@
             // dateaddRad
             // 
             this.dateaddRad.AutoSize = true;
-            this.dateaddRad.Location = new System.Drawing.Point(7, 129);
+            this.dateaddRad.Location = new System.Drawing.Point(6, 151);
             this.dateaddRad.Name = "dateaddRad";
-            this.dateaddRad.Size = new System.Drawing.Size(106, 17);
+            this.dateaddRad.Size = new System.Drawing.Size(119, 19);
             this.dateaddRad.TabIndex = 5;
             this.dateaddRad.TabStop = true;
             this.dateaddRad.Text = "По дате приема";
@@ -152,9 +165,9 @@
             // radioButton7
             // 
             this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(6, 105);
+            this.radioButton7.Location = new System.Drawing.Point(6, 126);
             this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(88, 17);
+            this.radioButton7.Size = new System.Drawing.Size(95, 19);
             this.radioButton7.TabIndex = 4;
             this.radioButton7.TabStop = true;
             this.radioButton7.Text = "По диагнозу";
@@ -163,9 +176,9 @@
             // radioButton8
             // 
             this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(6, 80);
+            this.radioButton8.Location = new System.Drawing.Point(6, 101);
             this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(88, 17);
+            this.radioButton8.Size = new System.Drawing.Size(96, 19);
             this.radioButton8.TabIndex = 3;
             this.radioButton8.TabStop = true;
             this.radioButton8.Text = "По возрасту";
@@ -174,9 +187,9 @@
             // radioButton9
             // 
             this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(6, 54);
+            this.radioButton9.Location = new System.Drawing.Point(6, 76);
             this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(97, 17);
+            this.radioButton9.Size = new System.Drawing.Size(109, 19);
             this.radioButton9.TabIndex = 2;
             this.radioButton9.TabStop = true;
             this.radioButton9.Text = "По отделению";
@@ -187,28 +200,29 @@
             this.radioButton10.AutoSize = true;
             this.radioButton10.Location = new System.Drawing.Point(6, 29);
             this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(88, 17);
+            this.radioButton10.Size = new System.Drawing.Size(99, 19);
             this.radioButton10.TabIndex = 1;
             this.radioButton10.TabStop = true;
             this.radioButton10.Text = "По фамилии";
             this.radioButton10.UseVisualStyleBackColor = true;
             // 
-            // dayrad
+            // radioButton1
             // 
-            this.dayrad.AutoSize = true;
-            this.dayrad.Location = new System.Drawing.Point(6, 198);
-            this.dayrad.Name = "dayrad";
-            this.dayrad.Size = new System.Drawing.Size(101, 17);
-            this.dayrad.TabIndex = 5;
-            this.dayrad.TabStop = true;
-            this.dayrad.Text = "По кол-ву дней";
-            this.dayrad.UseVisualStyleBackColor = true;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(6, 51);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(104, 19);
+            this.radioButton1.TabIndex = 2;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "По мед.карте";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // SortPac_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(335, 247);
+            this.ClientSize = new System.Drawing.Size(335, 274);
             this.Controls.Add(this.Cansel_but);
             this.Controls.Add(this.Accept_but);
             this.Controls.Add(this.groupBox2);
@@ -240,5 +254,6 @@
         private System.Windows.Forms.RadioButton radioButton9;
         private System.Windows.Forms.RadioButton radioButton10;
         private System.Windows.Forms.RadioButton dayrad;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }

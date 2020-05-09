@@ -15,12 +15,13 @@ public class Pacient
     public DateTime date_close { get; set; } // Дата выписки
     public bool hear { get; set; } // Факт наличия
     public int dayhear { get; set; } // Дней в больнице
+    public string medicinecard { get; set; } // Мед.Карта
     public Pacient()
     {
 
     }
 
-    public Pacient(string name, DateTime date, string syndrom, string depart_name, DateTime date_add, DateTime date_close, List<Department> departs)
+    public Pacient(string name, DateTime date, string syndrom, string depart_name, DateTime date_add, DateTime date_close, string medicinecard,List<Department> departs)
     {
         this.depart_name = depart_name;
         Department dep = departs.Find(
@@ -37,6 +38,7 @@ public class Pacient
         this.hear = this.date_close > DateTime.Now;
         this.age = DateTime.Now.Year - this.date.Year;
         this.dayhear = date_close.Subtract(date_add).Days;
+        this.medicinecard = medicinecard;
     }
 
     public void ChangeDepart(Department dep, string syndrom, List<Department> departs) // Функция смены отделения и соответсвенно диагноза.

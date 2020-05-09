@@ -42,11 +42,13 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.dateclose = new System.Windows.Forms.DateTimePicker();
             this.datebox = new System.Windows.Forms.DateTimePicker();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.medbox = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
+            this.textBox1.Location = new System.Drawing.Point(12, 38);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(100, 20);
@@ -55,7 +57,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 38);
+            this.textBox2.Location = new System.Drawing.Point(12, 64);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
@@ -66,7 +68,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(12, 64);
+            this.textBox3.Location = new System.Drawing.Point(12, 90);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(100, 20);
@@ -75,7 +77,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(12, 90);
+            this.textBox4.Location = new System.Drawing.Point(12, 116);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(100, 20);
@@ -84,14 +86,14 @@
             // 
             // namebox
             // 
-            this.namebox.Location = new System.Drawing.Point(129, 12);
+            this.namebox.Location = new System.Drawing.Point(129, 38);
             this.namebox.Name = "namebox";
             this.namebox.Size = new System.Drawing.Size(260, 20);
             this.namebox.TabIndex = 1;
             // 
             // syndrombox
             // 
-            this.syndrombox.Location = new System.Drawing.Point(129, 90);
+            this.syndrombox.Location = new System.Drawing.Point(129, 116);
             this.syndrombox.Name = "syndrombox";
             this.syndrombox.Size = new System.Drawing.Size(260, 20);
             this.syndrombox.TabIndex = 1;
@@ -99,9 +101,10 @@
             // depbox
             // 
             this.depbox.BackColor = System.Drawing.SystemColors.Window;
+            this.depbox.DisplayMember = "name";
             this.depbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.depbox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.depbox.Location = new System.Drawing.Point(129, 37);
+            this.depbox.Location = new System.Drawing.Point(129, 63);
             this.depbox.Name = "depbox";
             this.depbox.Size = new System.Drawing.Size(260, 21);
             this.depbox.TabIndex = 2;
@@ -109,7 +112,7 @@
             // 
             // Accept_but
             // 
-            this.Accept_but.Location = new System.Drawing.Point(12, 168);
+            this.Accept_but.Location = new System.Drawing.Point(12, 194);
             this.Accept_but.Name = "Accept_but";
             this.Accept_but.Size = new System.Drawing.Size(75, 23);
             this.Accept_but.TabIndex = 3;
@@ -119,7 +122,7 @@
             // 
             // cansel_but
             // 
-            this.cansel_but.Location = new System.Drawing.Point(129, 168);
+            this.cansel_but.Location = new System.Drawing.Point(129, 194);
             this.cansel_but.Name = "cansel_but";
             this.cansel_but.Size = new System.Drawing.Size(75, 23);
             this.cansel_but.TabIndex = 4;
@@ -129,7 +132,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(12, 116);
+            this.textBox5.Location = new System.Drawing.Point(12, 142);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(100, 20);
@@ -138,7 +141,7 @@
             // 
             // dateadd
             // 
-            this.dateadd.Location = new System.Drawing.Point(129, 116);
+            this.dateadd.Location = new System.Drawing.Point(129, 142);
             this.dateadd.Name = "dateadd";
             this.dateadd.Size = new System.Drawing.Size(260, 20);
             this.dateadd.TabIndex = 6;
@@ -147,16 +150,17 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(12, 142);
+            this.textBox6.Location = new System.Drawing.Point(12, 168);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(100, 20);
             this.textBox6.TabIndex = 5;
             this.textBox6.Text = "Дата приема";
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // dateclose
             // 
-            this.dateclose.Location = new System.Drawing.Point(129, 142);
+            this.dateclose.Location = new System.Drawing.Point(129, 168);
             this.dateclose.Name = "dateclose";
             this.dateclose.Size = new System.Drawing.Size(260, 20);
             this.dateclose.TabIndex = 7;
@@ -164,20 +168,40 @@
             // 
             // datebox
             // 
-            this.datebox.Location = new System.Drawing.Point(129, 64);
+            this.datebox.Location = new System.Drawing.Point(129, 90);
             this.datebox.Name = "datebox";
             this.datebox.Size = new System.Drawing.Size(260, 20);
             this.datebox.TabIndex = 8;
             this.datebox.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(12, 12);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.ReadOnly = true;
+            this.textBox7.Size = new System.Drawing.Size(100, 20);
+            this.textBox7.TabIndex = 5;
+            this.textBox7.Text = "Номер мед.карты";
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            // 
+            // medbox
+            // 
+            this.medbox.Location = new System.Drawing.Point(129, 12);
+            this.medbox.Mask = "000-000";
+            this.medbox.Name = "medbox";
+            this.medbox.Size = new System.Drawing.Size(260, 20);
+            this.medbox.TabIndex = 9;
+            // 
             // add_dialog_formpac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(401, 205);
+            this.ClientSize = new System.Drawing.Size(401, 227);
+            this.Controls.Add(this.medbox);
             this.Controls.Add(this.datebox);
             this.Controls.Add(this.dateclose);
             this.Controls.Add(this.dateadd);
+            this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.cansel_but);
@@ -215,5 +239,7 @@
         private System.Windows.Forms.TextBox textBox6;
         public System.Windows.Forms.DateTimePicker dateclose;
         public System.Windows.Forms.DateTimePicker datebox;
+        private System.Windows.Forms.TextBox textBox7;
+        public System.Windows.Forms.MaskedTextBox medbox;
     }
 }
