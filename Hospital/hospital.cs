@@ -397,6 +397,11 @@ namespace Hospital
             if (pac.hear) hearlab.Text = "Числится";
             else hearlab.Text = "Не числится";
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
