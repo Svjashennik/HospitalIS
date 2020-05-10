@@ -54,7 +54,7 @@ namespace Hospital
             if (dateadd.Value > dateclose.Value)
             {
                 MessageBox.Show("Дата принятия не может быть позже даты выписки.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
-               dateadd.Focus();
+                dateadd.Focus();
                 return;
             }
 

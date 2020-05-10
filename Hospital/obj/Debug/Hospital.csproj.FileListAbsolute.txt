@@ -50,3 +50,4 @@ C:\Users\A$tAшKIнЫ\Source\Repos\Svjashennik\HospitalIS\Hospital\obj\Debug\ja-
 C:\Users\A$tAшKIнЫ\Source\Repos\Svjashennik\HospitalIS\Hospital\obj\Debug\ru\Hospital.resources.dll
 C:\Users\A$tAшKIнЫ\Source\Repos\Svjashennik\HospitalIS\Hospital\obj\Debug\Hospital.exe
 C:\Users\A$tAшKIнЫ\Source\Repos\Svjashennik\HospitalIS\Hospital\obj\Debug\Hospital.pdb
+N:\Kursach\Hospital\Hospital\obj\Debug\Hospital.sort_dep_form.resources

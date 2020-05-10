@@ -45,14 +45,14 @@
             this.exitbut = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Sortbut = new System.Windows.Forms.Button();
+            this.filtbut = new System.Windows.Forms.Button();
+            this.clearfiltbut = new System.Windows.Forms.Button();
             this.departmentDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1.SuspendLayout();
@@ -92,7 +92,7 @@
             this.toolStripDropDownButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(784, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(784, 26);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -105,20 +105,20 @@
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(57, 22);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(66, 23);
             this.toolStripDropDownButton1.Text = "Опции";
             // 
             // настройкаЦветаToolStripMenuItem
             // 
             this.настройкаЦветаToolStripMenuItem.Name = "настройкаЦветаToolStripMenuItem";
-            this.настройкаЦветаToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.настройкаЦветаToolStripMenuItem.Size = new System.Drawing.Size(205, 24);
             this.настройкаЦветаToolStripMenuItem.Text = "Настройка цвета";
             this.настройкаЦветаToolStripMenuItem.Click += new System.EventHandler(this.настройкаЦветаToolStripMenuItem_Click);
             // 
             // настройкаШрифтаToolStripMenuItem
             // 
             this.настройкаШрифтаToolStripMenuItem.Name = "настройкаШрифтаToolStripMenuItem";
-            this.настройкаШрифтаToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.настройкаШрифтаToolStripMenuItem.Size = new System.Drawing.Size(205, 24);
             this.настройкаШрифтаToolStripMenuItem.Text = "Настройка шрифта";
             this.настройкаШрифтаToolStripMenuItem.Click += new System.EventHandler(this.настройкаШрифтаToolStripMenuItem_Click);
             // 
@@ -131,21 +131,21 @@
             this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
             this.toolStripDropDownButton2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(63, 22);
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(73, 23);
             this.toolStripDropDownButton2.Text = "Данные";
             this.toolStripDropDownButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             // 
             // отделенияToolStripMenuItem
             // 
             this.отделенияToolStripMenuItem.Name = "отделенияToolStripMenuItem";
-            this.отделенияToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.отделенияToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
             this.отделенияToolStripMenuItem.Text = "Отделения";
             this.отделенияToolStripMenuItem.Click += new System.EventHandler(this.отделенияToolStripMenuItem_Click);
             // 
             // пациентыToolStripMenuItem
             // 
             this.пациентыToolStripMenuItem.Name = "пациентыToolStripMenuItem";
-            this.пациентыToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.пациентыToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
             this.пациентыToolStripMenuItem.Text = "Пациенты";
             this.пациентыToolStripMenuItem.Click += new System.EventHandler(this.пациентыToolStripMenuItem_Click);
             // 
@@ -187,44 +187,44 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.Sortbut);
+            this.groupBox2.Controls.Add(this.filtbut);
+            this.groupBox2.Controls.Add(this.clearfiltbut);
             this.groupBox2.Location = new System.Drawing.Point(306, 382);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(296, 65);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Обработка данных";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // button3
+            // Sortbut
             // 
-            this.button3.Location = new System.Drawing.Point(198, 21);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(90, 30);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Сортировка";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.Sortbut.Location = new System.Drawing.Point(198, 21);
+            this.Sortbut.Name = "Sortbut";
+            this.Sortbut.Size = new System.Drawing.Size(90, 30);
+            this.Sortbut.TabIndex = 2;
+            this.Sortbut.Text = "Сортировка";
+            this.Sortbut.UseVisualStyleBackColor = true;
+            this.Sortbut.Click += new System.EventHandler(this.sortbut_Click);
             // 
-            // button2
+            // filtbut
             // 
-            this.button2.Location = new System.Drawing.Point(102, 21);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 30);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Фильтры";
-            this.button2.UseVisualStyleBackColor = true;
+            this.filtbut.Location = new System.Drawing.Point(102, 21);
+            this.filtbut.Name = "filtbut";
+            this.filtbut.Size = new System.Drawing.Size(90, 30);
+            this.filtbut.TabIndex = 1;
+            this.filtbut.Text = "Фильтры";
+            this.filtbut.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // clearfiltbut
             // 
-            this.button1.Location = new System.Drawing.Point(6, 17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 39);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Сбросить фильтры";
-            this.button1.UseVisualStyleBackColor = true;
+            this.clearfiltbut.Location = new System.Drawing.Point(6, 17);
+            this.clearfiltbut.Name = "clearfiltbut";
+            this.clearfiltbut.Size = new System.Drawing.Size(90, 39);
+            this.clearfiltbut.TabIndex = 0;
+            this.clearfiltbut.Text = "Сбросить фильтры";
+            this.clearfiltbut.UseVisualStyleBackColor = true;
+            this.clearfiltbut.Click += new System.EventHandler(this.clearfiltbut_Click);
             // 
             // departmentDataGridView
             // 
@@ -239,9 +239,9 @@
             this.departmentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.departmentDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn5});
             this.departmentDataGridView.DataSource = this.departmentBindingSource;
             this.departmentDataGridView.Location = new System.Drawing.Point(12, 29);
@@ -258,16 +258,6 @@
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "maximum";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Кол-во палат";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 80;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -287,6 +277,16 @@
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "maximum";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Кол-во палат";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 80;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -343,15 +343,15 @@
         private System.Windows.Forms.ToolStripMenuItem пациентыToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button clearfiltbut;
+        private System.Windows.Forms.Button Sortbut;
+        private System.Windows.Forms.Button filtbut;
         private System.Windows.Forms.BindingSource departmentBindingSource;
         public System.Windows.Forms.DataGridView departmentDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
     }
 }

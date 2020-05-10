@@ -10,32 +10,27 @@ using System.Windows.Forms;
 
 namespace Hospital
 {
-    public partial class SortPac_form : Form
+    public partial class sort_dep_form : Form
     {
         public string sort;
         public bool typesort = true;
         public bool flag = false;
-        public SortPac_form()
+        public sort_dep_form()
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void Cansel_but_Click(object sender, EventArgs e)
+        private void acceptbut_Click(object sender, EventArgs e)
         {
-            Hide();
-        }
-
-        private void Accept_but_Click(object sender, EventArgs e)
-        {
-            foreach (RadioButton rad in groupBox3.Controls)
+            foreach (RadioButton rad in groupBox1.Controls)
             {
                 if (rad.Checked)
                 {
                     sort = rad.Text;
                 }
             }
-            if (DescradioButton.Checked)
+            if (Descradiobut.Checked)
             {
                 typesort = false;
             }
@@ -43,9 +38,15 @@ namespace Hospital
             Hide();
         }
 
-        private void SortPac_form_Load(object sender, EventArgs e)
+        private void sort_dep_form_Load(object sender, EventArgs e)
         {
-            DescradioButton.Checked = true;
+            Descradiobut.Checked = true;
         }
+
+        private void canselbut_Click(object sender, EventArgs e)
+        {
+            Hide();
+        }
+
     }
 }

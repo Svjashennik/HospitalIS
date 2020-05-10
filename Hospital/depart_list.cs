@@ -12,8 +12,9 @@ namespace Hospital
 {
     public partial class departments_list : Form
     {
-        public List<Department> departments;
-        public List<String> filter;
+        public List<Department> departments; 
+        public List<Department> dep_onscreen;
+        public List<string> filter;
         public List<Pacient> lst_people;
         public departments_list()
         {
@@ -48,20 +49,20 @@ namespace Hospital
             add_dialog.Owner = this;
             add_dialog.departments = departments;
             add_dialog.chanfl = true;
-            add_dialog.sel = departmentDataGridView.CurrentRow;
+            add_dialog.sel = dep_onscreen[departmentDataGridView.CurrentRow.Index];
             add_dialog.ShowDialog();
             int i = departmentDataGridView.CurrentRow.Index;
             if (add_dialog.flag)
             {
-                departments[i].maximum = int.Parse(add_dialog.maximumbox.Text);
-                departments[i].phone = add_dialog.phonebox.Text;
-                departments[i].manager = add_dialog.managerbox.Text;
+                dep_onscreen[i].maximum = int.Parse(add_dialog.maximumbox.Text);
+                dep_onscreen[i].phone = add_dialog.phonebox.Text;
+                dep_onscreen[i].manager = add_dialog.managerbox.Text;
                 departmentBindingSource.ResetBindings(false);
-                if (departments[i].name != add_dialog.namebox.Text)
+                if (dep_onscreen[i].name != add_dialog.namebox.Text)
                 {
-                    departments[i].ChangeName(add_dialog.namebox.Text);
+                    dep_onscreen[i].ChangeName(add_dialog.namebox.Text);
                 }
-                MessageBox.Show("Информация об отделении успешна обновлена.", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                _ = MessageBox.Show("Информация об отделении успешна обновлена.", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             add_dialog.chanfl = false;
             add_dialog.Close();
@@ -69,7 +70,8 @@ namespace Hospital
 
         private void departments_list_Load(object sender, EventArgs e)
         {
-            departmentBindingSource.DataSource = departments;
+            dep_onscreen = departments;
+            departmentBindingSource.DataSource = dep_onscreen;
         }
 
 
@@ -97,11 +99,19 @@ namespace Hospital
             if (MessageBox.Show("Вы уверены? Данная операция удалит всех пациентов данного департамента.","Предупреждение", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning )== DialogResult.OK)
             {
                 int i = departmentDataGridView.CurrentCell.RowIndex;
-                foreach (Pacient pac in departments[i].people)
+                foreach (Pacient pac in dep_onscreen[i].people)
                 {
                     lst_people.Remove(pac);
                 }
-                departments.Remove(departments[i]);
+                if (dep_onscreen==departments)
+                {
+                    dep_onscreen.RemoveAt(i);
+                }
+                else
+                {
+                    departments.Remove(dep_onscreen[i]);
+                    dep_onscreen.RemoveAt(i);
+                }
                 departmentBindingSource.ResetBindings(false);
             }
         }
@@ -135,14 +145,69 @@ namespace Hospital
             Hide();
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
+        private void sortbut_Click(object sender, EventArgs e)
         {
-
+            sort_dep_form sort_form = new sort_dep_form();
+            sort_form.Owner = this;
+            sort_form.ShowDialog();
+            if (sort_form.flag)
+            {
+                if (!sort_form.typesort)
+                {
+                    switch (sort_form.sort)
+                    {
+                        case "По названию":
+                            dep_onscreen = dep_onscreen.OrderBy(pac => pac.name).ToList();
+                            break;
+                        case "По заведующему":
+                            dep_onscreen = dep_onscreen.OrderBy(pac => pac.manager).ToList();
+                            break;
+                        case "По кол-ву палат":
+                            dep_onscreen = dep_onscreen.OrderBy(pac => pac.maximum).ToList();
+                            break;
+                        case "По кол-ву пациентов":
+                            dep_onscreen = dep_onscreen.OrderBy(pac => pac.countpac).ToList();
+                            break;
+                        case "По номеру телефона":
+                            dep_onscreen = dep_onscreen.OrderBy(pac => pac.phone).ToList();
+                            break;
+                    }
+                }
+                else
+                {
+                    switch (sort_form.sort)
+                    {
+                        case "По названию":
+                            dep_onscreen = dep_onscreen.OrderByDescending(pac => pac.name).ToList();
+                            break;
+                        case "По заведующему":
+                            dep_onscreen = dep_onscreen.OrderByDescending(pac => pac.manager).ToList();
+                            break;
+                        case "По кол-ву палат":
+                            dep_onscreen = dep_onscreen.OrderByDescending(pac => pac.maximum).ToList();
+                            break;
+                        case "По кол-ву пациентов":
+                            dep_onscreen = dep_onscreen.OrderByDescending(pac => pac.countpac).ToList();
+                            break;
+                        case "По номеру телефона":
+                            dep_onscreen = dep_onscreen.OrderByDescending(pac => pac.phone).ToList();
+                            break;
+                    }
+                }
+                departmentBindingSource.DataSource = dep_onscreen;
+                departmentBindingSource.ResetBindings(false);
+            }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void clearfiltbut_Click(object sender, EventArgs e)
         {
-
+            dep_onscreen = departments;
+            departmentBindingSource.DataSource = dep_onscreen;
+            departmentBindingSource.ResetBindings(false);
+            //filt_dep_form.checkBox1.Checked = false;
+            //filt_dep_form.checkBox2.Checked = false;
+            //filt_dep_form.checkBox3.Checked = false;
+            filtbut.BackColor = chan_button.BackColor;
         }
     }
 }

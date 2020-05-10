@@ -40,9 +40,9 @@
             this.dateaddRad = new System.Windows.Forms.RadioButton();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -53,7 +53,7 @@
             this.groupBox2.Controls.Add(this.AscradioButton);
             this.groupBox2.Location = new System.Drawing.Point(183, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(138, 85);
+            this.groupBox2.Size = new System.Drawing.Size(138, 77);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Режим";
@@ -61,7 +61,7 @@
             // DescradioButton
             // 
             this.DescradioButton.AutoSize = true;
-            this.DescradioButton.Location = new System.Drawing.Point(6, 55);
+            this.DescradioButton.Location = new System.Drawing.Point(6, 29);
             this.DescradioButton.Name = "DescradioButton";
             this.DescradioButton.Size = new System.Drawing.Size(128, 19);
             this.DescradioButton.TabIndex = 1;
@@ -72,7 +72,7 @@
             // AscradioButton
             // 
             this.AscradioButton.AutoSize = true;
-            this.AscradioButton.Location = new System.Drawing.Point(6, 29);
+            this.AscradioButton.Location = new System.Drawing.Point(6, 51);
             this.AscradioButton.Name = "AscradioButton";
             this.AscradioButton.Size = new System.Drawing.Size(102, 19);
             this.AscradioButton.TabIndex = 0;
@@ -82,7 +82,7 @@
             // 
             // Accept_but
             // 
-            this.Accept_but.Location = new System.Drawing.Point(183, 103);
+            this.Accept_but.Location = new System.Drawing.Point(183, 107);
             this.Accept_but.Name = "Accept_but";
             this.Accept_but.Size = new System.Drawing.Size(90, 30);
             this.Accept_but.TabIndex = 4;
@@ -92,7 +92,7 @@
             // 
             // Cansel_but
             // 
-            this.Cansel_but.Location = new System.Drawing.Point(183, 139);
+            this.Cansel_but.Location = new System.Drawing.Point(183, 143);
             this.Cansel_but.Name = "Cansel_but";
             this.Cansel_but.Size = new System.Drawing.Size(90, 30);
             this.Cansel_but.TabIndex = 5;
@@ -184,6 +184,17 @@
             this.radioButton8.Text = "По возрасту";
             this.radioButton8.UseVisualStyleBackColor = true;
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(6, 51);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(104, 19);
+            this.radioButton1.TabIndex = 2;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "По мед.карте";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
             // radioButton9
             // 
             this.radioButton9.AutoSize = true;
@@ -205,18 +216,6 @@
             this.radioButton10.TabStop = true;
             this.radioButton10.Text = "По фамилии";
             this.radioButton10.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 51);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(104, 19);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "По мед.карте";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // SortPac_form
             // 
@@ -245,7 +244,6 @@
         private System.Windows.Forms.RadioButton AscradioButton;
         private System.Windows.Forms.Button Accept_but;
         private System.Windows.Forms.Button Cansel_but;
-        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.RadioButton hearrad;
         private System.Windows.Forms.RadioButton datecloseradioBut;
         private System.Windows.Forms.RadioButton dateaddRad;
@@ -255,5 +253,6 @@
         private System.Windows.Forms.RadioButton radioButton10;
         private System.Windows.Forms.RadioButton dayrad;
         private System.Windows.Forms.RadioButton radioButton1;
+        public System.Windows.Forms.GroupBox groupBox3;
     }
 }

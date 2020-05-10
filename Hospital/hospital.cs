@@ -106,6 +106,7 @@ namespace Hospital
                 lst_onscreen[i].medicinecard = add_dialog.medbox.Text;
                 pacientBindingSource.ResetBindings(false);
                 departmentBindingSource.ResetBindings(false);
+                _ = MessageBox.Show("Информация о пациенте успешна обновлена.", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
           
             add_dialog.chanfl = false;
@@ -179,14 +180,6 @@ namespace Hospital
             Close();
         }
 
-        private void pacientDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int i = pacientDataGridView.CurrentCell.RowIndex;
-            lst_onscreen = lst_people.FindAll(pac => pac.depart_name == pacientDataGridView.Rows[i].Cells["depart_name"].Value.ToString());
-            pacientBindingSource.DataSource = lst_onscreen;
-            pacientBindingSource.ResetBindings(false);
-        }
-
         private void resetfilterbut_Click(object sender, EventArgs e)
         {
             lst_onscreen = lst_people;
@@ -224,7 +217,7 @@ namespace Hospital
             fsdep.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void sortbut_Click(object sender, EventArgs e)
         {
             SortPac_form sort_form = new SortPac_form();
             sort_form.Owner = this;
@@ -383,7 +376,7 @@ namespace Hospital
         }
 
         private void pacientDataGridView_SelectionChanged(object sender, EventArgs e)
-        {
+        {   if (pacientDataGridView.CurrentRow is null) return;
             Pacient pac = lst_onscreen[pacientDataGridView.CurrentRow.Index];
             namelab.Text = pac.name;
             medicinelab.Text = pac.medicinecard;
@@ -398,9 +391,12 @@ namespace Hospital
             else hearlab.Text = "Не числится";
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void pacientDataGridView_CellContentDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
-
+            int i = pacientDataGridView.CurrentCell.RowIndex;
+            lst_onscreen = lst_people.FindAll(pac => pac.depart_name == pacientDataGridView.Rows[i].Cells["depart_name"].Value.ToString());
+            pacientBindingSource.DataSource = lst_onscreen;
+            pacientBindingSource.ResetBindings(false);
         }
     }
 }

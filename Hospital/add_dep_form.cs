@@ -16,7 +16,7 @@ namespace Hospital
         public bool chanfl = false;
         public bool again;
         public List<Department> departments;
-        public DataGridViewRow sel;
+        public Department sel;
         public add_dep_form()
         {
             InitializeComponent();
@@ -78,10 +78,10 @@ namespace Hospital
         {
             if (chanfl)
             {
-                namebox.Text = sel.Cells["name"].Value.ToString();
-                managerbox.Text = sel.Cells["manager"].Value.ToString();
-                phonebox.Text = sel.Cells["phone"].Value.ToString();
-                maximumbox.Text = sel.Cells["maximum"].Value.ToString();
+                namebox.Text = sel.name;
+                managerbox.Text = sel.manager;
+                phonebox.Text = sel.phone;
+                maximumbox.Text = sel.maximum.ToString();
             }
         }
     }
