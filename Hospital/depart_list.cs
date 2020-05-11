@@ -15,6 +15,7 @@ namespace Hospital
         public List<Department> departments; 
         public List<Department> dep_onscreen;
         public List<string> filter;
+        public filt_dep_form filt_form = new filt_dep_form();
         public List<Pacient> lst_people;
         public departments_list()
         {
@@ -204,10 +205,51 @@ namespace Hospital
             dep_onscreen = departments;
             departmentBindingSource.DataSource = dep_onscreen;
             departmentBindingSource.ResetBindings(false);
-            //filt_dep_form.checkBox1.Checked = false;
-            //filt_dep_form.checkBox2.Checked = false;
-            //filt_dep_form.checkBox3.Checked = false;
+            filt_form.checkBox1.Checked = false;
+            filt_form.checkBox2.Checked = false;
             filtbut.BackColor = chan_button.BackColor;
+        }
+
+        private void filtbut_Click(object sender, EventArgs e)
+        {
+            filt_form.Owner = this;
+            dep_onscreen = departments;
+            filt_form.flag = false;
+            filt_form.ShowDialog();
+            if (!filt_form.flag) return;
+
+            if (filt_form.checkBox1.Checked)
+            {
+                if (filt_form.namesubcheck.Checked)
+                {
+                    dep_onscreen = dep_onscreen.FindAll(dep => dep.name.Contains(filt_form.namesubbox.Text));
+                }
+                if (filt_form.managersubcheck.Checked)
+                {
+                    dep_onscreen = dep_onscreen.FindAll(dep => dep.manager.Contains(filt_form.managersubox.Text));
+                }
+                if (filt_form.phonesubcheck.Checked)
+                {
+                    dep_onscreen = dep_onscreen.FindAll(dep => dep.phone.Contains(filt_form.phonesubbox.Text));
+                }
+            }
+
+            if (filt_form.checkBox2.Checked)
+            {
+                if (filt_form.countcheck.Checked)
+                {
+                    dep_onscreen = dep_onscreen.FindAll(dep => (int.Parse(filt_form.count1.Text) <= dep.countpac && int.Parse(filt_form.count2.Text) >= dep.countpac));
+                }
+
+                if (filt_form.maximumcheck.Checked)
+                {
+                    dep_onscreen = dep_onscreen.FindAll(dep => (int.Parse(filt_form.max1.Text) <= dep.maximum && int.Parse(filt_form.max2.Text) >= dep.maximum));
+                }
+            }
+            if (filt_form.checkBox1.Checked || filt_form.checkBox2.Checked) filtbut.BackColor = System.Drawing.Color.Aqua;
+            else filtbut.BackColor = chan_button.BackColor;
+            departmentBindingSource.DataSource = dep_onscreen;
+            departmentBindingSource.ResetBindings(false);
         }
     }
 }

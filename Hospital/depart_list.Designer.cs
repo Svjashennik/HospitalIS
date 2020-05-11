@@ -215,6 +215,7 @@
             this.filtbut.TabIndex = 1;
             this.filtbut.Text = "Фильтры";
             this.filtbut.UseVisualStyleBackColor = true;
+            this.filtbut.Click += new System.EventHandler(this.filtbut_Click);
             // 
             // clearfiltbut
             // 
