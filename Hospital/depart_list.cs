@@ -17,6 +17,7 @@ namespace Hospital
         public List<string> filter;
         public filt_dep_form filt_form = new filt_dep_form();
         public List<Pacient> lst_people;
+        public bool rights { get; set; }
         public departments_list()
         {
             InitializeComponent();
@@ -73,6 +74,7 @@ namespace Hospital
         {
             dep_onscreen = departments;
             departmentBindingSource.DataSource = dep_onscreen;
+            groupBox1.Enabled = false;
         }
 
 

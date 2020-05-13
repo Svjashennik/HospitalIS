@@ -4,7 +4,7 @@ using System.IO;
 using System.Xml.Serialization;
 using System.Linq;
 using System.Windows.Forms;
-
+using System.Security.AccessControl;
 
 namespace Hospital
 {
@@ -23,9 +23,18 @@ namespace Hospital
         public List<Pacient> lst_onscreen = new List<Pacient>();
         public List<string> filter = new List<string>();
         public filter_form filt_form = new filter_form();
+        public bool rights { get; set; }
         public void Form1_Load(object sender, EventArgs e)
         {
-            if (File.Exists("Отделениия.xml"))
+            userform usform = new userform();
+            usform.Owner = this;
+            usform.ShowDialog();
+            if (!usform.flag) Close();
+            rights = usform.rights;
+            usform.Close();
+
+
+            /*if (File.Exists("Отделения.xml"))
             {
                 fsdep = new FileStream("Отделения.xml", FileMode.Open);
                 xsdep = new XmlSerializer(typeof(List<Department>));
@@ -57,10 +66,16 @@ namespace Hospital
                 lst_people.Add(new Pacient("Рогозникова С.Л.", new DateTime(2000, 11, 15), "Обследование", "Гастрологическое", new DateTime(2020, 2, 10), new DateTime(2020, 5, 14), "645-802", departments));
                 lst_people.Add(new Pacient("Акаев И.С.", new DateTime(2000, 7, 21), "Неврит", "Психиатрическое", new DateTime(2020, 3, 15), new DateTime(2020, 3, 16), "123-987", departments));
                 lst_people.Add(new Pacient("Комарницкий В.Г.", new DateTime(1999, 4, 28), "Биполярное расстройство", "Психиатрическое", new DateTime(2020, 4, 30), new DateTime(2020, 6, 1), "626-228", departments));
-            }
+            }*/
+
             lst_onscreen = lst_people;
             pacientBindingSource.DataSource = lst_onscreen;
             departmentBindingSource.DataSource = departments;
+
+            if (!rights)
+            {
+                groupBox1.Enabled = false;
+            }
         }
 
 
@@ -146,6 +161,7 @@ namespace Hospital
             depart_lst.filter = filter;
             depart_lst.lst_people = lst_people;
             depart_lst.Font = Font;
+            depart_lst.rights = rights;
             depart_lst.BackColor = BackColor;
             this.Hide();
             depart_lst.ShowDialog();
@@ -397,6 +413,47 @@ namespace Hospital
             lst_onscreen = lst_people.FindAll(pac => pac.depart_name == pacientDataGridView.Rows[i].Cells["depart_name"].Value.ToString());
             pacientBindingSource.DataSource = lst_onscreen;
             pacientBindingSource.ResetBindings(false);
+        }
+
+        private void сохранитьКакToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.Filter = "Xml файлы (*.xml)|*.xml";
+            saveFileDialog1.DefaultExt = "xml";
+            saveFileDialog1.RestoreDirectory = true;
+            if (saveFileDialog1.ShowDialog() == DialogResult.Cancel || saveFileDialog1.FileName == "")
+                return;
+            string filename = saveFileDialog1.FileName;
+            fsdep = new FileStream(filename, FileMode.Create);
+            xsdep = new XmlSerializer(typeof(List<Department>));
+            xsdep.Serialize(fsdep, departments);
+            fsdep.Close();
+        }
+
+        private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "Xml файлы (*.xml)|*.xml";
+            openFileDialog1.DefaultExt = "xml";
+            openFileDialog1.RestoreDirectory = true;
+            if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
+                return;
+            string filename = openFileDialog1.FileName;
+            fsdep = new FileStream(filename, FileMode.Open);
+            xsdep = new XmlSerializer(typeof(List<Department>));
+            departments = (List<Department>)xsdep.Deserialize(fsdep);
+            lst_people.Clear();
+            foreach (Department dep in departments)
+            {
+                foreach (Pacient pac in dep.people)
+                {
+                    lst_people.Add(pac);
+                }
+            }
+            fsdep.Close();
+            lst_onscreen = lst_people;
+            pacientBindingSource.DataSource = lst_onscreen;
+            departmentBindingSource.DataSource = departments;
+            pacientBindingSource.ResetBindings(false);
+            departmentBindingSource.ResetBindings(false);
         }
     }
 }

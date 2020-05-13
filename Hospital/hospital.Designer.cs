@@ -81,6 +81,14 @@
             this.depart_lab = new System.Windows.Forms.Label();
             this.namelab = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.сохранитьКакToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.depart_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.syndrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -131,7 +139,13 @@
             // 
             this.toolStripDropDownButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.сохранитьToolStripMenuItem});
+            this.toolStripMenuItem1,
+            this.toolStripSeparator1,
+            this.сохранитьToolStripMenuItem,
+            this.сохранитьКакToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.открытьToolStripMenuItem,
+            this.toolStripMenuItem2});
             resources.ApplyResources(this.toolStripDropDownButton3, "toolStripDropDownButton3");
             this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
             // 
@@ -287,7 +301,7 @@
             // date
             // 
             this.date.DataPropertyName = "date";
-            this.date.FillWeight = 96.44419F;
+            this.date.FillWeight = 91.27502F;
             resources.ApplyResources(this.date, "date");
             this.date.Name = "date";
             // 
@@ -427,6 +441,7 @@
             // 
             // depart_lab
             // 
+            this.depart_lab.AutoEllipsis = true;
             resources.ApplyResources(this.depart_lab, "depart_lab");
             this.depart_lab.Name = "depart_lab";
             // 
@@ -440,11 +455,48 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
+            // открытьToolStripMenuItem
+            // 
+            this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
+            resources.ApplyResources(this.открытьToolStripMenuItem, "открытьToolStripMenuItem");
+            this.открытьToolStripMenuItem.Click += new System.EventHandler(this.открытьToolStripMenuItem_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // сохранитьКакToolStripMenuItem
+            // 
+            this.сохранитьКакToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.сохранитьКакToolStripMenuItem.Name = "сохранитьКакToolStripMenuItem";
+            resources.ApplyResources(this.сохранитьКакToolStripMenuItem, "сохранитьКакToolStripMenuItem");
+            this.сохранитьКакToolStripMenuItem.Click += new System.EventHandler(this.сохранитьКакToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
+            // 
             // name
             // 
             this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.name.DataPropertyName = "name";
-            this.name.FillWeight = 136.4825F;
+            this.name.FillWeight = 129.1674F;
             resources.ApplyResources(this.name, "name");
             this.name.Name = "name";
             this.name.ReadOnly = true;
@@ -453,7 +505,7 @@
             // 
             this.depart_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.depart_name.DataPropertyName = "depart_name";
-            this.depart_name.FillWeight = 85.30157F;
+            this.depart_name.FillWeight = 89.66995F;
             resources.ApplyResources(this.depart_name, "depart_name");
             this.depart_name.Name = "depart_name";
             this.depart_name.ReadOnly = true;
@@ -462,7 +514,7 @@
             // 
             this.syndrom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.syndrom.DataPropertyName = "syndrom";
-            this.syndrom.FillWeight = 81.77171F;
+            this.syndrom.FillWeight = 89.88763F;
             resources.ApplyResources(this.syndrom, "syndrom");
             this.syndrom.Name = "syndrom";
             this.syndrom.ReadOnly = true;
@@ -558,6 +610,14 @@
         private System.Windows.Forms.Label daylab;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem сохранитьКакToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem открытьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 
