@@ -459,7 +459,7 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "filter_form";
-            this.Text = "Form1";
+            this.Text = "Фильтрация";
             this.Load += new System.EventHandler(this.filter_form_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

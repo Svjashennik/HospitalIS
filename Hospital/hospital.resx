@@ -1355,6 +1355,9 @@
   <data name="syndromlab.Location" type="System.Drawing.Point, System.Drawing">
     <value>194, 108</value>
   </data>
+  <data name="syndromlab.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>210, 0</value>
+  </data>
   <data name="syndromlab.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 20</value>
   </data>
@@ -1420,6 +1423,9 @@
   </data>
   <data name="datelab.Location" type="System.Drawing.Point, System.Drawing">
     <value>194, 128</value>
+  </data>
+  <data name="datelab.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>210, 0</value>
   </data>
   <data name="datelab.Size" type="System.Drawing.Size, System.Drawing">
     <value>108, 20</value>
@@ -1489,6 +1495,9 @@
   </data>
   <data name="namelab.Location" type="System.Drawing.Point, System.Drawing">
     <value>194, 31</value>
+  </data>
+  <data name="namelab.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>210, 0</value>
   </data>
   <data name="namelab.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 20</value>
@@ -1592,9 +1601,6 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1184, 562</value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>900, 400</value>
   </data>
@@ -1610,10 +1616,46 @@
   <data name="&gt;&gt;toolStripDropDownButton3.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripDropDownButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Name" xml:space="preserve">
+    <value>toolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;сохранитьToolStripMenuItem.Name" xml:space="preserve">
     <value>сохранитьToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;сохранитьToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;сохранитьКакToolStripMenuItem.Name" xml:space="preserve">
+    <value>сохранитьКакToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;сохранитьКакToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
+    <value>toolStripSeparator2</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;открытьToolStripMenuItem.Name" xml:space="preserve">
+    <value>открытьToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;открытьToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem2.Name" xml:space="preserve">
+    <value>toolStripMenuItem2</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripDropDownButton1.Name" xml:space="preserve">
@@ -1688,66 +1730,6 @@
   <data name="&gt;&gt;medicinecard.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;date.Name" xml:space="preserve">
-    <value>date</value>
-  </data>
-  <data name="&gt;&gt;date.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;hear.Name" xml:space="preserve">
-    <value>hear</value>
-  </data>
-  <data name="&gt;&gt;hear.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;открытьToolStripMenuItem.Name" xml:space="preserve">
-    <value>открытьToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;открытьToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;openFileDialog1.Name" xml:space="preserve">
-    <value>openFileDialog1</value>
-  </data>
-  <data name="&gt;&gt;openFileDialog1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;saveFileDialog1.Name" xml:space="preserve">
-    <value>saveFileDialog1</value>
-  </data>
-  <data name="&gt;&gt;saveFileDialog1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;сохранитьКакToolStripMenuItem.Name" xml:space="preserve">
-    <value>сохранитьКакToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;сохранитьКакToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
-    <value>toolStripSeparator1</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
-    <value>toolStripSeparator2</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem1.Name" xml:space="preserve">
-    <value>toolStripMenuItem1</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem2.Name" xml:space="preserve">
-    <value>toolStripMenuItem2</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;name.Name" xml:space="preserve">
     <value>name</value>
   </data>
@@ -1766,11 +1748,35 @@
   <data name="&gt;&gt;syndrom.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;date.Name" xml:space="preserve">
+    <value>date</value>
+  </data>
+  <data name="&gt;&gt;date.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hear.Name" xml:space="preserve">
+    <value>hear</value>
+  </data>
+  <data name="&gt;&gt;hear.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;pacientBindingSource.Name" xml:space="preserve">
     <value>pacientBindingSource</value>
   </data>
   <data name="&gt;&gt;pacientBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog1.Name" xml:space="preserve">
+    <value>openFileDialog1</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;saveFileDialog1.Name" xml:space="preserve">
+    <value>saveFileDialog1</value>
+  </data>
+  <data name="&gt;&gt;saveFileDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;departmentBindingSource.Name" xml:space="preserve">
     <value>departmentBindingSource</value>

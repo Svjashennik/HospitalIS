@@ -35,7 +35,13 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.сохранитьКакToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.shrift_button = new System.Windows.Forms.ToolStripMenuItem();
             this.color_but = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,8 +62,12 @@
             this.filtbut = new System.Windows.Forms.Button();
             this.pacientDataGridView = new System.Windows.Forms.DataGridView();
             this.medicinecard = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.depart_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.syndrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hear = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.pacientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -81,25 +91,15 @@
             this.depart_lab = new System.Windows.Forms.Label();
             this.namelab = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.сохранитьКакToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.depart_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.syndrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pacientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pacientDataGridView)).BeginInit();
-            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pacientBindingSource)).BeginInit();
+            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,11 +149,45 @@
             resources.ApplyResources(this.toolStripDropDownButton3, "toolStripDropDownButton3");
             this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            // 
             // сохранитьToolStripMenuItem
             // 
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
             resources.ApplyResources(this.сохранитьToolStripMenuItem, "сохранитьToolStripMenuItem");
             this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.сохранитьToolStripMenuItem_Click);
+            // 
+            // сохранитьКакToolStripMenuItem
+            // 
+            this.сохранитьКакToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.сохранитьКакToolStripMenuItem.Name = "сохранитьКакToolStripMenuItem";
+            resources.ApplyResources(this.сохранитьКакToolStripMenuItem, "сохранитьКакToolStripMenuItem");
+            this.сохранитьКакToolStripMenuItem.Click += new System.EventHandler(this.сохранитьКакToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+            // 
+            // открытьToolStripMenuItem
+            // 
+            this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
+            resources.ApplyResources(this.открытьToolStripMenuItem, "открытьToolStripMenuItem");
+            this.открытьToolStripMenuItem.Click += new System.EventHandler(this.открытьToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
             // 
             // toolStripDropDownButton1
             // 
@@ -298,6 +332,33 @@
             resources.ApplyResources(this.medicinecard, "medicinecard");
             this.medicinecard.Name = "medicinecard";
             // 
+            // name
+            // 
+            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.name.DataPropertyName = "name";
+            this.name.FillWeight = 129.1674F;
+            resources.ApplyResources(this.name, "name");
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            // 
+            // depart_name
+            // 
+            this.depart_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.depart_name.DataPropertyName = "depart_name";
+            this.depart_name.FillWeight = 89.66995F;
+            resources.ApplyResources(this.depart_name, "depart_name");
+            this.depart_name.Name = "depart_name";
+            this.depart_name.ReadOnly = true;
+            // 
+            // syndrom
+            // 
+            this.syndrom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.syndrom.DataPropertyName = "syndrom";
+            this.syndrom.FillWeight = 89.88763F;
+            resources.ApplyResources(this.syndrom, "syndrom");
+            this.syndrom.Name = "syndrom";
+            this.syndrom.ReadOnly = true;
+            // 
             // date
             // 
             this.date.DataPropertyName = "date";
@@ -313,6 +374,10 @@
             resources.ApplyResources(this.hear, "hear");
             this.hear.Name = "hear";
             this.hear.ReadOnly = true;
+            // 
+            // pacientBindingSource
+            // 
+            this.pacientBindingSource.DataSource = typeof(Pacient);
             // 
             // groupBox3
             // 
@@ -455,73 +520,9 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // открытьToolStripMenuItem
-            // 
-            this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            resources.ApplyResources(this.открытьToolStripMenuItem, "открытьToolStripMenuItem");
-            this.открытьToolStripMenuItem.Click += new System.EventHandler(this.открытьToolStripMenuItem_Click);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // сохранитьКакToolStripMenuItem
-            // 
-            this.сохранитьКакToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.сохранитьКакToolStripMenuItem.Name = "сохранитьКакToolStripMenuItem";
-            resources.ApplyResources(this.сохранитьКакToolStripMenuItem, "сохранитьКакToolStripMenuItem");
-            this.сохранитьКакToolStripMenuItem.Click += new System.EventHandler(this.сохранитьКакToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
-            // 
-            // name
-            // 
-            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.name.DataPropertyName = "name";
-            this.name.FillWeight = 129.1674F;
-            resources.ApplyResources(this.name, "name");
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            // 
-            // depart_name
-            // 
-            this.depart_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.depart_name.DataPropertyName = "depart_name";
-            this.depart_name.FillWeight = 89.66995F;
-            resources.ApplyResources(this.depart_name, "depart_name");
-            this.depart_name.Name = "depart_name";
-            this.depart_name.ReadOnly = true;
-            // 
-            // syndrom
-            // 
-            this.syndrom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.syndrom.DataPropertyName = "syndrom";
-            this.syndrom.FillWeight = 89.88763F;
-            resources.ApplyResources(this.syndrom, "syndrom");
-            this.syndrom.Name = "syndrom";
-            this.syndrom.ReadOnly = true;
-            // 
-            // pacientBindingSource
-            // 
-            this.pacientBindingSource.DataSource = typeof(Pacient);
             // 
             // departmentBindingSource
             // 
@@ -544,9 +545,9 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pacientDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacientBindingSource)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pacientBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

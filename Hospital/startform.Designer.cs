@@ -31,9 +31,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.ownfile = new System.Windows.Forms.RadioButton();
+            this.newfile = new System.Windows.Forms.RadioButton();
+            this.sample = new System.Windows.Forms.RadioButton();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.acceptbut = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -60,53 +62,70 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Выбрать";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // radioButton1
+            // ownfile
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(12, 72);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(112, 19);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Выбрать файл";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.ownfile.AutoSize = true;
+            this.ownfile.Location = new System.Drawing.Point(12, 72);
+            this.ownfile.Name = "ownfile";
+            this.ownfile.Size = new System.Drawing.Size(112, 19);
+            this.ownfile.TabIndex = 3;
+            this.ownfile.TabStop = true;
+            this.ownfile.Text = "Выбрать файл";
+            this.ownfile.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // newfile
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(12, 138);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(149, 19);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Создать новый файл";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.newfile.AutoSize = true;
+            this.newfile.Location = new System.Drawing.Point(12, 138);
+            this.newfile.Name = "newfile";
+            this.newfile.Size = new System.Drawing.Size(149, 19);
+            this.newfile.TabIndex = 3;
+            this.newfile.TabStop = true;
+            this.newfile.Text = "Создать новый файл";
+            this.newfile.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // sample
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(270, 138);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(128, 19);
-            this.radioButton3.TabIndex = 3;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Открыть образец";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.sample.AutoSize = true;
+            this.sample.Location = new System.Drawing.Point(169, 138);
+            this.sample.Name = "sample";
+            this.sample.Size = new System.Drawing.Size(128, 19);
+            this.sample.TabIndex = 3;
+            this.sample.TabStop = true;
+            this.sample.Text = "Открыть образец";
+            this.sample.UseVisualStyleBackColor = true;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // acceptbut
+            // 
+            this.acceptbut.Location = new System.Drawing.Point(323, 136);
+            this.acceptbut.Name = "acceptbut";
+            this.acceptbut.Size = new System.Drawing.Size(75, 23);
+            this.acceptbut.TabIndex = 2;
+            this.acceptbut.Text = "Принять";
+            this.acceptbut.UseVisualStyleBackColor = true;
+            this.acceptbut.Click += new System.EventHandler(this.acceptbut_Click);
             // 
             // startform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(409, 173);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.ClientSize = new System.Drawing.Size(409, 174);
+            this.Controls.Add(this.sample);
+            this.Controls.Add(this.newfile);
+            this.Controls.Add(this.ownfile);
+            this.Controls.Add(this.acceptbut);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "startform";
             this.Text = "Работа с файлами";
+            this.Load += new System.EventHandler(this.startform_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,8 +136,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton ownfile;
+        private System.Windows.Forms.RadioButton sample;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button acceptbut;
+        public System.Windows.Forms.RadioButton newfile;
     }
 }

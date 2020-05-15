@@ -18,7 +18,9 @@ namespace Hospital
 
         FileStream fsdep;
         XmlSerializer xsdep;
-        public List<Department> departments { get; set; }
+        public bool newfile = false;
+        public string filename;
+        public List<Department> departments = new List<Department>();
         public List<Pacient> lst_people = new List<Pacient>(); 
         public List<Pacient> lst_onscreen = new List<Pacient>();
         public List<string> filter = new List<string>();
@@ -29,11 +31,35 @@ namespace Hospital
             userform usform = new userform();
             usform.Owner = this;
             usform.ShowDialog();
-            if (!usform.flag) Close();
+            if (!usform.flag)
+            { 
+                Close();
+                return;
+            } 
             rights = usform.rights;
             usform.Close();
-
-
+            if (!rights)
+            {
+                groupBox1.Enabled = false;
+            }
+            startform fileform = new startform();
+            fileform.Owner = this;
+            fileform.ShowDialog();
+            if (!fileform.flag)
+            { 
+                Close();
+                return;
+            } 
+            if (fileform.newfile.Checked)
+            {
+                newfile = true;
+                MessageBox.Show("eqweq");
+                newfileoperation(sender, e);
+                return;
+            }
+            filename = fileform.filename;
+            openfileoperation();
+            fileform.Close();
             /*if (File.Exists("Отделения.xml"))
             {
                 fsdep = new FileStream("Отделения.xml", FileMode.Open);
@@ -71,11 +97,6 @@ namespace Hospital
             lst_onscreen = lst_people;
             pacientBindingSource.DataSource = lst_onscreen;
             departmentBindingSource.DataSource = departments;
-
-            if (!rights)
-            {
-                groupBox1.Enabled = false;
-            }
         }
 
 
@@ -189,10 +210,7 @@ namespace Hospital
 
         private void quite_save_Click(object sender, EventArgs e)
         {
-            fsdep = new FileStream("Отделения.xml", FileMode.Create);
-            xsdep = new XmlSerializer(typeof(List<Department>));
-            xsdep.Serialize(fsdep, departments);
-            fsdep.Close();
+            сохранитьToolStripMenuItem_Click(sender, e);
             Close();
         }
 
@@ -225,12 +243,14 @@ namespace Hospital
             pacientBindingSource.ResetBindings(false);
         }
 
-        private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
+        public void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fsdep = new FileStream("Отделения.xml", FileMode.Create);
-            xsdep = new XmlSerializer(typeof(List<Department>));
-            xsdep.Serialize(fsdep, departments);
-            fsdep.Close();
+            if (newfile)
+            {
+                сохранитьКакToolStripMenuItem_Click(sender, e);
+                return;
+            }
+            savefileoperation();
         }
 
         private void sortbut_Click(object sender, EventArgs e)
@@ -415,18 +435,15 @@ namespace Hospital
             pacientBindingSource.ResetBindings(false);
         }
 
-        private void сохранитьКакToolStripMenuItem_Click(object sender, EventArgs e)
+        public void сохранитьКакToolStripMenuItem_Click(object sender, EventArgs e)
         {
             saveFileDialog1.Filter = "Xml файлы (*.xml)|*.xml";
             saveFileDialog1.DefaultExt = "xml";
             saveFileDialog1.RestoreDirectory = true;
             if (saveFileDialog1.ShowDialog() == DialogResult.Cancel || saveFileDialog1.FileName == "")
                 return;
-            string filename = saveFileDialog1.FileName;
-            fsdep = new FileStream(filename, FileMode.Create);
-            xsdep = new XmlSerializer(typeof(List<Department>));
-            xsdep.Serialize(fsdep, departments);
-            fsdep.Close();
+            filename = saveFileDialog1.FileName;
+            savefileoperation();
         }
 
         private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -437,6 +454,52 @@ namespace Hospital
             if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
                 return;
             string filename = openFileDialog1.FileName;
+            openfileoperation();
+            lst_onscreen = lst_people;
+            pacientBindingSource.DataSource = lst_onscreen;
+            departmentBindingSource.DataSource = departments;
+            pacientBindingSource.ResetBindings(false);
+            departmentBindingSource.ResetBindings(false);
+        }
+
+        public void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            newfile = true;
+            lst_onscreen.Clear();
+            lst_people.Clear();
+            departments.Clear();
+            newfileoperation(sender, e);
+            pacientBindingSource.ResetBindings(false);
+            departmentBindingSource.ResetBindings(false);
+        }
+
+        public void newfileoperation(object sender, EventArgs e)
+        {
+            if (!rights) return;
+            departments_list depart_lst = new departments_list();
+            depart_lst.Owner = this;
+            depart_lst.departments = departments;
+            lst_onscreen = lst_people;
+            pacientBindingSource.DataSource = lst_onscreen;
+            departmentBindingSource.DataSource = departments;
+            depart_lst.rights = rights;
+            while (departments.Count == 0)
+            {
+                _ = MessageBox.Show("Перед работой с новым файлом необходимо создать одно отделение.", "Новый файл", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                depart_lst.add_button_Click(sender, e);
+            }
+            pacientBindingSource.ResetBindings(false);
+            departmentBindingSource.ResetBindings(false);
+        }
+        public void savefileoperation()
+        {
+            fsdep = new FileStream(filename, FileMode.Create);
+            xsdep = new XmlSerializer(typeof(List<Department>));
+            xsdep.Serialize(fsdep, departments);
+            fsdep.Close();
+        }
+        public void openfileoperation()
+        {
             fsdep = new FileStream(filename, FileMode.Open);
             xsdep = new XmlSerializer(typeof(List<Department>));
             departments = (List<Department>)xsdep.Deserialize(fsdep);
@@ -449,11 +512,6 @@ namespace Hospital
                 }
             }
             fsdep.Close();
-            lst_onscreen = lst_people;
-            pacientBindingSource.DataSource = lst_onscreen;
-            departmentBindingSource.DataSource = departments;
-            pacientBindingSource.ResetBindings(false);
-            departmentBindingSource.ResetBindings(false);
         }
     }
 }

@@ -24,7 +24,7 @@ namespace Hospital
             StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void add_button_Click(object sender, EventArgs e)
+        public void add_button_Click(object sender, EventArgs e)
         {
             add_dep_form add_dialog = new add_dep_form();
             add_dialog.Owner = this;
@@ -74,7 +74,7 @@ namespace Hospital
         {
             dep_onscreen = departments;
             departmentBindingSource.DataSource = dep_onscreen;
-            groupBox1.Enabled = false;
+            if (!rights) groupBox1.Enabled = false;
         }
 
 
