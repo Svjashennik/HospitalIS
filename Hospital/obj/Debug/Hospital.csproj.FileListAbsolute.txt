@@ -55,3 +55,4 @@ N:\Kursach\Hospital\Hospital\obj\Debug\Hospital.filt_dep_form.resources
 N:\Kursach\Hospital\Hospital\obj\Debug\Hospital.userform.resources
 N:\Kursach\Hospital\Hospital\obj\Debug\Hospital.startform.resources
 N:\Kursach\Hospital\Hospital\obj\Debug\Hospital.infoform.resources
+N:\Kursach\Hospital\Hospital\obj\Debug\Hospital.visualform.resources

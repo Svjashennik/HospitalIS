@@ -52,7 +52,7 @@ public class Department
     public static List<int> roomslst(int c, int id)
     {
         List<int> r = new List<int>();
-        for (int i = 0; i<c; i++)
+        for (int i = 0; i < c; i++)
         {
             r.Add(id * 100 + i);
         }

@@ -55,7 +55,7 @@ namespace Hospital
             {
                 dep_onscreen[i].phone = add_dialog.phonebox.Text;
                 dep_onscreen[i].manager = add_dialog.managerbox.Text;
-                dep_onscreen[i].rooms = Department.roomslst((int)add_dialog.roombox.Value, departments.FindIndex(dep => dep.name == dep_onscreen[i].name)+1);
+                dep_onscreen[i].rooms = Department.roomslst((int)add_dialog.roombox.Value, departments.FindIndex(dep => dep.name == dep_onscreen[i].name) + 1);
                 dep_onscreen[i].countroom = dep_onscreen[i].rooms.Count;
                 departmentBindingSource.ResetBindings(false);
                 if (dep_onscreen[i].name != add_dialog.namebox.Text)
@@ -88,12 +88,6 @@ namespace Hospital
             Owner.BackColor = BackColor;
         }
 
-        private void departmentDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int i = departmentDataGridView.CurrentCell.RowIndex;
-            filter.Add(departmentDataGridView.Rows[i].Cells["name"].Value.ToString());
-            Hide();
-        }
 
         private void deletebut_Click(object sender, EventArgs e)
         {
@@ -255,6 +249,13 @@ namespace Hospital
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void departmentDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = departmentDataGridView.CurrentCell.RowIndex;
+            filter.Add(departmentDataGridView.Rows[i].Cells["name"].Value.ToString());
+            Hide();
         }
     }
 }

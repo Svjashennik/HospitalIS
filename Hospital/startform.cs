@@ -29,12 +29,18 @@ namespace Hospital
 
         private void acceptbut_Click(object sender, EventArgs e)
         {
+            if (newfile.Checked)
+            {
+                flag = true;
+                Hide();
+                return;
+            }
             if (ownfile.Checked)
             {
                 filename = textBox1.Text;
             }
             if (sample.Checked) filename = "Отделения.xml";
-            if (!File.Exists(filename))
+            if (!File.Exists(filename) && !newfile.Checked)
             {
                 _ = MessageBox.Show("Не удается найти путь к файлу. Проверьте правильность ввода.", "Ошибка поиска.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

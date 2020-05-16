@@ -61,6 +61,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.filtbut = new System.Windows.Forms.Button();
             this.pacientDataGridView = new System.Windows.Forms.DataGridView();
+            this.medicinecard = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.room = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hear = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -73,6 +76,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.hearlab = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.daylab = new System.Windows.Forms.Label();
             this.medicinelab = new System.Windows.Forms.Label();
@@ -81,21 +85,18 @@
             this.syndromlab = new System.Windows.Forms.Label();
             this.agelab = new System.Windows.Forms.Label();
             this.datelab = new System.Windows.Forms.Label();
+            this.roomlab = new System.Windows.Forms.Label();
             this.depart_lab = new System.Windows.Forms.Label();
             this.namelab = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.label9 = new System.Windows.Forms.Label();
-            this.roomlab = new System.Windows.Forms.Label();
-            this.pacientBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.medicinecard = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.visbut = new System.Windows.Forms.Button();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.depart_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.room = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.syndrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hear = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.pacientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -329,6 +330,30 @@
             this.pacientDataGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.pacientDataGridView_CellContentDoubleClick_1);
             this.pacientDataGridView.SelectionChanged += new System.EventHandler(this.pacientDataGridView_SelectionChanged);
             // 
+            // medicinecard
+            // 
+            this.medicinecard.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.medicinecard.DataPropertyName = "medicinecard";
+            resources.ApplyResources(this.medicinecard, "medicinecard");
+            this.medicinecard.Name = "medicinecard";
+            // 
+            // room
+            // 
+            this.room.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.room.DataPropertyName = "room";
+            resources.ApplyResources(this.room, "room");
+            this.room.Name = "room";
+            this.room.ReadOnly = true;
+            // 
+            // hear
+            // 
+            this.hear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.hear.DataPropertyName = "hear";
+            this.hear.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            resources.ApplyResources(this.hear, "hear");
+            this.hear.Name = "hear";
+            this.hear.ReadOnly = true;
+            // 
             // groupBox3
             // 
             resources.ApplyResources(this.groupBox3, "groupBox3");
@@ -416,6 +441,12 @@
             resources.ApplyResources(this.hearlab, "hearlab");
             this.hearlab.Name = "hearlab";
             // 
+            // label9
+            // 
+            resources.ApplyResources(this.label9, "label9");
+            this.label9.Name = "label9";
+            this.label9.Click += new System.EventHandler(this.label2_Click);
+            // 
             // label2
             // 
             resources.ApplyResources(this.label2, "label2");
@@ -457,6 +488,12 @@
             resources.ApplyResources(this.datelab, "datelab");
             this.datelab.Name = "datelab";
             // 
+            // roomlab
+            // 
+            this.roomlab.AutoEllipsis = true;
+            resources.ApplyResources(this.roomlab, "roomlab");
+            this.roomlab.Name = "roomlab";
+            // 
             // depart_lab
             // 
             this.depart_lab.AutoEllipsis = true;
@@ -477,32 +514,12 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // label9
+            // visbut
             // 
-            resources.ApplyResources(this.label9, "label9");
-            this.label9.Name = "label9";
-            this.label9.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // roomlab
-            // 
-            this.roomlab.AutoEllipsis = true;
-            resources.ApplyResources(this.roomlab, "roomlab");
-            this.roomlab.Name = "roomlab";
-            // 
-            // pacientBindingSource
-            // 
-            this.pacientBindingSource.DataSource = typeof(Pacient);
-            // 
-            // departmentBindingSource
-            // 
-            this.departmentBindingSource.DataSource = typeof(Department);
-            // 
-            // medicinecard
-            // 
-            this.medicinecard.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.medicinecard.DataPropertyName = "medicinecard";
-            resources.ApplyResources(this.medicinecard, "medicinecard");
-            this.medicinecard.Name = "medicinecard";
+            resources.ApplyResources(this.visbut, "visbut");
+            this.visbut.Name = "visbut";
+            this.visbut.UseVisualStyleBackColor = true;
+            this.visbut.Click += new System.EventHandler(this.visbut_Click);
             // 
             // name
             // 
@@ -522,14 +539,6 @@
             this.depart_name.Name = "depart_name";
             this.depart_name.ReadOnly = true;
             // 
-            // room
-            // 
-            this.room.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.room.DataPropertyName = "room";
-            resources.ApplyResources(this.room, "room");
-            this.room.Name = "room";
-            this.room.ReadOnly = true;
-            // 
             // syndrom
             // 
             this.syndrom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -539,19 +548,19 @@
             this.syndrom.Name = "syndrom";
             this.syndrom.ReadOnly = true;
             // 
-            // hear
+            // pacientBindingSource
             // 
-            this.hear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.hear.DataPropertyName = "hear";
-            this.hear.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            resources.ApplyResources(this.hear, "hear");
-            this.hear.Name = "hear";
-            this.hear.ReadOnly = true;
+            this.pacientBindingSource.DataSource = typeof(Pacient);
+            // 
+            // departmentBindingSource
+            // 
+            this.departmentBindingSource.DataSource = typeof(Department);
             // 
             // hospital
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.visbut);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.pacientDataGridView);
             this.Controls.Add(this.groupBox2);
@@ -641,6 +650,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn room;
         private System.Windows.Forms.DataGridViewTextBoxColumn syndrom;
         private System.Windows.Forms.DataGridViewCheckBoxColumn hear;
+        private System.Windows.Forms.Button visbut;
     }
 }
 

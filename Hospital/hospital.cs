@@ -52,7 +52,6 @@ namespace Hospital
             if (fileform.newfile.Checked)
             {
                 newfile = true;
-                MessageBox.Show("eqweq");
                 newfileoperation(sender, e);
                 return;
             }
@@ -201,6 +200,7 @@ namespace Hospital
             pacientBindingSource.DataSource = lst_onscreen;
             pacientBindingSource.ResetBindings(false);
             departmentBindingSource.ResetBindings(false);
+            filtbut.BackColor = System.Drawing.Color.Aqua;
         }
 
         private void ПациентыToolStripMenuItem_Click(object sender, EventArgs e)
@@ -552,6 +552,17 @@ namespace Hospital
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void visbut_Click(object sender, EventArgs e)
+        {
+            visualform visform = new visualform();
+            visform.Owner = this;
+            visform.departments = departments;
+            visform.lst_people = lst_people;
+            visform.depbox.DataSource = departmentBindingSource.DataSource;
+            visform.ShowDialog();
+            visform.Close();
         }
     }
 }

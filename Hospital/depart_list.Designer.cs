@@ -50,10 +50,10 @@
             this.clearfiltbut = new System.Windows.Forms.Button();
             this.departmentDataGridView = new System.Windows.Forms.DataGridView();
             this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.countroom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.countroom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -240,10 +240,10 @@
             this.departmentDataGridView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.departmentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.departmentDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.countroom,
+            this.name,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
+            this.countroom,
             this.dataGridViewTextBoxColumn5});
             this.departmentDataGridView.DataSource = this.departmentBindingSource;
             this.departmentDataGridView.Location = new System.Drawing.Point(12, 29);
@@ -251,25 +251,20 @@
             this.departmentDataGridView.RowHeadersWidth = 45;
             this.departmentDataGridView.Size = new System.Drawing.Size(760, 346);
             this.departmentDataGridView.TabIndex = 8;
+            this.departmentDataGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.departmentDataGridView_CellContentDoubleClick);
             // 
             // departmentBindingSource
             // 
             this.departmentBindingSource.DataSource = typeof(Department);
             // 
-            // dataGridViewTextBoxColumn1
+            // name
             // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "name";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Название";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // countroom
-            // 
-            this.countroom.DataPropertyName = "countroom";
-            this.countroom.HeaderText = "Кол-во палат";
-            this.countroom.Name = "countroom";
+            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "Название";
+            this.name.MinimumWidth = 6;
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -289,6 +284,14 @@
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Width = 80;
+            // 
+            // countroom
+            // 
+            this.countroom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.countroom.DataPropertyName = "countroom";
+            this.countroom.HeaderText = "Кол-во палат";
+            this.countroom.Name = "countroom";
+            this.countroom.Width = 80;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -348,10 +351,10 @@
         private System.Windows.Forms.BindingSource departmentBindingSource;
         public System.Windows.Forms.DataGridView departmentDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn countroom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn countroom;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
     }
 }

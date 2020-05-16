@@ -19,7 +19,7 @@ public class Pacient
 
     }
 
-    public Pacient(string name, DateTime date, string syndrom, string depart_name,int room ,DateTime date_add, DateTime date_close, string medicinecard, List<Department> departs)
+    public Pacient(string name, DateTime date, string syndrom, string depart_name, int room, DateTime date_add, DateTime date_close, string medicinecard, List<Department> departs)
     {
         this.depart_name = depart_name;
         Department dep = departs.Find(
@@ -40,7 +40,7 @@ public class Pacient
         this.medicinecard = medicinecard;
     }
 
-    public void ChangeDepart(Department dep, string syndrom, int room,List<Department> departs) // Функция смены отделения и соответсвенно диагноза.
+    public void ChangeDepart(Department dep, string syndrom, int room, List<Department> departs) // Функция смены отделения и соответсвенно диагноза.
     {
 
         FindDep(departs).Delete(this);
