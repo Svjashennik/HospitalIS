@@ -73,7 +73,6 @@
             this.namebox.Name = "namebox";
             this.namebox.Size = new System.Drawing.Size(244, 20);
             this.namebox.TabIndex = 11;
-            this.namebox.TextChanged += new System.EventHandler(this.namebox_TextChanged);
             // 
             // textBox4
             // 

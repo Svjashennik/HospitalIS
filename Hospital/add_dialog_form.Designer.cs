@@ -146,7 +146,6 @@
             this.dateadd.Size = new System.Drawing.Size(260, 20);
             this.dateadd.TabIndex = 6;
             this.dateadd.Value = new System.DateTime(2020, 5, 2, 0, 0, 0, 0);
-            this.dateadd.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // textBox6
             // 
@@ -156,7 +155,6 @@
             this.textBox6.Size = new System.Drawing.Size(100, 20);
             this.textBox6.TabIndex = 5;
             this.textBox6.Text = "Дата приема";
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // dateclose
             // 
@@ -182,7 +180,6 @@
             this.textBox7.Size = new System.Drawing.Size(100, 20);
             this.textBox7.TabIndex = 5;
             this.textBox7.Text = "Номер мед.карты";
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // medbox
             // 

@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Xml.Serialization;
 using System.Linq;
 using System.Windows.Forms;
-using System.Security.AccessControl;
+using System.Xml.Serialization;
 
 namespace Hospital
 {
@@ -21,7 +20,7 @@ namespace Hospital
         public bool newfile = false;
         public string filename;
         public List<Department> departments = new List<Department>();
-        public List<Pacient> lst_people = new List<Pacient>(); 
+        public List<Pacient> lst_people = new List<Pacient>();
         public List<Pacient> lst_onscreen = new List<Pacient>();
         public List<string> filter = new List<string>();
         public filter_form filt_form = new filter_form();
@@ -32,10 +31,10 @@ namespace Hospital
             usform.Owner = this;
             usform.ShowDialog();
             if (!usform.flag)
-            { 
+            {
                 Close();
                 return;
-            } 
+            }
             rights = usform.rights;
             usform.Close();
             if (!rights)
@@ -46,10 +45,10 @@ namespace Hospital
             fileform.Owner = this;
             fileform.ShowDialog();
             if (!fileform.flag)
-            { 
+            {
                 Close();
                 return;
-            } 
+            }
             if (fileform.newfile.Checked)
             {
                 newfile = true;
@@ -105,12 +104,12 @@ namespace Hospital
         {
             add_dialog_formpac add_dialog = new add_dialog_formpac();
             add_dialog.Owner = this;
-            add_dialog.depbox.DataSource = departmentBindingSource; 
-            Add:
+            add_dialog.depbox.DataSource = departmentBindingSource;
+        Add:
             add_dialog.ShowDialog();
             if (add_dialog.flag)
             {
-                Pacient newpac = new Pacient(add_dialog.namebox.Text, add_dialog.datebox.Value, add_dialog.syndrombox.Text, ((Department)add_dialog.depbox.SelectedItem).name, add_dialog.dateadd.Value, add_dialog.dateclose.Value,add_dialog.medbox.Text ,departments);
+                Pacient newpac = new Pacient(add_dialog.namebox.Text, add_dialog.datebox.Value, add_dialog.syndrombox.Text, ((Department)add_dialog.depbox.SelectedItem).name, add_dialog.dateadd.Value, add_dialog.dateclose.Value, add_dialog.medbox.Text, departments);
                 lst_people.Add(newpac);
                 pacientBindingSource.ResetBindings(false);
                 departmentBindingSource.ResetBindings(false);
@@ -144,22 +143,22 @@ namespace Hospital
                 departmentBindingSource.ResetBindings(false);
                 _ = MessageBox.Show("Информация о пациенте успешна обновлена.", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-          
+
             add_dialog.chanfl = false;
             add_dialog.Close();
         }
 
-       
+
 
         private void shrift_button_Click(object sender, EventArgs e)
         {
-            fontDialog1.ShowColor = true; 
-            fontDialog1.Font = this.Font; 
+            fontDialog1.ShowColor = true;
+            fontDialog1.Font = this.Font;
             fontDialog1.Color = this.ForeColor;
             if (fontDialog1.ShowDialog() == DialogResult.OK)
             {
-                this.Font = fontDialog1.Font; 
-                this.ForeColor = fontDialog1.Color; 
+                this.Font = fontDialog1.Font;
+                this.ForeColor = fontDialog1.Color;
             }
         }
 
@@ -205,7 +204,7 @@ namespace Hospital
             pacientBindingSource.DataSource = lst_onscreen;
             pacientBindingSource.ResetBindings(false);
             departmentBindingSource.ResetBindings(false);
-        
+
         }
 
         private void quite_save_Click(object sender, EventArgs e)
@@ -352,7 +351,7 @@ namespace Hospital
                     lst_onscreen = lst_onscreen.FindAll(pac => pac.depart_name.Contains(filt_form.departsubtext.Text));
                 }
                 if (filt_form.syndromsub.Checked)
-                { 
+                {
                     lst_onscreen = lst_onscreen.FindAll(pac => pac.syndrom.Contains(filt_form.syndromsubtext.Text));
                 }
                 if (filt_form.medicinesub.Checked)
@@ -382,17 +381,17 @@ namespace Hospital
             {
                 if (filt_form.departcheck.Checked)
                 {
-                        lst_onscreen = lst_onscreen.FindAll(pac => pac.depart_name == filt_form.departbox.Text);
+                    lst_onscreen = lst_onscreen.FindAll(pac => pac.depart_name == filt_form.departbox.Text);
                 }
-                        
+
                 if (filt_form.dayhearcheck.Checked)
                 {
-                        lst_onscreen = lst_onscreen.FindAll(pac => (int.Parse(filt_form.day1.Text) <= pac.dayhear && int.Parse(filt_form.day2.Text) >= pac.dayhear));
+                    lst_onscreen = lst_onscreen.FindAll(pac => (int.Parse(filt_form.day1.Text) <= pac.dayhear && int.Parse(filt_form.day2.Text) >= pac.dayhear));
                 }
 
                 if (filt_form.agecheck.Checked)
                 {
-                        lst_onscreen = lst_onscreen.FindAll(pac => (int.Parse(filt_form.age1.Text) <= pac.age && int.Parse(filt_form.age2.Text) >= pac.age));
+                    lst_onscreen = lst_onscreen.FindAll(pac => (int.Parse(filt_form.age1.Text) <= pac.age && int.Parse(filt_form.age2.Text) >= pac.age));
                 }
                 if (filt_form.hearcheck.Checked)
                 {
@@ -400,7 +399,7 @@ namespace Hospital
                     else lst_onscreen = lst_onscreen.FindAll(pac => !pac.hear);
                 }
             }
-            if (filt_form.checkBox1.Checked || filt_form.checkBox2.Checked || filt_form.checkBox3.Checked) filtbut.BackColor = System.Drawing.Color.Aqua;  
+            if (filt_form.checkBox1.Checked || filt_form.checkBox2.Checked || filt_form.checkBox3.Checked) filtbut.BackColor = System.Drawing.Color.Aqua;
             else filtbut.BackColor = change_but.BackColor;
             pacientBindingSource.DataSource = lst_onscreen;
             pacientBindingSource.ResetBindings(false);
@@ -408,11 +407,12 @@ namespace Hospital
 
         private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _=MessageBox.Show("Данная программа разработана студентом \n Финансового Университета второго года обучения группы ПИ18-2 Асташкина Никиты. \n Научный руководитель - Чистов Д.В.", "О программе", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            _ = MessageBox.Show("Данная программа разработана студентом \n Финансового Университета второго года обучения группы ПИ18-2 Асташкина Никиты. \n Научный руководитель - Чистов Д.В.", "О программе", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void pacientDataGridView_SelectionChanged(object sender, EventArgs e)
-        {   if (pacientDataGridView.CurrentRow is null) return;
+        {
+            if (pacientDataGridView.CurrentRow is null) return;
             Pacient pac = lst_onscreen[pacientDataGridView.CurrentRow.Index];
             namelab.Text = pac.name;
             medicinelab.Text = pac.medicinecard;
@@ -513,10 +513,17 @@ namespace Hospital
             }
             fsdep.Close();
         }
+
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            filename = "Отделения.xml";
+            openfileoperation();
+        }
     }
 }
 
 
-   
+
 
 

@@ -1,8 +1,5 @@
-using Hospital;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
 
 public class Pacient
 {
@@ -21,7 +18,7 @@ public class Pacient
 
     }
 
-    public Pacient(string name, DateTime date, string syndrom, string depart_name, DateTime date_add, DateTime date_close, string medicinecard,List<Department> departs)
+    public Pacient(string name, DateTime date, string syndrom, string depart_name, DateTime date_add, DateTime date_close, string medicinecard, List<Department> departs)
     {
         this.depart_name = depart_name;
         Department dep = departs.Find(

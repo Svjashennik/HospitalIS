@@ -62,12 +62,8 @@
             this.filtbut = new System.Windows.Forms.Button();
             this.pacientDataGridView = new System.Windows.Forms.DataGridView();
             this.medicinecard = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.depart_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.syndrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hear = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.pacientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -93,13 +89,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.depart_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.syndrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pacientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pacientDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pacientBindingSource)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pacientBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -188,6 +188,7 @@
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // toolStripDropDownButton1
             // 
@@ -332,33 +333,6 @@
             resources.ApplyResources(this.medicinecard, "medicinecard");
             this.medicinecard.Name = "medicinecard";
             // 
-            // name
-            // 
-            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.name.DataPropertyName = "name";
-            this.name.FillWeight = 129.1674F;
-            resources.ApplyResources(this.name, "name");
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            // 
-            // depart_name
-            // 
-            this.depart_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.depart_name.DataPropertyName = "depart_name";
-            this.depart_name.FillWeight = 89.66995F;
-            resources.ApplyResources(this.depart_name, "depart_name");
-            this.depart_name.Name = "depart_name";
-            this.depart_name.ReadOnly = true;
-            // 
-            // syndrom
-            // 
-            this.syndrom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.syndrom.DataPropertyName = "syndrom";
-            this.syndrom.FillWeight = 89.88763F;
-            resources.ApplyResources(this.syndrom, "syndrom");
-            this.syndrom.Name = "syndrom";
-            this.syndrom.ReadOnly = true;
-            // 
             // date
             // 
             this.date.DataPropertyName = "date";
@@ -374,10 +348,6 @@
             resources.ApplyResources(this.hear, "hear");
             this.hear.Name = "hear";
             this.hear.ReadOnly = true;
-            // 
-            // pacientBindingSource
-            // 
-            this.pacientBindingSource.DataSource = typeof(Pacient);
             // 
             // groupBox3
             // 
@@ -524,6 +494,37 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // name
+            // 
+            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.name.DataPropertyName = "name";
+            this.name.FillWeight = 129.1674F;
+            resources.ApplyResources(this.name, "name");
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            // 
+            // depart_name
+            // 
+            this.depart_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.depart_name.DataPropertyName = "depart_name";
+            this.depart_name.FillWeight = 89.66995F;
+            resources.ApplyResources(this.depart_name, "depart_name");
+            this.depart_name.Name = "depart_name";
+            this.depart_name.ReadOnly = true;
+            // 
+            // syndrom
+            // 
+            this.syndrom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.syndrom.DataPropertyName = "syndrom";
+            this.syndrom.FillWeight = 89.88763F;
+            resources.ApplyResources(this.syndrom, "syndrom");
+            this.syndrom.Name = "syndrom";
+            this.syndrom.ReadOnly = true;
+            // 
+            // pacientBindingSource
+            // 
+            this.pacientBindingSource.DataSource = typeof(Pacient);
+            // 
             // departmentBindingSource
             // 
             this.departmentBindingSource.DataSource = typeof(Department);
@@ -545,9 +546,9 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pacientDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pacientBindingSource)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pacientBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

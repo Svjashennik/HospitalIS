@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 
 public class Department
 {
@@ -24,7 +22,6 @@ public class Department
         this.maximum = max;
         this.manager = manager;
         this.phone = phone;
-        
     }
 
 
@@ -45,7 +42,7 @@ public class Department
 
     public void ChangeName(string newname)
     {
-        foreach(Pacient pac in people)
+        foreach (Pacient pac in people)
         {
             pac.depart_name = newname;
             name = newname;

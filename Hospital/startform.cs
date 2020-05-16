@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace Hospital
 {
@@ -38,6 +34,24 @@ namespace Hospital
                 filename = textBox1.Text;
             }
             if (sample.Checked) filename = "Отделения.xml";
+            if (!File.Exists(filename))
+            {
+                _ = MessageBox.Show("Не удается найти путь к файлу. Проверьте правильность ввода.", "Ошибка поиска.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            FileStream fsdep = new FileStream(filename, FileMode.Open);
+            XmlSerializer xsdep = new XmlSerializer(typeof(List<Department>));
+            try
+            {
+                List<Department> l = (List<Department>)xsdep.Deserialize(fsdep);
+                fsdep.Close();
+            }
+            catch
+            {
+                _ = MessageBox.Show("Не удается считать данный файл, возможно он поврежден или не содержит необходимой информации.", "Ошибка поиска.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                fsdep.Close();
+                return;
+            }
             flag = true;
             Hide();
         }

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Hospital
@@ -35,18 +28,18 @@ namespace Hospital
             }
         }
 
-       
+
         private void Accept_but_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(namebox.Text))
             {
-                MessageBox.Show("Вы должны ввести фамилию.","Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Вы должны ввести фамилию.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 namebox.Focus();
                 return;
             }
             if (string.IsNullOrEmpty(syndrombox.Text))
             {
-                MessageBox.Show("Вы должны ввести диагноз.","Ошибка ввода",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Вы должны ввести диагноз.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 syndrombox.Focus();
                 return;
             }
@@ -67,20 +60,11 @@ namespace Hospital
             this.Hide();
         }
 
-        
+
         private void cansel_but_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

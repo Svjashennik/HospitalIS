@@ -1,18 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Hospital
 {
     public partial class departments_list : Form
     {
-        public List<Department> departments; 
+        public List<Department> departments;
         public List<Department> dep_onscreen;
         public List<string> filter;
         public filt_dep_form filt_form = new filt_dep_form();
@@ -29,7 +25,7 @@ namespace Hospital
             add_dep_form add_dialog = new add_dep_form();
             add_dialog.Owner = this;
             add_dialog.departments = departments;
-            Add:
+        Add:
             add_dialog.ShowDialog();
             if (add_dialog.flag)
             {
@@ -99,14 +95,14 @@ namespace Hospital
 
         private void deletebut_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Вы уверены? Данная операция удалит всех пациентов данного департамента.","Предупреждение", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning )== DialogResult.OK)
+            if (MessageBox.Show("Вы уверены? Данная операция удалит всех пациентов данного департамента.", "Предупреждение", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 int i = departmentDataGridView.CurrentCell.RowIndex;
                 foreach (Pacient pac in dep_onscreen[i].people)
                 {
                     lst_people.Remove(pac);
                 }
-                if (dep_onscreen==departments)
+                if (dep_onscreen == departments)
                 {
                     dep_onscreen.RemoveAt(i);
                 }
@@ -253,5 +249,6 @@ namespace Hospital
             departmentBindingSource.DataSource = dep_onscreen;
             departmentBindingSource.ResetBindings(false);
         }
+
     }
 }

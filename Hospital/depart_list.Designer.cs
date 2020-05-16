@@ -312,6 +312,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.exitbut);
             this.Controls.Add(this.toolStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(800, 400);
             this.Name = "departments_list";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
