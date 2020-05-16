@@ -38,12 +38,6 @@ namespace Hospital
                 managerbox.Focus();
                 return;
             }
-            if (!maximumbox.Text.All(char.IsDigit) || string.IsNullOrEmpty(maximumbox.Text))
-            {
-                MessageBox.Show("Необходим числовой формат ввода.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                maximumbox.Focus();
-                return;
-            }
 
             if (string.IsNullOrEmpty(phonebox.Text))
             {
@@ -72,7 +66,7 @@ namespace Hospital
                 namebox.Text = sel.name;
                 managerbox.Text = sel.manager;
                 phonebox.Text = sel.phone;
-                maximumbox.Text = sel.maximum.ToString();
+                roombox.Value = sel.rooms.Count;
             }
         }
     }

@@ -37,11 +37,11 @@
             this.namesubcheck = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.max2 = new System.Windows.Forms.TextBox();
-            this.max1 = new System.Windows.Forms.TextBox();
+            this.room2 = new System.Windows.Forms.TextBox();
+            this.room1 = new System.Windows.Forms.TextBox();
             this.count2 = new System.Windows.Forms.TextBox();
             this.count1 = new System.Windows.Forms.TextBox();
-            this.maximumcheck = new System.Windows.Forms.CheckBox();
+            this.roomcheck = new System.Windows.Forms.CheckBox();
             this.countcheck = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.acceptbut = new System.Windows.Forms.Button();
@@ -92,7 +92,7 @@
             this.phonesubcheck.AutoSize = true;
             this.phonesubcheck.Location = new System.Drawing.Point(7, 70);
             this.phonesubcheck.Name = "phonesubcheck";
-            this.phonesubcheck.Size = new System.Drawing.Size(188, 19);
+            this.phonesubcheck.Size = new System.Drawing.Size(164, 17);
             this.phonesubcheck.TabIndex = 0;
             this.phonesubcheck.Text = "Номер телефона содержит";
             this.phonesubcheck.UseVisualStyleBackColor = true;
@@ -102,7 +102,7 @@
             this.managersubcheck.AutoSize = true;
             this.managersubcheck.Location = new System.Drawing.Point(7, 45);
             this.managersubcheck.Name = "managersubcheck";
-            this.managersubcheck.Size = new System.Drawing.Size(190, 19);
+            this.managersubcheck.Size = new System.Drawing.Size(172, 17);
             this.managersubcheck.TabIndex = 0;
             this.managersubcheck.Text = "Имя заведующего содержит";
             this.managersubcheck.UseVisualStyleBackColor = true;
@@ -112,7 +112,7 @@
             this.namesubcheck.AutoSize = true;
             this.namesubcheck.Location = new System.Drawing.Point(7, 20);
             this.namesubcheck.Name = "namesubcheck";
-            this.namesubcheck.Size = new System.Drawing.Size(143, 19);
+            this.namesubcheck.Size = new System.Drawing.Size(128, 17);
             this.namesubcheck.TabIndex = 0;
             this.namesubcheck.Text = "Название содержит";
             this.namesubcheck.UseVisualStyleBackColor = true;
@@ -122,7 +122,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(12, 12);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(231, 19);
+            this.checkBox1.Size = new System.Drawing.Size(202, 17);
             this.checkBox1.TabIndex = 1;
             this.checkBox1.Text = "Включить фильтры по подстрокам";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -130,11 +130,11 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.max2);
-            this.groupBox2.Controls.Add(this.max1);
+            this.groupBox2.Controls.Add(this.room2);
+            this.groupBox2.Controls.Add(this.room1);
             this.groupBox2.Controls.Add(this.count2);
             this.groupBox2.Controls.Add(this.count1);
-            this.groupBox2.Controls.Add(this.maximumcheck);
+            this.groupBox2.Controls.Add(this.roomcheck);
             this.groupBox2.Controls.Add(this.countcheck);
             this.groupBox2.Location = new System.Drawing.Point(12, 162);
             this.groupBox2.Name = "groupBox2";
@@ -143,20 +143,20 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Числовые фильтры";
             // 
-            // max2
+            // room2
             // 
-            this.max2.Location = new System.Drawing.Point(314, 40);
-            this.max2.Name = "max2";
-            this.max2.Size = new System.Drawing.Size(105, 20);
-            this.max2.TabIndex = 5;
+            this.room2.Location = new System.Drawing.Point(314, 40);
+            this.room2.Name = "room2";
+            this.room2.Size = new System.Drawing.Size(105, 20);
+            this.room2.TabIndex = 5;
             // 
-            // max1
+            // room1
             // 
-            this.max1.Location = new System.Drawing.Point(201, 40);
-            this.max1.Name = "max1";
-            this.max1.Size = new System.Drawing.Size(105, 20);
-            this.max1.TabIndex = 6;
-            this.max1.TextChanged += new System.EventHandler(this.max1_TextChanged);
+            this.room1.Location = new System.Drawing.Point(201, 40);
+            this.room1.Name = "room1";
+            this.room1.Size = new System.Drawing.Size(105, 20);
+            this.room1.TabIndex = 6;
+            this.room1.TextChanged += new System.EventHandler(this.max1_TextChanged);
             // 
             // count2
             // 
@@ -173,22 +173,22 @@
             this.count1.TabIndex = 8;
             this.count1.TextChanged += new System.EventHandler(this.count1_TextChanged);
             // 
-            // maximumcheck
+            // roomcheck
             // 
-            this.maximumcheck.AutoSize = true;
-            this.maximumcheck.Location = new System.Drawing.Point(7, 42);
-            this.maximumcheck.Name = "maximumcheck";
-            this.maximumcheck.Size = new System.Drawing.Size(104, 19);
-            this.maximumcheck.TabIndex = 3;
-            this.maximumcheck.Text = "Кол-во палат";
-            this.maximumcheck.UseVisualStyleBackColor = true;
+            this.roomcheck.AutoSize = true;
+            this.roomcheck.Location = new System.Drawing.Point(7, 42);
+            this.roomcheck.Name = "roomcheck";
+            this.roomcheck.Size = new System.Drawing.Size(92, 17);
+            this.roomcheck.TabIndex = 3;
+            this.roomcheck.Text = "Кол-во палат";
+            this.roomcheck.UseVisualStyleBackColor = true;
             // 
             // countcheck
             // 
             this.countcheck.AutoSize = true;
             this.countcheck.Location = new System.Drawing.Point(7, 19);
             this.countcheck.Name = "countcheck";
-            this.countcheck.Size = new System.Drawing.Size(132, 19);
+            this.countcheck.Size = new System.Drawing.Size(116, 17);
             this.countcheck.TabIndex = 4;
             this.countcheck.Text = "Кол-во пациентов";
             this.countcheck.UseVisualStyleBackColor = true;
@@ -198,7 +198,7 @@
             this.checkBox2.AutoSize = true;
             this.checkBox2.Location = new System.Drawing.Point(12, 137);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(231, 19);
+            this.checkBox2.Size = new System.Drawing.Size(202, 17);
             this.checkBox2.TabIndex = 1;
             this.checkBox2.Text = "Включить фильтры по подстрокам";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -249,11 +249,11 @@
         }
 
         #endregion
-        public System.Windows.Forms.TextBox max2;
-        public System.Windows.Forms.TextBox max1;
+        public System.Windows.Forms.TextBox room2;
+        public System.Windows.Forms.TextBox room1;
         public System.Windows.Forms.TextBox count2;
         public System.Windows.Forms.TextBox count1;
-        public System.Windows.Forms.CheckBox maximumcheck;
+        public System.Windows.Forms.CheckBox roomcheck;
         public System.Windows.Forms.CheckBox countcheck;
         public System.Windows.Forms.GroupBox groupBox1;
         public System.Windows.Forms.CheckBox namesubcheck;

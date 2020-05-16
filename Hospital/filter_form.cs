@@ -70,6 +70,12 @@ namespace Hospital
                 return;
             }
 
+            if (roombox.Text.All(ch => !char.IsDigit(ch)) && roomcheck.Checked)
+            {
+                MessageBox.Show("Возраст должен выражаеться числами.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                roombox.Focus();
+                return;
+            }
             Hide();
         }
 
@@ -110,6 +116,11 @@ namespace Hospital
         }
 
         private void filter_form_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void hearcheck_CheckedChanged(object sender, EventArgs e)
         {
 
         }

@@ -29,7 +29,7 @@ namespace Hospital
             add_dialog.ShowDialog();
             if (add_dialog.flag)
             {
-                departments.Add(new Department(add_dialog.namebox.Text, int.Parse(add_dialog.maximumbox.Text), add_dialog.managerbox.Text, add_dialog.phonebox.Text));
+                departments.Add(new Department(add_dialog.namebox.Text, add_dialog.managerbox.Text, add_dialog.phonebox.Text, Department.roomslst((int)add_dialog.roombox.Value, departments.Count + 1)));
                 departmentBindingSource.ResetBindings(false);
                 if (add_dialog.again)
                 {
@@ -50,11 +50,13 @@ namespace Hospital
             add_dialog.sel = dep_onscreen[departmentDataGridView.CurrentRow.Index];
             add_dialog.ShowDialog();
             int i = departmentDataGridView.CurrentRow.Index;
+
             if (add_dialog.flag)
             {
-                dep_onscreen[i].maximum = int.Parse(add_dialog.maximumbox.Text);
                 dep_onscreen[i].phone = add_dialog.phonebox.Text;
                 dep_onscreen[i].manager = add_dialog.managerbox.Text;
+                dep_onscreen[i].rooms = Department.roomslst((int)add_dialog.roombox.Value, departments.FindIndex(dep => dep.name == dep_onscreen[i].name)+1);
+                dep_onscreen[i].countroom = dep_onscreen[i].rooms.Count;
                 departmentBindingSource.ResetBindings(false);
                 if (dep_onscreen[i].name != add_dialog.namebox.Text)
                 {
@@ -162,7 +164,7 @@ namespace Hospital
                             dep_onscreen = dep_onscreen.OrderBy(pac => pac.manager).ToList();
                             break;
                         case "По кол-ву палат":
-                            dep_onscreen = dep_onscreen.OrderBy(pac => pac.maximum).ToList();
+                            dep_onscreen = dep_onscreen.OrderBy(pac => pac.countroom).ToList();
                             break;
                         case "По кол-ву пациентов":
                             dep_onscreen = dep_onscreen.OrderBy(pac => pac.countpac).ToList();
@@ -183,7 +185,7 @@ namespace Hospital
                             dep_onscreen = dep_onscreen.OrderByDescending(pac => pac.manager).ToList();
                             break;
                         case "По кол-ву палат":
-                            dep_onscreen = dep_onscreen.OrderByDescending(pac => pac.maximum).ToList();
+                            dep_onscreen = dep_onscreen.OrderByDescending(pac => pac.countroom).ToList();
                             break;
                         case "По кол-ву пациентов":
                             dep_onscreen = dep_onscreen.OrderByDescending(pac => pac.countpac).ToList();
@@ -239,9 +241,9 @@ namespace Hospital
                     dep_onscreen = dep_onscreen.FindAll(dep => (int.Parse(filt_form.count1.Text) <= dep.countpac && int.Parse(filt_form.count2.Text) >= dep.countpac));
                 }
 
-                if (filt_form.maximumcheck.Checked)
+                if (filt_form.roomcheck.Checked)
                 {
-                    dep_onscreen = dep_onscreen.FindAll(dep => (int.Parse(filt_form.max1.Text) <= dep.maximum && int.Parse(filt_form.max2.Text) >= dep.maximum));
+                    dep_onscreen = dep_onscreen.FindAll(dep => int.Parse(filt_form.room1.Text) <= dep.countroom && int.Parse(filt_form.room2.Text) >= dep.countroom);
                 }
             }
             if (filt_form.checkBox1.Checked || filt_form.checkBox2.Checked) filtbut.BackColor = System.Drawing.Color.Aqua;
@@ -250,5 +252,9 @@ namespace Hospital
             departmentBindingSource.ResetBindings(false);
         }
 
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

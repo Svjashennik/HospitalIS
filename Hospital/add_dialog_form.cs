@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.Design.Serialization;
 using System.Windows.Forms;
 
 namespace Hospital
@@ -9,6 +11,7 @@ namespace Hospital
         public bool chanfl = false;
         public bool again;
         public Pacient sel;
+        public List<Department> departments;
         public add_dialog_formpac()
         {
             InitializeComponent();
@@ -16,15 +19,22 @@ namespace Hospital
 
         private void add_dialog_form_Load(object sender, EventArgs e)
         {
+            depbox.DataSource = departments;
+            depbox.SelectedItem = departments[0];
+            roombox.DataSource = ((Department)depbox.SelectedItem).rooms;
+            roombox.SelectedItem = ((Department)depbox.SelectedItem).rooms[0];
             if (chanfl)
             {
                 namebox.Text = sel.name;
                 datebox.Value = sel.date;
                 syndrombox.Text = sel.syndrom;
+                depbox.SelectedItem = (sel.FindDep(departments)).name;
                 depbox.Text = sel.depart_name;
                 dateadd.Value = sel.date_add;
                 dateclose.Value = sel.date_close;
                 medbox.Text = sel.medicinecard;
+                roombox.SelectedItem = sel.room;
+                roombox.Text = roombox.SelectedItem.ToString();
             }
         }
 
@@ -66,5 +76,10 @@ namespace Hospital
             this.Hide();
         }
 
+        private void depbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            roombox.DataSource = ((Department)depbox.SelectedItem).rooms;
+            roombox.SelectedItem = ((Department)depbox.SelectedItem).rooms[0];
+        }
     }
 }

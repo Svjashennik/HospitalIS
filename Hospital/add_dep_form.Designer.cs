@@ -30,19 +30,20 @@
         {
             this.cansel_but = new System.Windows.Forms.Button();
             this.Accept_but = new System.Windows.Forms.Button();
-            this.maximumbox = new System.Windows.Forms.TextBox();
             this.namebox = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.textbox2 = new System.Windows.Forms.TextBox();
             this.textbox = new System.Windows.Forms.TextBox();
             this.managerbox = new System.Windows.Forms.TextBox();
             this.phonebox = new System.Windows.Forms.MaskedTextBox();
+            this.roombox = new System.Windows.Forms.NumericUpDown();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.roombox)).BeginInit();
             this.SuspendLayout();
             // 
             // cansel_but
             // 
-            this.cansel_but.Location = new System.Drawing.Point(143, 116);
+            this.cansel_but.Location = new System.Drawing.Point(143, 117);
             this.cansel_but.Name = "cansel_but";
             this.cansel_but.Size = new System.Drawing.Size(75, 23);
             this.cansel_but.TabIndex = 14;
@@ -60,13 +61,6 @@
             this.Accept_but.UseVisualStyleBackColor = true;
             this.Accept_but.Click += new System.EventHandler(this.Accept_but_Click);
             // 
-            // maximumbox
-            // 
-            this.maximumbox.Location = new System.Drawing.Point(143, 64);
-            this.maximumbox.Name = "maximumbox";
-            this.maximumbox.Size = new System.Drawing.Size(244, 20);
-            this.maximumbox.TabIndex = 10;
-            // 
             // namebox
             // 
             this.namebox.Location = new System.Drawing.Point(143, 12);
@@ -76,21 +70,12 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(12, 90);
+            this.textBox4.Location = new System.Drawing.Point(12, 64);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 5;
             this.textBox4.Text = "Телефон";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(12, 64);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 6;
-            this.textBox3.Text = "Лимит палат";
             // 
             // textbox2
             // 
@@ -121,25 +106,51 @@
             // 
             // phonebox
             // 
-            this.phonebox.Location = new System.Drawing.Point(143, 90);
+            this.phonebox.Location = new System.Drawing.Point(143, 64);
             this.phonebox.Mask = "8-000-000-00-00";
             this.phonebox.Name = "phonebox";
             this.phonebox.Size = new System.Drawing.Size(244, 20);
             this.phonebox.TabIndex = 16;
             // 
+            // roombox
+            // 
+            this.roombox.Location = new System.Drawing.Point(143, 91);
+            this.roombox.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.roombox.Name = "roombox";
+            this.roombox.Size = new System.Drawing.Size(104, 20);
+            this.roombox.TabIndex = 17;
+            this.roombox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(12, 90);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 5;
+            this.textBox1.Text = "Кол-во палат";
+            // 
             // add_dep_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 152);
+            this.ClientSize = new System.Drawing.Size(399, 149);
+            this.Controls.Add(this.roombox);
             this.Controls.Add(this.phonebox);
             this.Controls.Add(this.managerbox);
             this.Controls.Add(this.cansel_but);
             this.Controls.Add(this.Accept_but);
-            this.Controls.Add(this.maximumbox);
             this.Controls.Add(this.namebox);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textbox2);
             this.Controls.Add(this.textbox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -147,6 +158,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Редактировать";
             this.Load += new System.EventHandler(this.add_dep_form_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.roombox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,13 +168,13 @@
 
         private System.Windows.Forms.Button cansel_but;
         private System.Windows.Forms.Button Accept_but;
-        public System.Windows.Forms.TextBox maximumbox;
         public System.Windows.Forms.TextBox namebox;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textbox2;
         private System.Windows.Forms.TextBox textbox;
         public System.Windows.Forms.TextBox managerbox;
         public System.Windows.Forms.MaskedTextBox phonebox;
+        private System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.NumericUpDown roombox;
     }
 }

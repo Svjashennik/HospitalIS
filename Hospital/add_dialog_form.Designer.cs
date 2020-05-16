@@ -44,6 +44,8 @@
             this.datebox = new System.Windows.Forms.DateTimePicker();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.medbox = new System.Windows.Forms.MaskedTextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.roombox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // textBox1
@@ -109,10 +111,11 @@
             this.depbox.Size = new System.Drawing.Size(260, 21);
             this.depbox.TabIndex = 2;
             this.depbox.ValueMember = "name";
+            this.depbox.SelectedIndexChanged += new System.EventHandler(this.depbox_SelectedIndexChanged);
             // 
             // Accept_but
             // 
-            this.Accept_but.Location = new System.Drawing.Point(12, 194);
+            this.Accept_but.Location = new System.Drawing.Point(12, 223);
             this.Accept_but.Name = "Accept_but";
             this.Accept_but.Size = new System.Drawing.Size(75, 23);
             this.Accept_but.TabIndex = 3;
@@ -122,7 +125,7 @@
             // 
             // cansel_but
             // 
-            this.cansel_but.Location = new System.Drawing.Point(129, 194);
+            this.cansel_but.Location = new System.Drawing.Point(129, 223);
             this.cansel_but.Name = "cansel_but";
             this.cansel_but.Size = new System.Drawing.Size(75, 23);
             this.cansel_but.TabIndex = 4;
@@ -189,16 +192,37 @@
             this.medbox.Size = new System.Drawing.Size(260, 20);
             this.medbox.TabIndex = 9;
             // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(12, 194);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
+            this.textBox8.Size = new System.Drawing.Size(100, 20);
+            this.textBox8.TabIndex = 5;
+            this.textBox8.Text = "Палата";
+            // 
+            // roombox
+            // 
+            this.roombox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.roombox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.roombox.FormattingEnabled = true;
+            this.roombox.Location = new System.Drawing.Point(129, 192);
+            this.roombox.Name = "roombox";
+            this.roombox.Size = new System.Drawing.Size(131, 21);
+            this.roombox.TabIndex = 10;
+            // 
             // add_dialog_formpac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(401, 227);
+            this.ClientSize = new System.Drawing.Size(401, 258);
+            this.Controls.Add(this.roombox);
             this.Controls.Add(this.medbox);
             this.Controls.Add(this.datebox);
             this.Controls.Add(this.dateclose);
             this.Controls.Add(this.dateadd);
             this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.cansel_but);
@@ -238,5 +262,7 @@
         public System.Windows.Forms.DateTimePicker datebox;
         private System.Windows.Forms.TextBox textBox7;
         public System.Windows.Forms.MaskedTextBox medbox;
+        private System.Windows.Forms.TextBox textBox8;
+        public System.Windows.Forms.ComboBox roombox;
     }
 }

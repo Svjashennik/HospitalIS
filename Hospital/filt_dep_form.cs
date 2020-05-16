@@ -35,22 +35,22 @@ namespace Hospital
 
         private void max1_TextChanged(object sender, EventArgs e)
         {
-            max2.Text = max1.Text;
+            room2.Text = room1.Text;
         }
 
         private void acceptbut_Click(object sender, EventArgs e)
         {
             flag = true;
-            if (max1.Text.All(ch => !char.IsDigit(ch)) && maximumcheck.Checked)
+            if (room1.Text.All(ch => !char.IsDigit(ch)) && roomcheck.Checked)
             {
                 _ = MessageBox.Show("Кол-во палат должно выражаться числами.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                max1.Focus();
+                room1.Focus();
                 return;
             }
-            if (max2.Text.All(ch => !char.IsDigit(ch)) && maximumcheck.Checked)
+            if (room2.Text.All(ch => !char.IsDigit(ch)) && roomcheck.Checked)
             {
                 _ = MessageBox.Show("Кол-во палат должно выражаться числами.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                max2.Focus();
+                room2.Focus();
                 return;
             }
             if (count2.Text.All(ch => !char.IsDigit(ch)) && countcheck.Checked)
