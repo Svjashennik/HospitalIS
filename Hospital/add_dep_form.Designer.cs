@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(add_dep_form));
             this.cansel_but = new System.Windows.Forms.Button();
             this.Accept_but = new System.Windows.Forms.Button();
             this.namebox = new System.Windows.Forms.TextBox();
@@ -154,6 +155,7 @@
             this.Controls.Add(this.textbox2);
             this.Controls.Add(this.textbox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "add_dep_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Редактировать";

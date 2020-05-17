@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using System.Xml.Serialization;
-using System.Diagnostics;
 
 namespace Hospital
 {
@@ -19,12 +19,14 @@ namespace Hospital
         FileStream fsdep;
         XmlSerializer xsdep;
         public bool newfile = false;
-        public string filename;
+        public string filename { get; set; }
         public List<Department> departments = new List<Department>();
         public List<Pacient> lst_people = new List<Pacient>();
         public List<Pacient> lst_onscreen = new List<Pacient>();
         public List<string> filter = new List<string>();
         public filter_form filt_form = new filter_form();
+        public bool flagfile = false;
+        public bool changecheck { get; set; }
         public bool rights { get; set; }
         public void Form1_Load(object sender, EventArgs e)
         {
@@ -97,7 +99,7 @@ namespace Hospital
             //    lst_people.Add(new Pacient("Акаев И.С.", new DateTime(2000, 7, 21), "Неврит", "Психиатрическое", 301, new DateTime(2020, 3, 15), new DateTime(2020, 3, 16), "123-987", departments));
             //    lst_people.Add(new Pacient("Комарницкий В.Г.", new DateTime(1999, 4, 28), "Биполярное расстройство", "Психиатрическое", 301, new DateTime(2020, 4, 30), new DateTime(2020, 6, 1), "626-228", departments));
             //}
-
+            changecheck = false;
             lst_onscreen = lst_people;
             pacientBindingSource.DataSource = lst_onscreen;
             departmentBindingSource.DataSource = departments;
@@ -111,6 +113,7 @@ namespace Hospital
             add_dialog_formpac add_dialog = new add_dialog_formpac();
             add_dialog.Owner = this;
             add_dialog.departments = departments;
+            add_dialog.lst_people = lst_people;
         Add:
             add_dialog.ShowDialog();
             if (add_dialog.flag)
@@ -127,16 +130,19 @@ namespace Hospital
                 }
             }
             add_dialog.Close();
+            changecheck = true;
             changecount();
         }
 
         private void change_but_Click(object sender, EventArgs e)
         {
+            if (pacientDataGridView.CurrentRow is null) return;
             add_dialog_formpac add_dialog = new add_dialog_formpac();
             add_dialog.Owner = this;
             add_dialog.chanfl = true;
             add_dialog.sel = lst_onscreen[pacientDataGridView.CurrentCell.RowIndex];
             add_dialog.departments = departments;
+            add_dialog.lst_people = lst_people;
             add_dialog.ShowDialog();
             int i = pacientDataGridView.CurrentRow.Index;
             if (add_dialog.flag)
@@ -153,6 +159,7 @@ namespace Hospital
 
             add_dialog.chanfl = false;
             add_dialog.Close();
+            changecheck = true;
             changecount();
         }
 
@@ -207,6 +214,7 @@ namespace Hospital
             departmentBindingSource.ResetBindings(false);
             filtbut.BackColor = System.Drawing.Color.Aqua;
             changecount();
+            changecheck = true;
         }
 
         private void ПациентыToolStripMenuItem_Click(object sender, EventArgs e)
@@ -216,7 +224,6 @@ namespace Hospital
             pacientBindingSource.ResetBindings(false);
             departmentBindingSource.ResetBindings(false);
             changecount();
-
         }
 
         private void Quite_save_Click(object sender, EventArgs e)
@@ -240,6 +247,7 @@ namespace Hospital
 
         private void deletebut_Click(object sender, EventArgs e)
         {
+            if (pacientDataGridView.CurrentRow is null) return;
             int i = pacientDataGridView.CurrentCell.RowIndex;
             if (lst_onscreen == lst_people)
             {
@@ -254,6 +262,7 @@ namespace Hospital
             }
             pacientBindingSource.ResetBindings(false);
             changecount();
+            changecheck = true;
         }
 
         public void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -264,6 +273,7 @@ namespace Hospital
                 return;
             }
             savefileoperation();
+            changecheck = false;
         }
 
         private void sortbut_Click(object sender, EventArgs e)
@@ -475,6 +485,7 @@ namespace Hospital
                 return;
             filename = saveFileDialog1.FileName;
             savefileoperation();
+            changecheck = false;
         }
 
         private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -484,14 +495,16 @@ namespace Hospital
             openFileDialog1.RestoreDirectory = true;
             if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
                 return;
-            string filename = openFileDialog1.FileName;
+            filename = openFileDialog1.FileName;
             openfileoperation(sender, e);
+            if (!flagfile) { return; }
             lst_onscreen = lst_people;
             pacientBindingSource.DataSource = lst_onscreen;
             departmentBindingSource.DataSource = departments;
             pacientBindingSource.ResetBindings(false);
             departmentBindingSource.ResetBindings(false);
             changecount();
+            flagfile = false;
         }
 
         public void toolStripMenuItem1_Click(object sender, EventArgs e)
@@ -500,6 +513,8 @@ namespace Hospital
             lst_onscreen.Clear();
             lst_people.Clear();
             departments.Clear();
+            pacientBindingSource.ResetBindings(false);
+            departmentBindingSource.ResetBindings(false);
             newfileoperation(sender, e);
             pacientBindingSource.ResetBindings(false);
             departmentBindingSource.ResetBindings(false);
@@ -523,6 +538,7 @@ namespace Hospital
             pacientBindingSource.ResetBindings(false);
             departmentBindingSource.ResetBindings(false);
             changecount();
+            changecheck = true;
         }
         public void savefileoperation()
         {
@@ -533,22 +549,31 @@ namespace Hospital
         }
         public void openfileoperation(object sender, EventArgs e)
         {
-            fsdep = new FileStream(filename, FileMode.Open);
-            xsdep = new XmlSerializer(typeof(List<Department>));
-            departments = (List<Department>)xsdep.Deserialize(fsdep);
-            lst_people.Clear();
-            foreach (Department dep in departments)
+            try
             {
-                foreach (Pacient pac in dep.people)
+                fsdep = new FileStream(filename, FileMode.Open);
+                xsdep = new XmlSerializer(typeof(List<Department>));
+                departments = (List<Department>)xsdep.Deserialize(fsdep);
+                lst_people.Clear();
+                foreach (Department dep in departments)
                 {
-                    lst_people.Add(pac);
+                    foreach (Pacient pac in dep.people)
+                    {
+                        lst_people.Add(pac);
+                    }
                 }
+                if (departments.Count == 0)
+                {
+                    newfileoperation(sender, e);
+                }
+                flagfile = true;
+                fsdep.Close();
             }
-            if (departments.Count == 0)
+            catch
             {
-                newfileoperation(sender, e);
+                _ = MessageBox.Show("Не удается считать данный файл, возможно он поврежден или не содержит необходимой информации.", "Ошибка поиска.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                fsdep.Close();
             }
-            fsdep.Close();
 
         }
 
@@ -558,12 +583,14 @@ namespace Hospital
             filename = "samples/Отделения.xml";
             newfile = false;
             openfileoperation(sender, e);
+            if (!flagfile) { return; }
             lst_onscreen = lst_people;
             pacientBindingSource.DataSource = lst_onscreen;
             departmentBindingSource.DataSource = departments;
             pacientBindingSource.ResetBindings(false);
             departmentBindingSource.ResetBindings(false);
             changecount();
+            flagfile = false;
 
         }
 
@@ -590,6 +617,7 @@ namespace Hospital
 
         public void changecount()
         {
+            if (lst_people is null || lst_onscreen is null) return;
             countrow.Text = lst_people.Count.ToString();
             herecount.Text = lst_onscreen.Count.ToString();
         }
@@ -597,6 +625,14 @@ namespace Hospital
         private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Process.Start("NotePad.exe", "files/Info.txt");
+        }
+
+        private void hospital_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (changecheck)
+            {
+                if (DialogResult.Cancel == MessageBox.Show("Вы уверены,что хотите выйти без сохранения?", "Выход", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)) e.Cancel = true;
+            }
         }
     }
 }

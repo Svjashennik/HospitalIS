@@ -8,6 +8,7 @@ namespace Hospital
         public infoform()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void infoform_Load(object sender, EventArgs e)

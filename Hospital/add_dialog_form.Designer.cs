@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(add_dialog_formpac));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -43,9 +44,9 @@
             this.dateclose = new System.Windows.Forms.DateTimePicker();
             this.datebox = new System.Windows.Forms.DateTimePicker();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.medbox = new System.Windows.Forms.MaskedTextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.roombox = new System.Windows.Forms.ComboBox();
+            this.medbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox1
@@ -157,7 +158,7 @@
             this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(100, 20);
             this.textBox6.TabIndex = 5;
-            this.textBox6.Text = "Дата приема";
+            this.textBox6.Text = "Дата выписки";
             // 
             // dateclose
             // 
@@ -184,14 +185,6 @@
             this.textBox7.TabIndex = 5;
             this.textBox7.Text = "Номер мед.карты";
             // 
-            // medbox
-            // 
-            this.medbox.Location = new System.Drawing.Point(129, 12);
-            this.medbox.Mask = "000-000";
-            this.medbox.Name = "medbox";
-            this.medbox.Size = new System.Drawing.Size(260, 20);
-            this.medbox.TabIndex = 9;
-            // 
             // textBox8
             // 
             this.textBox8.Location = new System.Drawing.Point(12, 194);
@@ -211,13 +204,19 @@
             this.roombox.Size = new System.Drawing.Size(131, 21);
             this.roombox.TabIndex = 10;
             // 
+            // medbox
+            // 
+            this.medbox.Location = new System.Drawing.Point(129, 12);
+            this.medbox.Name = "medbox";
+            this.medbox.Size = new System.Drawing.Size(260, 20);
+            this.medbox.TabIndex = 1;
+            // 
             // add_dialog_formpac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(401, 258);
             this.Controls.Add(this.roombox);
-            this.Controls.Add(this.medbox);
             this.Controls.Add(this.datebox);
             this.Controls.Add(this.dateclose);
             this.Controls.Add(this.dateadd);
@@ -229,12 +228,14 @@
             this.Controls.Add(this.Accept_but);
             this.Controls.Add(this.depbox);
             this.Controls.Add(this.syndrombox);
+            this.Controls.Add(this.medbox);
             this.Controls.Add(this.namebox);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "add_dialog_formpac";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Редактировать";
@@ -261,8 +262,8 @@
         public System.Windows.Forms.DateTimePicker dateclose;
         public System.Windows.Forms.DateTimePicker datebox;
         private System.Windows.Forms.TextBox textBox7;
-        public System.Windows.Forms.MaskedTextBox medbox;
         private System.Windows.Forms.TextBox textBox8;
         public System.Windows.Forms.ComboBox roombox;
+        public System.Windows.Forms.TextBox medbox;
     }
 }

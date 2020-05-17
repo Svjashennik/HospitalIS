@@ -44,7 +44,6 @@ namespace Hospital
 
         private void AcceptBut_Click(object sender, EventArgs e)
         {
-            flag = true;
             if (day1.Text.All(ch => !char.IsDigit(ch)) && dayhearcheck.Checked)
             {
                 MessageBox.Show("Кол-во дней должно выражаться числами.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -59,24 +58,25 @@ namespace Hospital
             }
             if (age2.Text.All(ch => !char.IsDigit(ch)) && agecheck.Checked)
             {
-                MessageBox.Show("Возраст должен выражаеться числами.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Возраст должен выражаться числами.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 age2.Focus();
                 return;
             }
             if (age1.Text.All(ch => !char.IsDigit(ch)) && agecheck.Checked)
             {
-                MessageBox.Show("Возраст должен выражаеться числами.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Возраст должен выражаться числами.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 age1.Focus();
                 return;
             }
 
             if (roombox.Text.All(ch => !char.IsDigit(ch)) && roomcheck.Checked)
             {
-                MessageBox.Show("Возраст должен выражаеться числами.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Номер палаты должен выражаться числами.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 roombox.Focus();
                 return;
             }
             Hide();
+            flag = true;
         }
 
         private void CanselBut_Click(object sender, EventArgs e)

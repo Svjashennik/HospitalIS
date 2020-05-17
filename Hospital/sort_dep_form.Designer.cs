@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(sort_dep_form));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
@@ -62,7 +63,7 @@
             this.radioButton5.AutoSize = true;
             this.radioButton5.Location = new System.Drawing.Point(6, 129);
             this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(149, 19);
+            this.radioButton5.Size = new System.Drawing.Size(131, 17);
             this.radioButton5.TabIndex = 0;
             this.radioButton5.TabStop = true;
             this.radioButton5.Text = "По номеру телефона";
@@ -73,7 +74,7 @@
             this.radioButton4.AutoSize = true;
             this.radioButton4.Location = new System.Drawing.Point(6, 104);
             this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(146, 19);
+            this.radioButton4.Size = new System.Drawing.Size(130, 17);
             this.radioButton4.TabIndex = 0;
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "По кол-ву пациентов";
@@ -84,7 +85,7 @@
             this.radioButton3.AutoSize = true;
             this.radioButton3.Location = new System.Drawing.Point(6, 79);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(118, 19);
+            this.radioButton3.Size = new System.Drawing.Size(106, 17);
             this.radioButton3.TabIndex = 0;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "По кол-ву палат";
@@ -95,7 +96,7 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(6, 54);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(122, 19);
+            this.radioButton2.Size = new System.Drawing.Size(113, 17);
             this.radioButton2.TabIndex = 0;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "По заведующему";
@@ -106,7 +107,7 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(7, 29);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(101, 19);
+            this.radioButton1.Size = new System.Drawing.Size(92, 17);
             this.radioButton1.TabIndex = 0;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "По названию";
@@ -148,7 +149,7 @@
             this.Descradiobut.AutoSize = true;
             this.Descradiobut.Location = new System.Drawing.Point(6, 29);
             this.Descradiobut.Name = "Descradiobut";
-            this.Descradiobut.Size = new System.Drawing.Size(121, 19);
+            this.Descradiobut.Size = new System.Drawing.Size(109, 17);
             this.Descradiobut.TabIndex = 0;
             this.Descradiobut.TabStop = true;
             this.Descradiobut.Text = "По возрастанию";
@@ -159,7 +160,7 @@
             this.Ascradiobut.AutoSize = true;
             this.Ascradiobut.Location = new System.Drawing.Point(6, 54);
             this.Ascradiobut.Name = "Ascradiobut";
-            this.Ascradiobut.Size = new System.Drawing.Size(102, 19);
+            this.Ascradiobut.Size = new System.Drawing.Size(93, 17);
             this.Ascradiobut.TabIndex = 0;
             this.Ascradiobut.TabStop = true;
             this.Ascradiobut.Text = "По убыванию";
@@ -175,6 +176,7 @@
             this.Controls.Add(this.acceptbut);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "sort_dep_form";
             this.Text = "Сортировка отделений";
             this.Load += new System.EventHandler(this.sort_dep_form_Load);

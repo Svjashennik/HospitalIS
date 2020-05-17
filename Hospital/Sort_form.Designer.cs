@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SortPac_form));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.DescradioButton = new System.Windows.Forms.RadioButton();
             this.AscradioButton = new System.Windows.Forms.RadioButton();
             this.Accept_but = new System.Windows.Forms.Button();
             this.Cansel_but = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.roomrad = new System.Windows.Forms.RadioButton();
             this.dayrad = new System.Windows.Forms.RadioButton();
             this.hearrad = new System.Windows.Forms.RadioButton();
             this.datecloseradioBut = new System.Windows.Forms.RadioButton();
@@ -43,7 +45,6 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.roomrad = new System.Windows.Forms.RadioButton();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -119,6 +120,17 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Варианты сортировки";
+            // 
+            // roomrad
+            // 
+            this.roomrad.AutoSize = true;
+            this.roomrad.Location = new System.Drawing.Point(6, 249);
+            this.roomrad.Name = "roomrad";
+            this.roomrad.Size = new System.Drawing.Size(85, 17);
+            this.roomrad.TabIndex = 5;
+            this.roomrad.TabStop = true;
+            this.roomrad.Text = "По палатам";
+            this.roomrad.UseVisualStyleBackColor = true;
             // 
             // dayrad
             // 
@@ -219,17 +231,6 @@
             this.radioButton10.Text = "По фамилии";
             this.radioButton10.UseVisualStyleBackColor = true;
             // 
-            // roomrad
-            // 
-            this.roomrad.AutoSize = true;
-            this.roomrad.Location = new System.Drawing.Point(6, 249);
-            this.roomrad.Name = "roomrad";
-            this.roomrad.Size = new System.Drawing.Size(85, 17);
-            this.roomrad.TabIndex = 5;
-            this.roomrad.TabStop = true;
-            this.roomrad.Text = "По палатам";
-            this.roomrad.UseVisualStyleBackColor = true;
-            // 
             // SortPac_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,6 +241,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SortPac_form";
             this.Text = "Сортировка";
             this.Load += new System.EventHandler(this.SortPac_form_Load);

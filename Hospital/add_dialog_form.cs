@@ -11,6 +11,7 @@ namespace Hospital
         public bool again;
         public Pacient sel;
         public List<Department> departments;
+        public List<Pacient> lst_people;
         public add_dialog_formpac()
         {
             InitializeComponent();
@@ -54,10 +55,25 @@ namespace Hospital
                 return;
             }
 
+            if (string.IsNullOrEmpty(medbox.Text))
+            {
+                MessageBox.Show("Вы должны ввести номер мед карты.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                syndrombox.Focus();
+                return;
+            }
+
+
             if (dateadd.Value > dateclose.Value)
             {
                 MessageBox.Show("Дата принятия не может быть позже даты выписки.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 dateadd.Focus();
+                return;
+            }
+
+            if (checkpac())
+            {
+                MessageBox.Show("Аналогичный пациент уже существует.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                namebox.Focus();
                 return;
             }
 
@@ -70,6 +86,22 @@ namespace Hospital
             this.Hide();
         }
 
+        public bool checkpac()
+        {
+            foreach (Pacient pac in lst_people)
+            {
+                if (pac.date_add != dateadd.Value) continue;
+                if (pac.date_close != dateclose.Value) continue;
+                if (pac.date != datebox.Value) continue;
+                if (pac.name != namebox.Text) continue;
+                if (pac.depart_name != depbox.Text) continue;
+                if (pac.syndrom != syndrombox.Text) continue;
+                if (pac.medicinecard != medbox.Text) continue;
+                if (pac.room.ToString() != roombox.Text) continue;
+                return true;
+            }
+            return false;
+        }
 
         private void cansel_but_Click(object sender, EventArgs e)
         {

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(filt_dep_form));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.phonesubbox = new System.Windows.Forms.MaskedTextBox();
             this.managersubox = new System.Windows.Forms.TextBox();
@@ -236,6 +237,7 @@
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "filt_dep_form";
             this.Text = "Фильтрация";
             this.Load += new System.EventHandler(this.filt_dep_form_Load);

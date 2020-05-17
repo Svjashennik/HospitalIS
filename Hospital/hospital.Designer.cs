@@ -50,6 +50,7 @@
             this.пациентыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton4 = new System.Windows.Forms.ToolStripDropDownButton();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
@@ -96,21 +97,20 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.visbut = new System.Windows.Forms.Button();
-            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.counlab = new System.Windows.Forms.Label();
             this.herec = new System.Windows.Forms.Label();
             this.countrow = new System.Windows.Forms.TextBox();
             this.herecount = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pacientDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pacientBindingSource)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Add_pole
@@ -256,6 +256,12 @@
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
             resources.ApplyResources(this.оПрограммеToolStripMenuItem, "оПрограммеToolStripMenuItem");
             this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
+            // 
+            // справкаToolStripMenuItem
+            // 
+            this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
+            resources.ApplyResources(this.справкаToolStripMenuItem, "справкаToolStripMenuItem");
+            this.справкаToolStripMenuItem.Click += new System.EventHandler(this.справкаToolStripMenuItem_Click);
             // 
             // toolStripButton1
             // 
@@ -558,10 +564,6 @@
             this.visbut.UseVisualStyleBackColor = true;
             this.visbut.Click += new System.EventHandler(this.visbut_Click);
             // 
-            // departmentBindingSource
-            // 
-            this.departmentBindingSource.DataSource = typeof(Department);
-            // 
             // counlab
             // 
             resources.ApplyResources(this.counlab, "counlab");
@@ -586,19 +588,17 @@
             // 
             // groupBox4
             // 
+            resources.ApplyResources(this.groupBox4, "groupBox4");
             this.groupBox4.Controls.Add(this.counlab);
             this.groupBox4.Controls.Add(this.herecount);
             this.groupBox4.Controls.Add(this.herec);
             this.groupBox4.Controls.Add(this.countrow);
-            resources.ApplyResources(this.groupBox4, "groupBox4");
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.TabStop = false;
             // 
-            // справкаToolStripMenuItem
+            // departmentBindingSource
             // 
-            this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
-            resources.ApplyResources(this.справкаToolStripMenuItem, "справкаToolStripMenuItem");
-            this.справкаToolStripMenuItem.Click += new System.EventHandler(this.справкаToolStripMenuItem_Click);
+            this.departmentBindingSource.DataSource = typeof(Department);
             // 
             // hospital
             // 
@@ -613,6 +613,7 @@
             this.Controls.Add(this.quite_save);
             this.Controls.Add(this.toolStrip1);
             this.Name = "hospital";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.hospital_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -622,9 +623,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pacientBindingSource)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

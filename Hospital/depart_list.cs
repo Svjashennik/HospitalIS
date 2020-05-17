@@ -262,8 +262,14 @@ namespace Hospital
         }
         public void changecount()
         {
+            if (departments is null || dep_onscreen is null) return;
             countrow.Text = departments.Count.ToString();
             herecount.Text = dep_onscreen.Count.ToString();
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 

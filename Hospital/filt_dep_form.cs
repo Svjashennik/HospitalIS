@@ -40,7 +40,6 @@ namespace Hospital
 
         private void acceptbut_Click(object sender, EventArgs e)
         {
-            flag = true;
             if (room1.Text.All(ch => !char.IsDigit(ch)) && roomcheck.Checked)
             {
                 _ = MessageBox.Show("Кол-во палат должно выражаться числами.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -65,7 +64,7 @@ namespace Hospital
                 count1.Focus();
                 return;
             }
-
+            flag = true;
             Hide();
         }
 

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(filter_form));
             this.nameCheck = new System.Windows.Forms.CheckBox();
             this.departsub = new System.Windows.Forms.CheckBox();
             this.datecheck = new System.Windows.Forms.CheckBox();
@@ -50,12 +51,14 @@
             this.dateadd2 = new System.Windows.Forms.DateTimePicker();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.day2 = new System.Windows.Forms.TextBox();
+            this.roombox = new System.Windows.Forms.TextBox();
             this.day1 = new System.Windows.Forms.TextBox();
             this.age2 = new System.Windows.Forms.TextBox();
             this.age1 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.departbox = new System.Windows.Forms.ComboBox();
             this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.roomcheck = new System.Windows.Forms.CheckBox();
             this.hearcheck = new System.Windows.Forms.CheckBox();
             this.dayhearcheck = new System.Windows.Forms.CheckBox();
             this.agecheck = new System.Windows.Forms.CheckBox();
@@ -66,8 +69,6 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.factcheck = new System.Windows.Forms.CheckBox();
-            this.roomcheck = new System.Windows.Forms.CheckBox();
-            this.roombox = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -288,6 +289,14 @@
             this.day2.Size = new System.Drawing.Size(110, 20);
             this.day2.TabIndex = 2;
             // 
+            // roombox
+            // 
+            this.roombox.Location = new System.Drawing.Point(162, 108);
+            this.roombox.Name = "roombox";
+            this.roombox.Size = new System.Drawing.Size(110, 20);
+            this.roombox.TabIndex = 2;
+            this.roombox.TextChanged += new System.EventHandler(this.day1_TextChanged);
+            // 
             // day1
             // 
             this.day1.Location = new System.Drawing.Point(162, 62);
@@ -340,6 +349,16 @@
             // departmentBindingSource
             // 
             this.departmentBindingSource.DataSource = typeof(Department);
+            // 
+            // roomcheck
+            // 
+            this.roomcheck.AutoSize = true;
+            this.roomcheck.Location = new System.Drawing.Point(6, 110);
+            this.roomcheck.Name = "roomcheck";
+            this.roomcheck.Size = new System.Drawing.Size(100, 17);
+            this.roomcheck.TabIndex = 0;
+            this.roomcheck.Text = "Номер палаты";
+            this.roomcheck.UseVisualStyleBackColor = true;
             // 
             // hearcheck
             // 
@@ -447,24 +466,6 @@
             this.factcheck.UseVisualStyleBackColor = true;
             this.factcheck.Visible = false;
             // 
-            // roomcheck
-            // 
-            this.roomcheck.AutoSize = true;
-            this.roomcheck.Location = new System.Drawing.Point(6, 110);
-            this.roomcheck.Name = "roomcheck";
-            this.roomcheck.Size = new System.Drawing.Size(100, 17);
-            this.roomcheck.TabIndex = 0;
-            this.roomcheck.Text = "Номер палаты";
-            this.roomcheck.UseVisualStyleBackColor = true;
-            // 
-            // roombox
-            // 
-            this.roombox.Location = new System.Drawing.Point(162, 108);
-            this.roombox.Name = "roombox";
-            this.roombox.Size = new System.Drawing.Size(110, 20);
-            this.roombox.TabIndex = 2;
-            this.roombox.TextChanged += new System.EventHandler(this.day1_TextChanged);
-            // 
             // filter_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -480,6 +481,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "filter_form";
             this.Text = "Фильтрация";
             this.Load += new System.EventHandler(this.filter_form_Load);
