@@ -39,7 +39,7 @@ namespace Hospital
             {
                 filename = textBox1.Text;
             }
-            if (sample.Checked) filename = "Отделения.xml";
+            if (sample.Checked) filename = "samples/Отделения.xml";
             if (!File.Exists(filename) && !newfile.Checked)
             {
                 _ = MessageBox.Show("Не удается найти путь к файлу. Проверьте правильность ввода.", "Ошибка поиска.", MessageBoxButtons.OK, MessageBoxIcon.Error);

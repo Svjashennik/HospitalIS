@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using System.Xml.Serialization;
+using System.Diagnostics;
 
 namespace Hospital
 {
@@ -554,7 +555,7 @@ namespace Hospital
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            filename = "Отделения.xml";
+            filename = "samples/Отделения.xml";
             newfile = false;
             openfileoperation(sender, e);
             lst_onscreen = lst_people;
@@ -591,6 +592,11 @@ namespace Hospital
         {
             countrow.Text = lst_people.Count.ToString();
             herecount.Text = lst_onscreen.Count.ToString();
+        }
+
+        private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("NotePad.exe", "files/Info.txt");
         }
     }
 }
