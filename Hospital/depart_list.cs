@@ -39,6 +39,7 @@ namespace Hospital
                 }
             }
             add_dialog.Close();
+            changecount();
         }
 
         private void chan_button_Click(object sender, EventArgs e)
@@ -66,6 +67,7 @@ namespace Hospital
             }
             add_dialog.chanfl = false;
             add_dialog.Close();
+            changecount();
         }
 
         private void departments_list_Load(object sender, EventArgs e)
@@ -73,6 +75,7 @@ namespace Hospital
             dep_onscreen = departments;
             departmentBindingSource.DataSource = dep_onscreen;
             if (!rights) groupBox1.Enabled = false;
+            changecount();
         }
 
 
@@ -108,6 +111,7 @@ namespace Hospital
                     dep_onscreen.RemoveAt(i);
                 }
                 departmentBindingSource.ResetBindings(false);
+                changecount();
             }
         }
 
@@ -128,6 +132,7 @@ namespace Hospital
         private void отделенияToolStripMenuItem_Click(object sender, EventArgs e)
         {
             departmentBindingSource.ResetBindings(false);
+            changecount();
         }
 
         private void пациентыToolStripMenuItem_Click(object sender, EventArgs e)
@@ -191,6 +196,7 @@ namespace Hospital
                 }
                 departmentBindingSource.DataSource = dep_onscreen;
                 departmentBindingSource.ResetBindings(false);
+                changecount();
             }
         }
 
@@ -202,6 +208,7 @@ namespace Hospital
             filt_form.checkBox1.Checked = false;
             filt_form.checkBox2.Checked = false;
             filtbut.BackColor = chan_button.BackColor;
+            changecount();
         }
 
         private void filtbut_Click(object sender, EventArgs e)
@@ -244,11 +251,7 @@ namespace Hospital
             else filtbut.BackColor = chan_button.BackColor;
             departmentBindingSource.DataSource = dep_onscreen;
             departmentBindingSource.ResetBindings(false);
-        }
-
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
+            changecount();
         }
 
         private void departmentDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -257,5 +260,11 @@ namespace Hospital
             filter.Add(departmentDataGridView.Rows[i].Cells["name"].Value.ToString());
             Hide();
         }
+        public void changecount()
+        {
+            countrow.Text = departments.Count.ToString();
+            herecount.Text = dep_onscreen.Count.ToString();
+        }
     }
+
 }

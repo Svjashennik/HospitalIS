@@ -119,10 +119,5 @@ namespace Hospital
         {
 
         }
-
-        private void hearcheck_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

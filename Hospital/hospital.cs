@@ -100,6 +100,7 @@ namespace Hospital
             lst_onscreen = lst_people;
             pacientBindingSource.DataSource = lst_onscreen;
             departmentBindingSource.DataSource = departments;
+            changecount();
         }
 
 
@@ -125,6 +126,7 @@ namespace Hospital
                 }
             }
             add_dialog.Close();
+            changecount();
         }
 
         private void change_but_Click(object sender, EventArgs e)
@@ -150,6 +152,7 @@ namespace Hospital
 
             add_dialog.chanfl = false;
             add_dialog.Close();
+            changecount();
         }
 
 
@@ -192,6 +195,7 @@ namespace Hospital
             this.Show();
             pacientBindingSource.ResetBindings(false);
             departmentBindingSource.ResetBindings(false);
+            changecount();
             if (!filter.Any())
             {
                 return;
@@ -201,6 +205,7 @@ namespace Hospital
             pacientBindingSource.ResetBindings(false);
             departmentBindingSource.ResetBindings(false);
             filtbut.BackColor = System.Drawing.Color.Aqua;
+            changecount();
         }
 
         private void ПациентыToolStripMenuItem_Click(object sender, EventArgs e)
@@ -209,6 +214,7 @@ namespace Hospital
             pacientBindingSource.DataSource = lst_onscreen;
             pacientBindingSource.ResetBindings(false);
             departmentBindingSource.ResetBindings(false);
+            changecount();
 
         }
 
@@ -228,6 +234,7 @@ namespace Hospital
             filt_form.checkBox3.Checked = false;
             filtbut.BackColor = change_but.BackColor;
             filter.Clear();
+            changecount();
         }
 
         private void deletebut_Click(object sender, EventArgs e)
@@ -245,6 +252,7 @@ namespace Hospital
                 lst_onscreen.RemoveAt(i);
             }
             pacientBindingSource.ResetBindings(false);
+            changecount();
         }
 
         public void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -339,6 +347,7 @@ namespace Hospital
                 }
                 pacientBindingSource.DataSource = lst_onscreen;
                 pacientBindingSource.ResetBindings(false);
+                changecount();
             }
         }
 
@@ -418,6 +427,7 @@ namespace Hospital
             else filtbut.BackColor = change_but.BackColor;
             pacientBindingSource.DataSource = lst_onscreen;
             pacientBindingSource.ResetBindings(false);
+            changecount();
         }
 
         private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
@@ -452,6 +462,7 @@ namespace Hospital
             pacientBindingSource.DataSource = lst_onscreen;
             pacientBindingSource.ResetBindings(false);
             filtbut.BackColor = System.Drawing.Color.Aqua;
+            changecount();
         }
 
         public void сохранитьКакToolStripMenuItem_Click(object sender, EventArgs e)
@@ -479,6 +490,7 @@ namespace Hospital
             departmentBindingSource.DataSource = departments;
             pacientBindingSource.ResetBindings(false);
             departmentBindingSource.ResetBindings(false);
+            changecount();
         }
 
         public void toolStripMenuItem1_Click(object sender, EventArgs e)
@@ -509,6 +521,7 @@ namespace Hospital
             }
             pacientBindingSource.ResetBindings(false);
             departmentBindingSource.ResetBindings(false);
+            changecount();
         }
         public void savefileoperation()
         {
@@ -535,13 +548,22 @@ namespace Hospital
                 newfileoperation(sender, e);
             }
             fsdep.Close();
+
         }
 
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
             filename = "Отделения.xml";
+            newfile = false;
             openfileoperation(sender, e);
+            lst_onscreen = lst_people;
+            pacientBindingSource.DataSource = lst_onscreen;
+            departmentBindingSource.DataSource = departments;
+            pacientBindingSource.ResetBindings(false);
+            departmentBindingSource.ResetBindings(false);
+            changecount();
+
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -549,13 +571,13 @@ namespace Hospital
             сохранитьToolStripMenuItem_Click(sender, e);
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void visbut_Click(object sender, EventArgs e)
         {
+            if (departments.Count == 0)
+            {
+                _ = MessageBox.Show("Визуализация не доступна для работы с пустым файлом.", "Пустой файл", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             visualform visform = new visualform();
             visform.Owner = this;
             visform.departments = departments;
@@ -563,6 +585,12 @@ namespace Hospital
             visform.depbox.DataSource = departmentBindingSource.DataSource;
             visform.ShowDialog();
             visform.Close();
+        }
+
+        public void changecount()
+        {
+            countrow.Text = lst_people.Count.ToString();
+            herecount.Text = lst_onscreen.Count.ToString();
         }
     }
 }

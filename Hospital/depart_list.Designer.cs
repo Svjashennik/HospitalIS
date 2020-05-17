@@ -49,17 +49,23 @@
             this.filtbut = new System.Windows.Forms.Button();
             this.clearfiltbut = new System.Windows.Forms.Button();
             this.departmentDataGridView = new System.Windows.Forms.DataGridView();
-            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countroom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.counlab = new System.Windows.Forms.Label();
+            this.herecount = new System.Windows.Forms.TextBox();
+            this.herec = new System.Windows.Forms.Label();
+            this.countrow = new System.Windows.Forms.TextBox();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.departmentDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // add_button
@@ -92,10 +98,9 @@
             this.toolStripDropDownButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(784, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(934, 25);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
-            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // toolStripDropDownButton1
             // 
@@ -164,7 +169,7 @@
             // exitbut
             // 
             this.exitbut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.exitbut.Location = new System.Drawing.Point(672, 402);
+            this.exitbut.Location = new System.Drawing.Point(822, 404);
             this.exitbut.Name = "exitbut";
             this.exitbut.Size = new System.Drawing.Size(100, 30);
             this.exitbut.TabIndex = 5;
@@ -178,7 +183,7 @@
             this.groupBox1.Controls.Add(this.add_button);
             this.groupBox1.Controls.Add(this.chan_button);
             this.groupBox1.Controls.Add(this.deletebut);
-            this.groupBox1.Location = new System.Drawing.Point(12, 381);
+            this.groupBox1.Location = new System.Drawing.Point(12, 383);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(288, 66);
             this.groupBox1.TabIndex = 6;
@@ -191,7 +196,7 @@
             this.groupBox2.Controls.Add(this.Sortbut);
             this.groupBox2.Controls.Add(this.filtbut);
             this.groupBox2.Controls.Add(this.clearfiltbut);
-            this.groupBox2.Location = new System.Drawing.Point(306, 382);
+            this.groupBox2.Location = new System.Drawing.Point(306, 384);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(296, 65);
             this.groupBox2.TabIndex = 7;
@@ -249,13 +254,9 @@
             this.departmentDataGridView.Location = new System.Drawing.Point(12, 29);
             this.departmentDataGridView.Name = "departmentDataGridView";
             this.departmentDataGridView.RowHeadersWidth = 45;
-            this.departmentDataGridView.Size = new System.Drawing.Size(760, 346);
+            this.departmentDataGridView.Size = new System.Drawing.Size(910, 348);
             this.departmentDataGridView.TabIndex = 8;
             this.departmentDataGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.departmentDataGridView_CellContentDoubleClick);
-            // 
-            // departmentBindingSource
-            // 
-            this.departmentBindingSource.DataSource = typeof(Department);
             // 
             // name
             // 
@@ -302,11 +303,64 @@
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
+            // departmentBindingSource
+            // 
+            this.departmentBindingSource.DataSource = typeof(Department);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.counlab);
+            this.groupBox4.Controls.Add(this.herecount);
+            this.groupBox4.Controls.Add(this.herec);
+            this.groupBox4.Controls.Add(this.countrow);
+            this.groupBox4.Location = new System.Drawing.Point(608, 384);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(192, 65);
+            this.groupBox4.TabIndex = 19;
+            this.groupBox4.TabStop = false;
+            // 
+            // counlab
+            // 
+            this.counlab.AutoSize = true;
+            this.counlab.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.counlab.Location = new System.Drawing.Point(10, 15);
+            this.counlab.Name = "counlab";
+            this.counlab.Size = new System.Drawing.Size(72, 13);
+            this.counlab.TabIndex = 16;
+            this.counlab.Text = "Строк всего:";
+            // 
+            // herecount
+            // 
+            this.herecount.Location = new System.Drawing.Point(120, 39);
+            this.herecount.Name = "herecount";
+            this.herecount.ReadOnly = true;
+            this.herecount.Size = new System.Drawing.Size(63, 20);
+            this.herecount.TabIndex = 17;
+            // 
+            // herec
+            // 
+            this.herec.AutoSize = true;
+            this.herec.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.herec.Location = new System.Drawing.Point(10, 42);
+            this.herec.Name = "herec";
+            this.herec.Size = new System.Drawing.Size(104, 13);
+            this.herec.TabIndex = 16;
+            this.herec.Text = "Строк отображено:";
+            // 
+            // countrow
+            // 
+            this.countrow.Location = new System.Drawing.Point(120, 12);
+            this.countrow.Name = "countrow";
+            this.countrow.ReadOnly = true;
+            this.countrow.Size = new System.Drawing.Size(63, 20);
+            this.countrow.TabIndex = 17;
+            // 
             // departments_list
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 459);
+            this.ClientSize = new System.Drawing.Size(934, 461);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.departmentDataGridView);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -324,6 +378,8 @@
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.departmentDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -356,5 +412,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn countroom;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label counlab;
+        private System.Windows.Forms.TextBox herecount;
+        private System.Windows.Forms.Label herec;
+        private System.Windows.Forms.TextBox countrow;
     }
 }

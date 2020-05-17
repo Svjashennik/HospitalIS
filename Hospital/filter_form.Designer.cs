@@ -350,7 +350,6 @@
             this.hearcheck.TabIndex = 0;
             this.hearcheck.Text = "Факт пребывания";
             this.hearcheck.UseVisualStyleBackColor = true;
-            this.hearcheck.CheckedChanged += new System.EventHandler(this.hearcheck_CheckedChanged);
             // 
             // dayhearcheck
             // 
@@ -457,7 +456,6 @@
             this.roomcheck.TabIndex = 0;
             this.roomcheck.Text = "Номер палаты";
             this.roomcheck.UseVisualStyleBackColor = true;
-            this.roomcheck.CheckedChanged += new System.EventHandler(this.hearcheck_CheckedChanged);
             // 
             // roombox
             // 

@@ -16,6 +16,7 @@ namespace Hospital
         public add_dep_form()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void Accept_but_Click(object sender, EventArgs e)

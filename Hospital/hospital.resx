@@ -525,7 +525,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;toolStrip1.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <metadata name="fontDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>445, 17</value>
@@ -561,7 +561,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;quite_save.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="resetfilterbut.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -648,7 +648,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="groupBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -729,7 +729,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="pacientDataGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -807,7 +807,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pacientDataGridView.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="groupBox3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Right</value>
@@ -1155,13 +1155,10 @@
     <value>193, 272</value>
   </data>
   <data name="hearlab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 18</value>
+    <value>0, 18</value>
   </data>
   <data name="hearlab.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="hearlab.Text" xml:space="preserve">
-    <value>ДЕСЯ?</value>
   </data>
   <data name="&gt;&gt;hearlab.Name" xml:space="preserve">
     <value>hearlab</value>
@@ -1254,13 +1251,10 @@
     <value>193, 252</value>
   </data>
   <data name="daylab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 18</value>
+    <value>0, 18</value>
   </data>
   <data name="daylab.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="daylab.Text" xml:space="preserve">
-    <value>ДНИ</value>
   </data>
   <data name="&gt;&gt;daylab.Name" xml:space="preserve">
     <value>daylab</value>
@@ -1287,13 +1281,10 @@
     <value>194, 51</value>
   </data>
   <data name="medicinelab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 18</value>
+    <value>0, 18</value>
   </data>
   <data name="medicinelab.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="medicinelab.Text" xml:space="preserve">
-    <value>НОМЕР</value>
   </data>
   <data name="&gt;&gt;medicinelab.Name" xml:space="preserve">
     <value>medicinelab</value>
@@ -1320,13 +1311,10 @@
     <value>193, 232</value>
   </data>
   <data name="datecloselab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 18</value>
+    <value>0, 18</value>
   </data>
   <data name="datecloselab.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="datecloselab.Text" xml:space="preserve">
-    <value>ВЫПИСКА</value>
   </data>
   <data name="&gt;&gt;datecloselab.Name" xml:space="preserve">
     <value>datecloselab</value>
@@ -1353,13 +1341,10 @@
     <value>193, 212</value>
   </data>
   <data name="dateaddlab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 18</value>
+    <value>0, 18</value>
   </data>
   <data name="dateaddlab.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="dateaddlab.Text" xml:space="preserve">
-    <value>ПРИЕМ</value>
   </data>
   <data name="&gt;&gt;dateaddlab.Name" xml:space="preserve">
     <value>dateaddlab</value>
@@ -1389,13 +1374,10 @@
     <value>210, 20</value>
   </data>
   <data name="syndromlab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 18</value>
+    <value>0, 18</value>
   </data>
   <data name="syndromlab.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="syndromlab.Text" xml:space="preserve">
-    <value>НАЗВАНИЕ</value>
   </data>
   <data name="&gt;&gt;syndromlab.Name" xml:space="preserve">
     <value>syndromlab</value>
@@ -1422,13 +1404,10 @@
     <value>194, 164</value>
   </data>
   <data name="agelab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 18</value>
+    <value>0, 18</value>
   </data>
   <data name="agelab.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="agelab.Text" xml:space="preserve">
-    <value>ЛЕТ</value>
   </data>
   <data name="&gt;&gt;agelab.Name" xml:space="preserve">
     <value>agelab</value>
@@ -1458,13 +1437,10 @@
     <value>210, 0</value>
   </data>
   <data name="datelab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 18</value>
+    <value>0, 18</value>
   </data>
   <data name="datelab.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="datelab.Text" xml:space="preserve">
-    <value>РОЖДЕНИЕ</value>
   </data>
   <data name="&gt;&gt;datelab.Name" xml:space="preserve">
     <value>datelab</value>
@@ -1494,13 +1470,10 @@
     <value>210, 0</value>
   </data>
   <data name="roomlab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 18</value>
+    <value>0, 18</value>
   </data>
   <data name="roomlab.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="roomlab.Text" xml:space="preserve">
-    <value>НОМЕР</value>
   </data>
   <data name="&gt;&gt;roomlab.Name" xml:space="preserve">
     <value>roomlab</value>
@@ -1530,13 +1503,10 @@
     <value>210, 0</value>
   </data>
   <data name="depart_lab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 18</value>
+    <value>0, 18</value>
   </data>
   <data name="depart_lab.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="depart_lab.Text" xml:space="preserve">
-    <value>НАЗВАНИЕ</value>
   </data>
   <data name="&gt;&gt;depart_lab.Name" xml:space="preserve">
     <value>depart_lab</value>
@@ -1566,13 +1536,10 @@
     <value>210, 0</value>
   </data>
   <data name="namelab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 18</value>
+    <value>0, 18</value>
   </data>
   <data name="namelab.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="namelab.Text" xml:space="preserve">
-    <value>ИМЯ</value>
   </data>
   <data name="&gt;&gt;namelab.Name" xml:space="preserve">
     <value>namelab</value>
@@ -1644,7 +1611,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>183, 17</value>
@@ -1680,11 +1647,134 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;visbut.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <metadata name="departmentBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1026, 17</value>
   </metadata>
+  <data name="counlab.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="counlab.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="counlab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 15</value>
+  </data>
+  <data name="counlab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 13</value>
+  </data>
+  <data name="counlab.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="counlab.Text" xml:space="preserve">
+    <value>Строк всего:</value>
+  </data>
+  <data name="&gt;&gt;counlab.Name" xml:space="preserve">
+    <value>counlab</value>
+  </data>
+  <data name="&gt;&gt;counlab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;counlab.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;counlab.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="herec.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="herec.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="herec.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 42</value>
+  </data>
+  <data name="herec.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 13</value>
+  </data>
+  <data name="herec.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="herec.Text" xml:space="preserve">
+    <value>Строк отображено:</value>
+  </data>
+  <data name="&gt;&gt;herec.Name" xml:space="preserve">
+    <value>herec</value>
+  </data>
+  <data name="&gt;&gt;herec.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;herec.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;herec.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="countrow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 12</value>
+  </data>
+  <data name="countrow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 20</value>
+  </data>
+  <data name="countrow.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;countrow.Name" xml:space="preserve">
+    <value>countrow</value>
+  </data>
+  <data name="&gt;&gt;countrow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;countrow.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;countrow.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="herecount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 39</value>
+  </data>
+  <data name="herecount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 20</value>
+  </data>
+  <data name="herecount.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;herecount.Name" xml:space="preserve">
+    <value>herecount</value>
+  </data>
+  <data name="&gt;&gt;herecount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;herecount.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;herecount.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>738, 489</value>
+  </data>
+  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 61</value>
+  </data>
+  <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Name" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -2958,30 +3048,6 @@
   <data name="&gt;&gt;medicinecard.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;room.Name" xml:space="preserve">
-    <value>room</value>
-  </data>
-  <data name="&gt;&gt;room.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;hear.Name" xml:space="preserve">
-    <value>hear</value>
-  </data>
-  <data name="&gt;&gt;hear.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;openFileDialog1.Name" xml:space="preserve">
-    <value>openFileDialog1</value>
-  </data>
-  <data name="&gt;&gt;openFileDialog1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;saveFileDialog1.Name" xml:space="preserve">
-    <value>saveFileDialog1</value>
-  </data>
-  <data name="&gt;&gt;saveFileDialog1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;name.Name" xml:space="preserve">
     <value>name</value>
   </data>
@@ -2994,17 +3060,41 @@
   <data name="&gt;&gt;depart_name.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;room.Name" xml:space="preserve">
+    <value>room</value>
+  </data>
+  <data name="&gt;&gt;room.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;syndrom.Name" xml:space="preserve">
     <value>syndrom</value>
   </data>
   <data name="&gt;&gt;syndrom.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;hear.Name" xml:space="preserve">
+    <value>hear</value>
+  </data>
+  <data name="&gt;&gt;hear.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;pacientBindingSource.Name" xml:space="preserve">
     <value>pacientBindingSource</value>
   </data>
   <data name="&gt;&gt;pacientBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog1.Name" xml:space="preserve">
+    <value>openFileDialog1</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;saveFileDialog1.Name" xml:space="preserve">
+    <value>saveFileDialog1</value>
+  </data>
+  <data name="&gt;&gt;saveFileDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;departmentBindingSource.Name" xml:space="preserve">
     <value>departmentBindingSource</value>

@@ -14,6 +14,7 @@ namespace Hospital
         public add_dialog_formpac()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void add_dialog_form_Load(object sender, EventArgs e)
