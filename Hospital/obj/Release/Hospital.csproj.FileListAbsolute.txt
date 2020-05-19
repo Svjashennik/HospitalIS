@@ -46,3 +46,9 @@ N:\Kursach\Hospital\Hospital\obj\Release\ru\Hospital.resources.dll
 N:\Kursach\Hospital\Hospital\obj\Release\Hospital.exe
 N:\Kursach\Hospital\Hospital\obj\Release\Hospital.pdb
 N:\Kursach\Hospital\Hospital\obj\Release\Hospital.csprojAssemblyReference.cache
+C:\Users\A$tAшKIнЫ\Source\Repos\Svjashennik\HospitalIS\Hospital\obj\Release\Hospital.filt_dep_form.resources
+C:\Users\A$tAшKIнЫ\Source\Repos\Svjashennik\HospitalIS\Hospital\obj\Release\Hospital.visualform.resources
+C:\Users\A$tAшKIнЫ\Source\Repos\Svjashennik\HospitalIS\Hospital\obj\Release\Hospital.infoform.resources
+C:\Users\A$tAшKIнЫ\Source\Repos\Svjashennik\HospitalIS\Hospital\obj\Release\Hospital.sort_dep_form.resources
+C:\Users\A$tAшKIнЫ\Source\Repos\Svjashennik\HospitalIS\Hospital\obj\Release\Hospital.startform.resources
+C:\Users\A$tAшKIнЫ\Source\Repos\Svjashennik\HospitalIS\Hospital\obj\Release\Hospital.userform.resources

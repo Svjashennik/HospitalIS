@@ -8,24 +8,24 @@ namespace Hospital
 {
     public partial class departments_list : Form
     {
-        public List<Department> departments;
-        public List<Department> dep_onscreen;
-        public List<string> filter;
-        public filt_dep_form filt_form = new filt_dep_form();
-        public List<Pacient> lst_people;
-        public bool rights { get; set; }
+        public List<Department> departments; // Основной список отделений
+        public List<Department> dep_onscreen; // Список отделений, который выводится на экран
+        public List<string> filter; // список фильтров для основной формы.
+        public filt_dep_form filt_form = new filt_dep_form(); // форма фильтрации
+        public List<Pacient> lst_people; // список пациентов
+        public bool rights { get; set; } // Переменная прав доступа
         public departments_list()
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
         }
 
-        public void add_button_Click(object sender, EventArgs e)
+        public void add_button_Click(object sender, EventArgs e) // кнопка добавления отделения
         {
-            add_dep_form add_dialog = new add_dep_form();
+            add_dep_form add_dialog = new add_dep_form(); // Создание формы, указания владельца, передача ссылки на список.
             add_dialog.Owner = this;
             add_dialog.departments = departments;
-        Add:
+        Add: // метка повтора.
             add_dialog.ShowDialog();
             if (add_dialog.flag)
             {

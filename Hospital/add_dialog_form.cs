@@ -6,12 +6,12 @@ namespace Hospital
 {
     public partial class add_dialog_formpac : Form
     {
-        public bool flag = false;
-        public bool chanfl = false;
-        public bool again;
-        public Pacient sel;
-        public List<Department> departments;
-        public List<Pacient> lst_people;
+        public bool flag = false; //Флаг проверки, выполнена операция или нет.
+        public bool chanfl = false;//флаг проверки по какому пути должна идти функция, добавления или изменения.
+        public bool again;// флаг проверки повторять ли запуск формы или нет.
+        public Pacient sel; //выбранный пациент для изменения
+        public List<Department> departments; // список для заполнения комбобокса
+        public List<Pacient> lst_people; // список для проверки уникальности
         public add_dialog_formpac()
         {
             InitializeComponent();
@@ -20,11 +20,13 @@ namespace Hospital
 
         private void add_dialog_form_Load(object sender, EventArgs e)
         {
-            depbox.DataSource = departments;
+            depbox.DataSource = departments; // передача в источники данных
             depbox.SelectedItem = departments[0];
-            roombox.DataSource = ((Department)depbox.SelectedItem).rooms;
+            roombox.DataSource = ((Department)depbox.SelectedItem).rooms; // выбора набора палат, конкретного департамента.
             roombox.SelectedItem = ((Department)depbox.SelectedItem).rooms[0];
-            if (chanfl)
+            dateadd.Value = DateTime.Now;
+            dateclose.Value = DateTime.Now;
+            if (chanfl) // заполнение данных выбранного пациента
             {
                 namebox.Text = sel.name;
                 datebox.Value = sel.date;
@@ -42,7 +44,7 @@ namespace Hospital
 
         private void Accept_but_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(namebox.Text))
+            if (string.IsNullOrEmpty(namebox.Text)) // проверка на пустые строки
             {
                 MessageBox.Show("Вы должны ввести фамилию.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 namebox.Focus();
@@ -63,14 +65,14 @@ namespace Hospital
             }
 
 
-            if (dateadd.Value > dateclose.Value)
+            if (dateadd.Value > dateclose.Value) // проверка на правильный порядок дат
             {
                 MessageBox.Show("Дата принятия не может быть позже даты выписки.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 dateadd.Focus();
                 return;
             }
 
-            if (checkpac())
+            if (checkpac()) //проверка на уникальность записи
             {
                 MessageBox.Show("Аналогичный пациент уже существует.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 namebox.Focus();
@@ -79,14 +81,14 @@ namespace Hospital
 
             if (!chanfl && MessageBox.Show("Пациент с фамилией " + namebox.Text + " добавлен. \n\nПовторить ввод?", "Вопросы ввода", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                again = true;
+                again = true; // уточнение на повторение операции
             }
 
             flag = true;
             this.Hide();
         }
 
-        public bool checkpac()
+        public bool checkpac() // функция на проверку уникальности
         {
             foreach (Pacient pac in lst_people)
             {
@@ -103,12 +105,12 @@ namespace Hospital
             return false;
         }
 
-        private void cansel_but_Click(object sender, EventArgs e)
+        private void cansel_but_Click(object sender, EventArgs e) // кнопка отмены
         {
             this.Hide();
         }
 
-        private void depbox_SelectedIndexChanged(object sender, EventArgs e)
+        private void depbox_SelectedIndexChanged(object sender, EventArgs e) // изменение списка палат
         {
             roombox.DataSource = ((Department)depbox.SelectedItem).rooms;
             roombox.SelectedItem = ((Department)depbox.SelectedItem).rooms[0];
