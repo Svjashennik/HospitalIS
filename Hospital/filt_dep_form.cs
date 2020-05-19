@@ -6,12 +6,12 @@ namespace Hospital
 {
     public partial class filt_dep_form : Form
     {
-        public bool flag;
-        public filt_dep_form()
+        public bool flag; // флаг выполнения операции
+        public filt_dep_form() 
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
-            groupBox1.Enabled = false;
+            groupBox1.Enabled = false; // выключение блоков при запуске формы
             groupBox2.Enabled = false;
         }
 
@@ -22,7 +22,7 @@ namespace Hospital
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
+            if (checkBox1.Checked) // при изменении изменяется и доступ к ячейке
                 groupBox1.Enabled = true;
             else
                 groupBox1.Enabled = false;
@@ -30,17 +30,17 @@ namespace Hospital
 
         private void count1_TextChanged(object sender, EventArgs e)
         {
-            count2.Text = count1.Text;
+            count2.Text = count1.Text; // подстраивание второго показателя под первый
         }
 
         private void max1_TextChanged(object sender, EventArgs e)
         {
-            room2.Text = room1.Text;
+            room2.Text = room1.Text; // подстаивание второго показателя под первый
         }
 
-        private void acceptbut_Click(object sender, EventArgs e)
+        private void acceptbut_Click(object sender, EventArgs e) // проверка ввода и кнопка принятия
         {
-            if (room1.Text.All(ch => !char.IsDigit(ch)) && roomcheck.Checked)
+            if (room1.Text.All(ch => !char.IsDigit(ch)) && roomcheck.Checked) // проверка на числа
             {
                 _ = MessageBox.Show("Кол-во палат должно выражаться числами.", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 room1.Focus();
@@ -64,7 +64,7 @@ namespace Hospital
                 count1.Focus();
                 return;
             }
-            flag = true;
+            flag = true; // изменение флага проведения операции
             Hide();
         }
 
@@ -73,9 +73,9 @@ namespace Hospital
             Hide();
         }
 
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        private void checkBox2_CheckedChanged(object sender, EventArgs e) 
         {
-            if (checkBox2.Checked)
+            if (checkBox2.Checked) //при изменении изменяется и доступ к ячейке
                 groupBox2.Enabled = true;
             else
                 groupBox2.Enabled = false;

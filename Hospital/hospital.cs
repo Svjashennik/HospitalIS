@@ -18,89 +18,55 @@ namespace Hospital
 
         FileStream fsdep;
         XmlSerializer xsdep;
-        public bool newfile = false;
-        public string filename { get; set; }
-        public List<Department> departments = new List<Department>();
-        public List<Pacient> lst_people = new List<Pacient>();
-        public List<Pacient> lst_onscreen = new List<Pacient>();
-        public List<string> filter = new List<string>();
-        public filter_form filt_form = new filter_form();
-        public bool flagfile = false;
-        public bool changecheck { get; set; }
-        public bool rights { get; set; }
+        public bool newfile = false; // флаг работы с новым файлом
+        public string filename { get; set; } // имя рабочего файла
+        public List<Department> departments = new List<Department>(); // список отделений
+        public List<Pacient> lst_people = new List<Pacient>(); // основной список пациентов
+        public List<Pacient> lst_onscreen = new List<Pacient>(); // список пациентов для отображения
+        public List<string> filter = new List<string>(); // фильтр от отделения
+        public filter_form filt_form = new filter_form(); // форма фильтрации
+        public bool flagfile = false; 
+        public bool changecheck { get; set; } //флаг изменения файла
+        public bool rights { get; set; } // флаг уровня доступа
         public void Form1_Load(object sender, EventArgs e)
         {
             userform usform = new userform();
-            usform.Owner = this;
+            usform.Owner = this; // создание и запуск формы определения уровня доступа
             usform.ShowDialog();
-            if (!usform.flag)
+            if (!usform.flag) // закрытие программы при закрытии формы
             {
                 Close();
                 return;
             }
             rights = usform.rights;
             usform.Close();
-            if (!rights)
+            if (!rights) // выключение действий с пациентами
             {
                 groupBox1.Enabled = false;
             }
-            startform fileform = new startform();
+            startform fileform = new startform(); // создание и запуск формы выбора файлов
             fileform.Owner = this;
             fileform.ShowDialog();
-            if (!fileform.flag)
+            if (!fileform.flag) // закрытие программы при закрытии формы
             {
                 Close();
                 return;
             }
-            if (fileform.newfile.Checked)
+            if (fileform.newfile.Checked) // операция создания нового файла.
             {
                 newfile = true;
                 newfileoperation(sender, e);
                 return;
             }
-            filename = fileform.filename;
-            openfileoperation(sender, e);
-            if (departments.Count == 0)
+            filename = fileform.filename; // имя рабочего файла
+            openfileoperation(sender, e); // операция открытия нового файла
+            if (departments.Count == 0) // если файл пустой. Работаем в формате нового файла.
             {
                 newfileoperation(sender, e);
             }
             fileform.Close();
-            //if (File.Exists("Отделенияяя.xml"))
-            //{
-            //    fsdep = new FileStream("Отделения.xml", FileMode.Open);
-            //    xsdep = new XmlSerializer(typeof(List<Department>));
-            //    departments = (List<Department>)xsdep.Deserialize(fsdep);
-            //    foreach (Department dep in departments)
-            //    {
-            //        foreach (Pacient pac in dep.people)
-            //        {
-            //            lst_people.Add(pac);
-            //        }                   
-            //    }
-            //    fsdep.Close();
-            //}
-            //else
-            //{
-            //    filename = "Отделения.xml";
-            //    Department dep1 = new Department("Кожевно-венерологическое", 20, "Купитман", "8-800-555-35-35", Department.roomslst(5,1));
-            //    Department dep2 = new Department("Гастрологическое", 15, "Степанов", "8-900-555-35-35", Department.roomslst(8, 2));
-            //    Department dep3 = new Department("Психиатрическое", 40, "Колганова", "8-228-555-35-35", Department.roomslst(6, 3));
-            //    departments = new List<Department>();
-            //    departments.Add(dep1);
-            //    departments.Add(dep2);
-            //    departments.Add(dep3);
-            //    lst_people.Add(new Pacient("Кириллкин В.Л.", new DateTime(2000,2,3), "Ветрянка", "Кожевно-венерологическое", 105, new DateTime(2020,1,20),new DateTime(2020,2,20),"783-212",departments));
-            //    lst_people.Add(new Pacient("Райбекас А.Я.", new DateTime(2000, 10, 12), "Сыпь", "Кожевно-венерологическое", 105, new DateTime(2020, 5, 2), new DateTime(2020, 7, 25), "784-818", departments));
-            //    lst_people.Add(new Pacient("Никитин Р.Б.", new DateTime(2000, 6, 8), "Герпис", "Кожевно-венерологическое", 103, new DateTime(2020, 1, 10), new DateTime(2020, 1, 20), "233-252", departments));
-            //    lst_people.Add(new Pacient("Калашникова С.Д.", new DateTime(2001, 9, 25), "Гастрит", "Гастрологическое", 202,new DateTime(2020, 2, 15), new DateTime(2020, 6, 8), "983-000", departments));
-            //    lst_people.Add(new Pacient("Лебедь Д.О.", new DateTime(2000, 12, 14), "Гастрит", "Гастрологическое", 202, new DateTime(2020, 4, 20), new DateTime(2020, 8, 26), "753-900", departments));
-            //    lst_people.Add(new Pacient("Федоренков В.В.", new DateTime(2000, 6, 19), "Ожирение", "Гастрологическое", 201 , new DateTime(2020, 5, 10), new DateTime(2020, 6, 10), "408-123", departments));
-            //    lst_people.Add(new Pacient("Рогозникова С.Л.", new DateTime(2000, 11, 15), "Обследование", "Гастрологическое", 203,new DateTime(2020, 2, 10), new DateTime(2020, 5, 14), "645-802", departments));
-            //    lst_people.Add(new Pacient("Акаев И.С.", new DateTime(2000, 7, 21), "Неврит", "Психиатрическое", 301, new DateTime(2020, 3, 15), new DateTime(2020, 3, 16), "123-987", departments));
-            //    lst_people.Add(new Pacient("Комарницкий В.Г.", new DateTime(1999, 4, 28), "Биполярное расстройство", "Психиатрическое", 301, new DateTime(2020, 4, 30), new DateTime(2020, 6, 1), "626-228", departments));
-            //}
-            changecheck = false;
-            lst_onscreen = lst_people;
+            changecheck = false; // задаем параметр изменения
+            lst_onscreen = lst_people; // передаем ссылки в источники данных
             pacientBindingSource.DataSource = lst_onscreen;
             departmentBindingSource.DataSource = departments;
             changecount();
@@ -108,64 +74,64 @@ namespace Hospital
 
 
 
-        private void Add_pole_Click(object sender, EventArgs e)
+        private void Add_pole_Click(object sender, EventArgs e) // функция добавления пациента
         {
-            add_dialog_formpac add_dialog = new add_dialog_formpac();
+            add_dialog_formpac add_dialog = new add_dialog_formpac(); //Создание формы, указания владельца, передача ссылки на список.
             add_dialog.Owner = this;
             add_dialog.departments = departments;
             add_dialog.lst_people = lst_people;
         Add:
             add_dialog.ShowDialog();
-            if (add_dialog.flag)
+            if (add_dialog.flag) // если флаг выполнения операции истененен, то добавляем нового пациента.
             {
+                // Добавляем в список нового пациента через конструктор
                 Pacient newpac = new Pacient(add_dialog.namebox.Text, add_dialog.datebox.Value, add_dialog.syndrombox.Text, ((Department)add_dialog.depbox.SelectedItem).name, (int)add_dialog.roombox.SelectedItem, add_dialog.dateadd.Value, add_dialog.dateclose.Value, add_dialog.medbox.Text, departments);
-                lst_people.Add(newpac);
+                lst_people.Add(newpac); 
                 pacientBindingSource.ResetBindings(false);
                 departmentBindingSource.ResetBindings(false);
-                if (add_dialog.again)
+                if (add_dialog.again) // проверка на повторный запуск.
                 {
                     add_dialog.flag = false;
                     add_dialog.again = false;
                     goto Add;
                 }
+                changecheck = true; // флаг изменений в файле
             }
             add_dialog.Close();
-            changecheck = true;
-            changecount();
+            changecount(); // функция обновления количества.
         }
 
-        private void change_but_Click(object sender, EventArgs e)
+        private void change_but_Click(object sender, EventArgs e) // функция изменение пациента
         {
-            if (pacientDataGridView.CurrentRow is null) return;
-            add_dialog_formpac add_dialog = new add_dialog_formpac();
+            if (pacientDataGridView.CurrentRow is null) return; // проверка на пустоту
+            add_dialog_formpac add_dialog = new add_dialog_formpac(); // создание формы и передача необходимых параметров.
             add_dialog.Owner = this;
-            add_dialog.chanfl = true;
-            add_dialog.sel = lst_onscreen[pacientDataGridView.CurrentCell.RowIndex];
+            add_dialog.chanfl = true; // флаг операции изменения
+            add_dialog.sel = lst_onscreen[pacientDataGridView.CurrentCell.RowIndex]; // пациент для изменения
             add_dialog.departments = departments;
             add_dialog.lst_people = lst_people;
             add_dialog.ShowDialog();
             int i = pacientDataGridView.CurrentRow.Index;
-            if (add_dialog.flag)
+            if (add_dialog.flag) // изменение параметров пациента
             {
                 lst_onscreen[i].name = add_dialog.namebox.Text;
                 lst_onscreen[i].ChangeDepart((Department)add_dialog.depbox.SelectedItem, add_dialog.syndrombox.Text, (int)add_dialog.roombox.SelectedItem, departments);
                 lst_onscreen[i].ChangeDate(add_dialog.datebox.Value);
-                lst_onscreen[i].ChangeCloseDate(add_dialog.dateadd.Value, add_dialog.dateclose.Value);
+                lst_onscreen[i].ChangeCloseDate(add_dialog.dateadd.Value, add_dialog.dateclose.Value); // используя функции класса
                 lst_onscreen[i].medicinecard = add_dialog.medbox.Text;
                 pacientBindingSource.ResetBindings(false);
                 departmentBindingSource.ResetBindings(false);
                 _ = MessageBox.Show("Информация о пациенте успешна обновлена.", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                changecheck = true;
             }
-
             add_dialog.chanfl = false;
             add_dialog.Close();
-            changecheck = true;
             changecount();
         }
 
 
 
-        private void Shrift_button_Click(object sender, EventArgs e)
+        private void Shrift_button_Click(object sender, EventArgs e) // кнопка изменения шрифта
         {
             fontDialog1.ShowColor = true;
             fontDialog1.Font = this.Font;
@@ -177,7 +143,7 @@ namespace Hospital
             }
         }
 
-        private void Color_but_Click(object sender, EventArgs e)
+        private void Color_but_Click(object sender, EventArgs e) // кнопка изменения цвета
         {
             colorDialog1.Color = this.BackColor; // Текущий цвет в рамке
             if (colorDialog1.ShowDialog() == DialogResult.OK)
@@ -188,9 +154,9 @@ namespace Hospital
         }
 
 
-        private void ДепартаментыToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ДепартаментыToolStripMenuItem_Click(object sender, EventArgs e) // переключение на форму отделений
         {
-            departments_list depart_lst = new departments_list();
+            departments_list depart_lst = new departments_list(); // создание формы и передача всех необходимых параметров
             depart_lst.Owner = this;
             depart_lst.departments = departments;
             depart_lst.filter = filter;
@@ -204,20 +170,20 @@ namespace Hospital
             pacientBindingSource.ResetBindings(false);
             departmentBindingSource.ResetBindings(false);
             changecount();
-            if (!filter.Any())
+            changecheck = true;
+            if (!filter.Any()) // проверка на фильтры отделений
             {
                 return;
             }
-            lst_onscreen = lst_people.FindAll(pac => pac.depart_name == filter[0]);
+            lst_onscreen = lst_people.FindAll(pac => pac.depart_name == filter[0]); // фильтрация списка
             pacientBindingSource.DataSource = lst_onscreen;
             pacientBindingSource.ResetBindings(false);
             departmentBindingSource.ResetBindings(false);
-            filtbut.BackColor = System.Drawing.Color.Aqua;
+            filtbut.BackColor = System.Drawing.Color.Aqua; // изменение цвета кнопки
             changecount();
-            changecheck = true;
         }
 
-        private void ПациентыToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ПациентыToolStripMenuItem_Click(object sender, EventArgs e) // обновление списка пациента
         {
             lst_onscreen = lst_people;
             pacientBindingSource.DataSource = lst_onscreen;
@@ -226,18 +192,18 @@ namespace Hospital
             changecount();
         }
 
-        private void Quite_save_Click(object sender, EventArgs e)
+        private void Quite_save_Click(object sender, EventArgs e) // кнопка выхода и сохранения
         {
             сохранитьToolStripMenuItem_Click(sender, e);
             Close();
         }
 
-        private void Resetfilterbut_Click(object sender, EventArgs e)
-        {
-            lst_onscreen = lst_people;
+        private void Resetfilterbut_Click(object sender, EventArgs e) // сброс фильтров
+        {  
+            lst_onscreen = lst_people; // обновление ссылки
             pacientBindingSource.DataSource = lst_onscreen;
             pacientBindingSource.ResetBindings(false);
-            filt_form.checkBox1.Checked = false;
+            filt_form.checkBox1.Checked = false; // выключение галочек сохранения
             filt_form.checkBox2.Checked = false;
             filt_form.checkBox3.Checked = false;
             filtbut.BackColor = change_but.BackColor;
@@ -245,16 +211,16 @@ namespace Hospital
             changecount();
         }
 
-        private void deletebut_Click(object sender, EventArgs e)
+        private void deletebut_Click(object sender, EventArgs e) // функция удаления
         {
-            if (pacientDataGridView.CurrentRow is null) return;
+            if (pacientDataGridView.CurrentRow is null) return; // проверка на пустоту
             int i = pacientDataGridView.CurrentCell.RowIndex;
-            if (lst_onscreen == lst_people)
+            if (lst_onscreen == lst_people) // если список пациентов и список вывода на экран исползуют одну ссылку, то удаляем только из одного
             {
                 lst_onscreen[i].Out(departments);
                 lst_onscreen.RemoveAt(i);
             }
-            else
+            else // удаляем из обоих
             {
                 lst_people.Remove(lst_onscreen[i]);
                 lst_onscreen[i].Out(departments);
@@ -262,12 +228,12 @@ namespace Hospital
             }
             pacientBindingSource.ResetBindings(false);
             changecount();
-            changecheck = true;
+            changecheck = true; 
         }
 
         public void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (newfile)
+            if (newfile) // другой режим сохранения при работе с новым файлом
             {
                 сохранитьКакToolStripMenuItem_Click(sender, e);
                 return;
@@ -276,16 +242,16 @@ namespace Hospital
             changecheck = false;
         }
 
-        private void sortbut_Click(object sender, EventArgs e)
+        private void sortbut_Click(object sender, EventArgs e) // кнопка сортировки
         {
-            SortPac_form sort_form = new SortPac_form();
+            SortPac_form sort_form = new SortPac_form(); // создание формы сортировки
             sort_form.Owner = this;
             sort_form.ShowDialog();
-            if (sort_form.flag)
+            if (sort_form.flag) // если флаг выполнения истин, то выполняем сортировку
             {
-                if (!sort_form.typesort)
+                if (!sort_form.typesort) // выбор вида сортировки
                 {
-                    switch (sort_form.sort)
+                    switch (sort_form.sort) // сравниваем выбор с типом сортировки
                     {
                         case "По фамилии":
                             lst_onscreen = lst_onscreen.OrderBy(pac => pac.name).ToList();
@@ -362,16 +328,16 @@ namespace Hospital
             }
         }
 
-        private void filt_Click(object sender, EventArgs e)
+        private void filt_Click(object sender, EventArgs e) // кнопка фильтрации
         {
-            filt_form.Owner = this;
+            filt_form.Owner = this; // создание формы и передача необходимых параметров
             lst_onscreen = lst_people;
             filt_form.flag = false;
             filt_form.departmentBindingSource.DataSource = departments;
             filt_form.ShowDialog();
-            if (!filt_form.flag) return;
+            if (!filt_form.flag) return; 
 
-            if (filt_form.checkBox1.Checked)
+            if (filt_form.checkBox1.Checked) // проверка фильтров из списка
             {
                 if (filt_form.nameCheck.Checked)
                 {
@@ -435,20 +401,20 @@ namespace Hospital
                 }
             }
             if (filt_form.checkBox1.Checked || filt_form.checkBox2.Checked || filt_form.checkBox3.Checked) filtbut.BackColor = System.Drawing.Color.Aqua;
-            else filtbut.BackColor = change_but.BackColor;
+            else filtbut.BackColor = change_but.BackColor; // изменение цвета кнопки
             pacientBindingSource.DataSource = lst_onscreen;
             pacientBindingSource.ResetBindings(false);
             changecount();
         }
 
-        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e) // вызов формы информации
         {
             infoform inf = new infoform();
             inf.ShowDialog();
             inf.Close();
         }
 
-        private void pacientDataGridView_SelectionChanged(object sender, EventArgs e)
+        private void pacientDataGridView_SelectionChanged(object sender, EventArgs e) // отображение доп.информации
         {
             if (pacientDataGridView.CurrentRow is null) return;
             Pacient pac = lst_onscreen[pacientDataGridView.CurrentRow.Index];
@@ -466,7 +432,7 @@ namespace Hospital
             else hearlab.Text = "Не числится";
         }
 
-        private void pacientDataGridView_CellContentDoubleClick_1(object sender, DataGridViewCellEventArgs e)
+        private void pacientDataGridView_CellContentDoubleClick_1(object sender, DataGridViewCellEventArgs e) // фильтрация по отделениям
         {
             int i = pacientDataGridView.CurrentCell.RowIndex;
             lst_onscreen = lst_people.FindAll(pac => pac.depart_name == pacientDataGridView.Rows[i].Cells["depart_name"].Value.ToString());
@@ -476,21 +442,21 @@ namespace Hospital
             changecount();
         }
 
-        public void сохранитьКакToolStripMenuItem_Click(object sender, EventArgs e)
+        public void сохранитьКакToolStripMenuItem_Click(object sender, EventArgs e) // кнопка сохранения
         {
-            saveFileDialog1.Filter = "Xml файлы (*.xml)|*.xml";
+            saveFileDialog1.Filter = "Xml файлы (*.xml)|*.xml"; // создание формы сохранения и передача ей необходимых параметров
             saveFileDialog1.DefaultExt = "xml";
             saveFileDialog1.RestoreDirectory = true;
             if (saveFileDialog1.ShowDialog() == DialogResult.Cancel || saveFileDialog1.FileName == "")
                 return;
-            filename = saveFileDialog1.FileName;
+            filename = saveFileDialog1.FileName; // название файла
             savefileoperation();
             changecheck = false;
         }
 
         private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = "Xml файлы (*.xml)|*.xml";
+            openFileDialog1.Filter = "Xml файлы (*.xml)|*.xml"; // откр
             openFileDialog1.DefaultExt = "xml";
             openFileDialog1.RestoreDirectory = true;
             if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
