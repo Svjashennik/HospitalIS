@@ -14,16 +14,17 @@ namespace Hospital
             StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void acceptbut_Click(object sender, EventArgs e)
+        private void acceptbut_Click(object sender, EventArgs e) // кнопка принятия
         {
-            foreach (RadioButton rad in groupBox1.Controls)
+            foreach (RadioButton rad in groupBox1.Controls) // поиск выбранного элемента
             {
-                if (rad.Checked)
+                if (rad.Checked) // выбранный элемент становится фильтром
                 {
                     sort = rad.Text;
+                    break;
                 }
             }
-            if (Descradiobut.Checked)
+            if (Descradiobut.Checked) // определение режима сортировки
             {
                 typesort = false;
             }
@@ -36,7 +37,7 @@ namespace Hospital
             Descradiobut.Checked = true;
         }
 
-        private void canselbut_Click(object sender, EventArgs e)
+        private void canselbut_Click(object sender, EventArgs e) // кнопка отмены
         {
             Hide();
         }

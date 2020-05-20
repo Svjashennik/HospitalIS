@@ -14,21 +14,22 @@ namespace Hospital
             StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void Cansel_but_Click(object sender, EventArgs e)
+        private void Cansel_but_Click(object sender, EventArgs e) // кнопка выхода из формы
         {
             Hide();
         }
 
-        private void Accept_but_Click(object sender, EventArgs e)
+        private void Accept_but_Click(object sender, EventArgs e) // кнопка принятия
         {
-            foreach (RadioButton rad in groupBox3.Controls)
+            foreach (RadioButton rad in groupBox3.Controls) // поиск выбранного параметра
             {
                 if (rad.Checked)
                 {
                     sort = rad.Text;
+                    break;
                 }
             }
-            if (DescradioButton.Checked)
+            if (DescradioButton.Checked) // определение типа сортировки
             {
                 typesort = false;
             }

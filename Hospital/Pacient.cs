@@ -20,7 +20,7 @@ public class Pacient
     }
 
     public Pacient(string name, DateTime date, string syndrom, string depart_name, int room, DateTime date_add, DateTime date_close, string medicinecard, List<Department> departs)
-    {
+    { // конструктор
         this.depart_name = depart_name;
         Department dep = departs.Find(
             delegate (Department d)
@@ -41,17 +41,17 @@ public class Pacient
     }
 
     public void ChangeDepart(Department dep, string syndrom, int room, List<Department> departs) // Функция смены отделения и соответсвенно диагноза.
-    {
+    { // функция смены департамента.
 
-        FindDep(departs).Delete(this);
-        this.syndrom = syndrom;
-        this.room = room;
-        dep.Add(this);
+        FindDep(departs).Delete(this); // удаление себя из отделения
+        this.syndrom = syndrom; // обновление диагноза
+        this.room = room; // смена палаты
+        dep.Add(this); // добавление себя в новый
     }
 
     public void ChangeCloseDate(DateTime date_add, DateTime date_close)
     {
-        this.date_add = date_add;
+        this.date_add = date_add; // смена даты приема
         this.date_close = date_close;
         this.hear = (this.date_close > DateTime.Now);
         this.dayhear = date_close.Subtract(date_add).Days;
@@ -62,12 +62,12 @@ public class Pacient
         age = DateTime.Now.Year - this.date.Year;
     }
 
-    public void Out(List<Department> departs)
+    public void Out(List<Department> departs) // функция удаления из отделения
     {
         FindDep(departs).Delete(this);
     }
 
-    public Department FindDep(List<Department> departs)
+    public Department FindDep(List<Department> departs) // функция нахождения отделения из списка отделений
     {
         return departs.Find(dep => dep.name == depart_name);
     }

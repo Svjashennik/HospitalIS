@@ -414,7 +414,7 @@ namespace Hospital
             inf.Close();
         }
 
-        private void pacientDataGridView_SelectionChanged(object sender, EventArgs e) // отображение доп.информации
+        private void pacientDataGridView_SelectionChanged(object sender, EventArgs e) // отображение доп.информации при смене выбранной ячейки
         {
             if (pacientDataGridView.CurrentRow is null) return;
             Pacient pac = lst_onscreen[pacientDataGridView.CurrentRow.Index];
@@ -454,18 +454,18 @@ namespace Hospital
             changecheck = false;
         }
 
-        private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
+        private void открытьToolStripMenuItem_Click(object sender, EventArgs e) // открытие файла.
         {
-            openFileDialog1.Filter = "Xml файлы (*.xml)|*.xml"; // откр
-            openFileDialog1.DefaultExt = "xml";
+            openFileDialog1.Filter = "Xml файлы (*.xml)|*.xml"; // передача необходимых параметров форме открытия файла
+            openFileDialog1.DefaultExt = "xml"; 
             openFileDialog1.RestoreDirectory = true;
             if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
                 return;
             filename = openFileDialog1.FileName;
             openfileoperation(sender, e);
-            if (!flagfile) { return; }
+            if (!flagfile) { return; } // проверка флага выполнения
             lst_onscreen = lst_people;
-            pacientBindingSource.DataSource = lst_onscreen;
+            pacientBindingSource.DataSource = lst_onscreen; // обновление источников данных
             departmentBindingSource.DataSource = departments;
             pacientBindingSource.ResetBindings(false);
             departmentBindingSource.ResetBindings(false);
@@ -473,10 +473,10 @@ namespace Hospital
             flagfile = false;
         }
 
-        public void toolStripMenuItem1_Click(object sender, EventArgs e)
+        public void toolStripMenuItem1_Click(object sender, EventArgs e) // кнопка создания нового файла
         {
-            newfile = true;
-            lst_onscreen.Clear();
+            newfile = true; // флаг нового файла
+            lst_onscreen.Clear(); // очистка всех списков
             lst_people.Clear();
             departments.Clear();
             pacientBindingSource.ResetBindings(false);
@@ -486,17 +486,17 @@ namespace Hospital
             departmentBindingSource.ResetBindings(false);
         }
 
-        public void newfileoperation(object sender, EventArgs e)
+        public void newfileoperation(object sender, EventArgs e) // создание одного отделения, для полноценной работы многих функций
         {
-            if (!rights) return;
-            departments_list depart_lst = new departments_list();
+            if (!rights) return; // проверка прав доступа
+            departments_list depart_lst = new departments_list();  // создание формы отделений и вызов функции создания отделения
             depart_lst.Owner = this;
             depart_lst.departments = departments;
             lst_onscreen = lst_people;
             pacientBindingSource.DataSource = lst_onscreen;
             departmentBindingSource.DataSource = departments;
             depart_lst.rights = rights;
-            while (departments.Count == 0)
+            while (departments.Count == 0) // требование создать хотя бы одно отделение
             {
                 _ = MessageBox.Show("Перед работой с новым файлом необходимо создать одно отделение.", "Новый файл", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 depart_lst.add_button_Click(sender, e);
@@ -506,33 +506,33 @@ namespace Hospital
             changecount();
             changecheck = true;
         }
-        public void savefileoperation()
+        public void savefileoperation() // функция сохранения файла
         {
             fsdep = new FileStream(filename, FileMode.Create);
             xsdep = new XmlSerializer(typeof(List<Department>));
             xsdep.Serialize(fsdep, departments);
             fsdep.Close();
         }
-        public void openfileoperation(object sender, EventArgs e)
+        public void openfileoperation(object sender, EventArgs e) //функция распаковки файла в список отделений
         {
-            try
+            try // в случае ошибки открытия файла
             {
                 fsdep = new FileStream(filename, FileMode.Open);
                 xsdep = new XmlSerializer(typeof(List<Department>));
                 departments = (List<Department>)xsdep.Deserialize(fsdep);
                 lst_people.Clear();
-                foreach (Department dep in departments)
+                foreach (Department dep in departments) // достаем отделения и заполняем из них список пациентов.
                 {
                     foreach (Pacient pac in dep.people)
                     {
                         lst_people.Add(pac);
                     }
                 }
-                if (departments.Count == 0)
+                if (departments.Count == 0) // если файл оказался пустым, то запустим операцию нового файла
                 {
                     newfileoperation(sender, e);
                 }
-                flagfile = true;
+                flagfile = true; // изменение флага.
                 fsdep.Close();
             }
             catch
@@ -544,9 +544,9 @@ namespace Hospital
         }
 
 
-        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        private void toolStripMenuItem2_Click(object sender, EventArgs e) // открытие файла образца
         {
-            filename = "samples/Отделения.xml";
+            filename = "samples/Отделения.xml"; // передача, имени файла.
             newfile = false;
             openfileoperation(sender, e);
             if (!flagfile) { return; }
@@ -560,19 +560,19 @@ namespace Hospital
 
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void toolStripButton1_Click(object sender, EventArgs e) // кнопка сохранения
         {
             сохранитьToolStripMenuItem_Click(sender, e);
         }
 
-        private void visbut_Click(object sender, EventArgs e)
+        private void visbut_Click(object sender, EventArgs e) // вызов визуализации
         {
-            if (departments.Count == 0)
+            if (departments.Count == 0) // проверка на пустоту
             {
                 _ = MessageBox.Show("Визуализация не доступна для работы с пустым файлом.", "Пустой файл", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            visualform visform = new visualform();
+            visualform visform = new visualform(); // создание формы и передача необходимых параметров
             visform.Owner = this;
             visform.departments = departments;
             visform.lst_people = lst_people;
@@ -581,21 +581,21 @@ namespace Hospital
             visform.Close();
         }
 
-        public void changecount()
+        public void changecount() // функция обновления количества отображаемых строк. Вызывается при изменении отоброжения
         {
             if (lst_people is null || lst_onscreen is null) return;
             countrow.Text = lst_people.Count.ToString();
             herecount.Text = lst_onscreen.Count.ToString();
         }
 
-        private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
+        private void справкаToolStripMenuItem_Click(object sender, EventArgs e) // вызов справки
         {
-            Process.Start("NotePad.exe", "files/Info.txt");
+            Process.Start("NotePad.exe", "files/Info.txt"); // открытие файла блокнота
         }
 
-        private void hospital_FormClosing(object sender, FormClosingEventArgs e)
+        private void hospital_FormClosing(object sender, FormClosingEventArgs e) // проверка выхода из формы
         {
-            if (changecheck)
+            if (changecheck) // если были проделаны изменения
             {
                 if (DialogResult.Cancel == MessageBox.Show("Вы уверены,что хотите выйти без сохранения?", "Выход", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)) e.Cancel = true;
             }

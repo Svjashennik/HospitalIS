@@ -16,36 +16,36 @@ namespace Hospital
             StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // кнопка выбора файла
         {
-            ownfile.Checked = true;
+            ownfile.Checked = true; // открытие формы и передача ей необходимых параметров
             openFileDialog1.Filter = "Xml файлы (*.xml)|*.xml";
             openFileDialog1.DefaultExt = "xml";
             openFileDialog1.RestoreDirectory = true;
-            if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
+            if (openFileDialog1.ShowDialog() == DialogResult.Cancel) // проверка на отмену
                 return;
-            textBox1.Text = openFileDialog1.FileName;
+            textBox1.Text = openFileDialog1.FileName; // заполнение текстбокса
         }
 
         private void acceptbut_Click(object sender, EventArgs e)
         {
-            if (newfile.Checked)
+            if (newfile.Checked) // если новый файл
             {
                 flag = true;
                 Hide();
                 return;
             }
-            if (ownfile.Checked)
+            if (ownfile.Checked) // если выбран свой файх
             {
                 filename = textBox1.Text;
             }
-            if (sample.Checked) filename = "samples/Отделения.xml";
-            if (!File.Exists(filename) && !newfile.Checked)
+            if (sample.Checked) filename = "samples/Отделения.xml"; // если образец
+            if (!File.Exists(filename) && !newfile.Checked) // проверка существования файла.
             {
                 _ = MessageBox.Show("Не удается найти путь к файлу. Проверьте правильность ввода.", "Ошибка поиска.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            FileStream fsdep = new FileStream(filename, FileMode.Open);
+            FileStream fsdep = new FileStream(filename, FileMode.Open); // предварительное открытие файла, в случае ошибки вернет в начало формы.
             XmlSerializer xsdep = new XmlSerializer(typeof(List<Department>));
             try
             {

@@ -9,7 +9,7 @@ namespace Hospital
         /// Главная точка входа для приложения.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main() // главный запуск формы.
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
